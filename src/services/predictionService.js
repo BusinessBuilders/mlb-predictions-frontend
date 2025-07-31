@@ -68,12 +68,24 @@ class PredictionService {
    * Fetch latest predictions from API
    */
   async fetchLatestPredictions() {
-    // In production, replace with your actual API endpoint
-    const response = await fetch('/api/predictions/latest');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    // Try multiple sources in order
+    const sources = [
+      '/data/latest.json',
+      '/data/ultimate_predictions_detailed_2025-07-31_20250731_072408.json'
+    ];
+
+    for (const source of sources) {
+      try {
+        const response = await fetch(source);
+        if (response.ok) {
+          return await response.json();
+        }
+      } catch (error) {
+        console.log(`Failed to load ${source}:`, error.message);
+      }
     }
-    return await response.json();
+
+    throw new Error('No prediction data sources available');
   }
 
   /**
@@ -116,7 +128,7 @@ class PredictionService {
    */
   savePredictions(data, key) {
     try {
-      const cacheKey = key || data.meta.date;
+      const cacheKey = key || data.meta?.date || new Date().toISOString().split('T')[0];
       this.cache.set(cacheKey, data);
 
       // Save to localStorage for persistence
@@ -142,7 +154,7 @@ class PredictionService {
   getGamePrediction(gameId) {
     if (!this.currentData) return null;
 
-    return this.currentData.detailed_predictions.find(
+    return this.currentData.detailed_predictions?.find(
       game => game.game_info.game_id === gameId
     );
   }
@@ -153,41 +165,41 @@ class PredictionService {
   filterPredictions(criteria = {}) {
     if (!this.currentData) return [];
 
-    let predictions = [...this.currentData.detailed_predictions];
+    let predictions = [...(this.currentData.detailed_predictions || [])];
 
     // Filter by bet recommendation
     if (criteria.recommendation) {
       predictions = predictions.filter(
-        game => game.system_metrics.bet_recommendation === criteria.recommendation
+        game => game.system_metrics?.bet_recommendation === criteria.recommendation
       );
     }
 
     // Filter by edge strength
     if (criteria.edgeStrength) {
       predictions = predictions.filter(
-        game => game.system_metrics.edge_strength === criteria.edgeStrength
+        game => game.system_metrics?.edge_strength === criteria.edgeStrength
       );
     }
 
     // Filter by minimum confidence
     if (criteria.minConfidence) {
       predictions = predictions.filter(
-        game => game.system_metrics.overall_confidence >= criteria.minConfidence
+        game => (game.system_metrics?.overall_confidence || 0) >= criteria.minConfidence
       );
     }
 
     // Filter by team
     if (criteria.team) {
       predictions = predictions.filter(
-        game => game.game_info.away_team === criteria.team ||
-                game.game_info.home_team === criteria.team
+        game => game.game_info?.away_team === criteria.team ||
+                game.game_info?.home_team === criteria.team
       );
     }
 
     // Filter by hot batters threshold
     if (criteria.minHotBatters) {
       predictions = predictions.filter(
-        game => game.primary_edges.hot_batter_system.scorching_batters >= criteria.minHotBatters
+        game => (game.primary_edges?.hot_batter_system?.scorching_batters || 0) >= criteria.minHotBatters
       );
     }
 
@@ -200,22 +212,34 @@ class PredictionService {
   getSummaryStats() {
     if (!this.currentData) return null;
 
-    const predictions = this.currentData.detailed_predictions;
+    const predictions = this.currentData.detailed_predictions || [];
+
+    if (predictions.length === 0) {
+      return {
+        totalGames: 0,
+        averageConfidence: 0,
+        strongEdges: 0,
+        recommendedBets: 0,
+        totalHotBatters: 0,
+        totalExpectedEV: 0,
+        averageROI: 0
+      };
+    }
 
     return {
       totalGames: predictions.length,
       averageConfidence: predictions.reduce((sum, game) =>
-        sum + game.system_metrics.overall_confidence, 0) / predictions.length,
+        sum + (game.system_metrics?.overall_confidence || 0), 0) / predictions.length,
       strongEdges: predictions.filter(game =>
-        ['ELITE', 'STRONG'].includes(game.system_metrics.edge_strength)).length,
+        ['ELITE', 'STRONG'].includes(game.system_metrics?.edge_strength)).length,
       recommendedBets: predictions.filter(game =>
-        game.system_metrics.bet_recommendation !== 'PASS').length,
+        game.system_metrics?.bet_recommendation !== 'PASS').length,
       totalHotBatters: predictions.reduce((sum, game) =>
-        sum + game.primary_edges.hot_batter_system.scorching_batters, 0),
+        sum + (game.primary_edges?.hot_batter_system?.scorching_batters || 0), 0),
       totalExpectedEV: predictions.reduce((sum, game) =>
-        sum + game.system_metrics.total_system_ev, 0),
+        sum + (game.system_metrics?.total_system_ev || 0), 0),
       averageROI: predictions.reduce((sum, game) =>
-        sum + game.system_metrics.expected_roi, 0) / predictions.length
+        sum + (game.system_metrics?.expected_roi || 0), 0) / predictions.length
     };
   }
 
@@ -225,9 +249,9 @@ class PredictionService {
   getTopOpportunities(limit = 5) {
     if (!this.currentData) return [];
 
-    return this.currentData.detailed_predictions
-      .filter(game => game.system_metrics.bet_recommendation !== 'PASS')
-      .sort((a, b) => b.system_metrics.overall_confidence - a.system_metrics.overall_confidence)
+    return (this.currentData.detailed_predictions || [])
+      .filter(game => game.system_metrics?.bet_recommendation !== 'PASS')
+      .sort((a, b) => (b.system_metrics?.overall_confidence || 0) - (a.system_metrics?.overall_confidence || 0))
       .slice(0, limit);
   }
 
@@ -242,24 +266,24 @@ class PredictionService {
     const { system_metrics, gpt_analysis, primary_edges } = game;
 
     // Main moneyline bet
-    if (system_metrics.bet_recommendation !== 'PASS') {
+    if (system_metrics?.bet_recommendation !== 'PASS') {
       recommendations.push({
         type: 'MONEYLINE',
-        team: gpt_analysis.predicted_winner === 'away' ?
+        team: gpt_analysis?.predicted_winner === 'away' ?
           game.game_info.away_team : game.game_info.home_team,
-        confidence: system_metrics.overall_confidence,
+        confidence: system_metrics?.overall_confidence || 0,
         units: this.calculateUnits(system_metrics),
-        reasoning: `${system_metrics.edge_strength} edge detected`,
-        expectedROI: system_metrics.expected_roi
+        reasoning: `${system_metrics?.edge_strength || 'MODERATE'} edge detected`,
+        expectedROI: system_metrics?.expected_roi || 0
       });
     }
 
     // Run total recommendations based on hot batters
-    if (primary_edges.hot_batter_system.scorching_batters >= 3) {
+    if ((primary_edges?.hot_batter_system?.scorching_batters || 0) >= 3) {
       recommendations.push({
         type: 'TOTAL_RUNS',
         bet: 'OVER',
-        confidence: Math.min(85, system_metrics.overall_confidence - 5),
+        confidence: Math.min(85, (system_metrics?.overall_confidence || 0) - 5),
         units: 1,
         reasoning: `${primary_edges.hot_batter_system.scorching_batters} hot batters identified`,
         expectedROI: 0.05
@@ -267,7 +291,7 @@ class PredictionService {
     }
 
     // First inning no run (placeholder - you can expand this)
-    if (system_metrics.overall_confidence >= 75) {
+    if ((system_metrics?.overall_confidence || 0) >= 75) {
       recommendations.push({
         type: 'FIRST_INNING_NO_RUN',
         bet: 'YES',
@@ -285,8 +309,10 @@ class PredictionService {
    * Calculate recommended units based on Kelly criterion
    */
   calculateUnits(metrics) {
+    if (!metrics) return 0.5;
+    
     const maxUnits = 5;
-    const baseUnits = metrics.kelly_bet_size * 100;
+    const baseUnits = (metrics.kelly_bet_size || 0.05) * 100;
 
     // Adjust based on edge strength
     let multiplier = 1;
@@ -295,6 +321,7 @@ class PredictionService {
       case 'STRONG': multiplier = 1.2; break;
       case 'MODERATE': multiplier = 1.0; break;
       case 'WEAK': multiplier = 0.5; break;
+      default: multiplier = 1.0;
     }
 
     return Math.min(maxUnits, Math.max(0.5, baseUnits * multiplier));
@@ -340,19 +367,20 @@ class PredictionService {
       'Pitcher Quality Advantage'
     ];
 
-    const rows = data.detailed_predictions.map(game => [
-      game.game_info.game_id,
-      game.game_info.away_team,
-      game.game_info.home_team,
-      game.game_info.venue,
-      game.gpt_analysis.predicted_winner,
-      game.system_metrics.overall_confidence.toFixed(1),
-      game.gpt_analysis.confidence,
-      game.system_metrics.edge_strength,
-      game.system_metrics.bet_recommendation,
-      (game.system_metrics.expected_roi * 100).toFixed(1) + '%',
-      game.primary_edges.hot_batter_system.scorching_batters,
-      game.primary_edges.pitcher_quality.advantage
+    const predictions = data.detailed_predictions || [];
+    const rows = predictions.map(game => [
+      game.game_info?.game_id || '',
+      game.game_info?.away_team || '',
+      game.game_info?.home_team || '',
+      game.game_info?.venue || '',
+      game.gpt_analysis?.predicted_winner || '',
+      (game.system_metrics?.overall_confidence || 0).toFixed(1),
+      game.gpt_analysis?.confidence || '',
+      game.system_metrics?.edge_strength || '',
+      game.system_metrics?.bet_recommendation || '',
+      ((game.system_metrics?.expected_roi || 0) * 100).toFixed(1) + '%',
+      game.primary_edges?.hot_batter_system?.scorching_batters || 0,
+      game.primary_edges?.pitcher_quality?.advantage || ''
     ]);
 
     return [headers, ...rows]
@@ -372,8 +400,8 @@ class PredictionService {
     return `
 MLB PREDICTIONS SUMMARY REPORT
 ==============================
-Date: ${this.currentData.meta.date}
-System: ${this.currentData.meta.system_name} v${this.currentData.meta.version}
+Date: ${this.currentData.meta?.date || 'Unknown'}
+System: ${this.currentData.meta?.system_name || 'MLB System'} v${this.currentData.meta?.version || '6.0'}
 
 OVERVIEW
 --------
@@ -387,11 +415,11 @@ Expected EV: +${(stats.totalExpectedEV * 100).toFixed(1)}%
 TOP OPPORTUNITIES
 -----------------
 ${topOpportunities.map((game, i) => `
-${i + 1}. ${game.game_info.away_team} @ ${game.game_info.home_team}
-   Prediction: ${game.gpt_analysis.predicted_winner.toUpperCase()}
-   Confidence: ${game.system_metrics.overall_confidence.toFixed(1)}%
-   Edge: ${game.system_metrics.edge_strength}
-   Recommendation: ${game.system_metrics.bet_recommendation}
+${i + 1}. ${game.game_info?.away_team || 'AWAY'} @ ${game.game_info?.home_team || 'HOME'}
+   Prediction: ${(game.gpt_analysis?.predicted_winner || 'home').toUpperCase()}
+   Confidence: ${(game.system_metrics?.overall_confidence || 0).toFixed(1)}%
+   Edge: ${game.system_metrics?.edge_strength || 'MODERATE'}
+   Recommendation: ${game.system_metrics?.bet_recommendation || 'LEAN'}
 `).join('')}
 
 Generated: ${new Date().toLocaleString()}
@@ -427,7 +455,7 @@ Generated: ${new Date().toLocaleString()}
 const predictionService = new PredictionService();
 
 // Auto-load sample data for development
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.DEV) {
   // You can uncomment this to auto-load sample data
   // predictionService.loadPredictions(sampleMLBData);
 }

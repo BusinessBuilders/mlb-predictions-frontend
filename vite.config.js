@@ -10,10 +10,14 @@ export default defineConfig({
       // Or, if you want to allow all ngrok-free.app subdomains:
       // '.ngrok-free.app',
     ],
-
-    // Add headers to override CSP from server
-    headers: {
-      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; style-src 'self' 'unsafe-inline' data:; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https: wss: ws:;"
+    
+    // Proxy API requests to avoid CSP issues
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+        secure: false
+      }
     }
   },
   build: {

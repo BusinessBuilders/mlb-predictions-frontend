@@ -44,6 +44,7 @@ const MLBPredictionsApp = () => {
   const [hitSortBy, setHitSortBy] = useState('confidence');
   const [predictionSortBy, setPredictionSortBy] = useState('confidence');
   const [expandedCards, setExpandedCards] = useState(new Set());
+  const [viewMode, setViewMode] = useState('detail'); // 'list' or 'detail'
   const [parlayFilters, setParlayFilters] = useState({
     includeHomers: true,
     includeHits: true,
@@ -64,7 +65,6 @@ const MLBPredictionsApp = () => {
     }
     setExpandedCards(newExpanded);
   };
-  const [viewMode, setViewMode] = useState('grid');
   const [autoRefresh, setAutoRefresh] = useState(false);
   const [refreshInterval, setRefreshInterval] = useState(300000); // 5 minutes
   const [theme, setTheme] = useState('dark');
@@ -736,6 +736,17 @@ const MLBPredictionsApp = () => {
                 </select>
               </div>
 
+              {/* View Toggle Button */}
+              <button
+                onClick={() => setViewMode(viewMode === 'detail' ? 'list' : 'detail')}
+                className="flex items-center space-x-2 bg-gray-800/50 px-3 py-2 rounded-lg hover:bg-gray-700/50 transition-colors"
+              >
+                <Layers3 className="w-4 h-4 text-gray-400" />
+                <span className="text-sm text-white">
+                  {viewMode === 'detail' ? 'Less' : 'More'}
+                </span>
+              </button>
+
               <button
                 onClick={() => loadAllData()}
                 className="px-3 lg:px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-sm font-bold hover:shadow-lg hover:shadow-purple-500/25 transition-all flex items-center space-x-2"
@@ -746,8 +757,54 @@ const MLBPredictionsApp = () => {
             </div>
           </div>
 
-          {/* Game Cards */}
-          {filteredGames.map((game, index) => (
+          {/* Game Cards or List */}
+          {viewMode === 'list' ? (
+            /* Simple List View */
+            <div className="space-y-3">
+              {filteredGames.map((game) => (
+                <div key={game.game_info.game_id} className="bg-gradient-to-r from-gray-900/90 to-gray-800/90 rounded-xl border border-gray-700 p-4 hover:border-purple-500/50 transition-colors">
+                  <div className="flex items-center justify-between">
+                    {/* Game Matchup */}
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-2 text-lg font-bold">
+                        <span className="text-lg">{teamLogos[game.game_info.away_team] || '⚾'}</span>
+                        <span className={`${game.gpt_analysis.predicted_winner === 'away' ? 'text-green-400' : 'text-gray-300'} transition-colors`}>
+                          {game.game_info.away_team}
+                        </span>
+                        <span className="text-gray-500">@</span>
+                        <span className="text-lg">{teamLogos[game.game_info.home_team] || '⚾'}</span>
+                        <span className={`${game.gpt_analysis.predicted_winner === 'home' ? 'text-green-400' : 'text-gray-300'} transition-colors`}>
+                          {game.game_info.home_team}
+                        </span>
+                      </div>
+                      
+                      {/* Predicted Winner Badge */}
+                      <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-3 py-1 rounded-full">
+                        <span className="text-white text-sm font-bold">
+                          {game.gpt_analysis.predicted_winner === 'away' ? game.game_info.away_team : game.game_info.home_team}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Confidence & Edge */}
+                    <div className="flex items-center space-x-4">
+                      <div className="text-right">
+                        <div className="text-sm text-gray-400">Confidence</div>
+                        <div className={`text-lg font-bold ${getConfidenceColor(game.system_metrics.overall_confidence)}`}>
+                          {game.system_metrics.overall_confidence.toFixed(1)}%
+                        </div>
+                      </div>
+                      <div className={`w-12 h-8 bg-gradient-to-r ${getTierColor(game.system_metrics.edge_strength)} rounded-lg flex items-center justify-center`}>
+                        <span className="text-white text-xs font-bold">{game.system_metrics.edge_strength}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            /* Detailed Cards View */
+            filteredGames.map((game, index) => (
             <div key={game.game_info.game_id} className="bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl border border-gray-700 overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 group">
               {/* Game Header */}
               <div className="p-4 lg:p-6 border-b border-gray-700/50">
@@ -954,7 +1011,7 @@ const MLBPredictionsApp = () => {
                 </div>
               </div>
             </div>
-          ))}
+          )))}
 
           {filteredGames.length === 0 && (
             <div className="text-center py-12 text-gray-400">

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Registration</title>
+</head>
+<body>
+    <h1>Test Supabase Registration</h1>
+    <button onclick="testRegistration()">Test Registration</button>
+    <div id="result"></div>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js';
+        
+        const supabaseUrl = 'http://127.0.0.1:54321';
+        const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0';
+        
+        const supabase = createClient(supabaseUrl, supabaseAnonKey);
+        
+        window.testRegistration = async function() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Testing...';
+            
+            try {
+                console.log('🔧 Starting registration test...');
+                
+                const { data, error } = await supabase.auth.signUp({
+                    email: 'jstest@example.com',
+                    password: 'TestPassword123',
+                    options: {
+                        data: {
+                            username: 'jstest'
+                        }
+                    }
+                });
+                
+                if (error) {
+                    console.error('Supabase error:', error);
+                    resultDiv.innerHTML = `Error: ${error.message}`;
+                } else {
+                    console.log('Success:', data);
+                    resultDiv.innerHTML = `Success! User: ${data.user?.email}`;
+                }
+                
+            } catch (err) {
+                console.error('Catch error:', err);
+                resultDiv.innerHTML = `Failed to fetch: ${err.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

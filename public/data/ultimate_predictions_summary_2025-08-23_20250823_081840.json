@@ -1,0 +1,652 @@
+{
+  "date": "2025-08-23",
+  "success": true,
+  "system_version": "7.0_Ultimate_4_Source",
+  "generation_timestamp": "2025-08-23T08:18:40.964069",
+  "total_games_analyzed": 14,
+  "total_failed_games": 0,
+  "success_rate": 1.0,
+  "average_overall_confidence": 76.4,
+  "average_gpt_confidence": 84.5,
+  "total_system_ev": 13.905,
+  "edge_strength_breakdown": {
+    "WEAK": 1,
+    "ELITE": 4,
+    "STRONG": 6,
+    "MODERATE": 3
+  },
+  "bet_recommendation_breakdown": {
+    "PASS": 1,
+    "STRONG BET": 4,
+    "BET": 6,
+    "LEAN": 3
+  },
+  "primary_edge_source_breakdown": {
+    "team_vs_team_matchup": 1,
+    "convergence_of_factors": 13
+  },
+  "strong_betting_opportunities": 10,
+  "elite_edge_games": 4,
+  "total_expected_profit": 1390.55,
+  "total_scorching_batters": 0,
+  "total_hr_candidates": 0,
+  "avg_scorching_per_game": 0.0,
+  "games_with_h2h_advantage": 6,
+  "strong_h2h_edges": 2,
+  "api_calls_made": 508,
+  "data_quality": "REAL_MLB_STATS_API_WITH_H2H",
+  "top_opportunities": [
+    {
+      "game": "BOS @ NYY",
+      "predicted_winner": "away",
+      "confidence": 86.75,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge": "convergence_of_factors",
+      "h2h_record": "1-7",
+      "expected_profit": 158.95
+    },
+    {
+      "game": "SF @ MIL",
+      "predicted_winner": "home",
+      "confidence": 85.75,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge": "convergence_of_factors",
+      "h2h_record": "3-3",
+      "expected_profit": 103.9
+    },
+    {
+      "game": "NYM @ ATL",
+      "predicted_winner": "home",
+      "confidence": 85.5,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge": "convergence_of_factors",
+      "h2h_record": "7-4",
+      "expected_profit": 157.35
+    }
+  ],
+  "failed_games": [],
+  "predictions": [
+    {
+      "game_id": "MIN@CWS_2025-08-23",
+      "game": "MIN @ CWS",
+      "venue": "Rate Field",
+      "predicted_winner": "away",
+      "overall_confidence": 44.25,
+      "gpt_confidence": 75,
+      "win_probability": 0.58,
+      "edge_strength": "WEAK",
+      "bet_recommendation": "PASS",
+      "primary_edge_source": "team_vs_team_matchup",
+      "total_system_ev": 0.25,
+      "expected_roi": 0.05,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "real_bullpen_advantage": "NEUTRAL BULLPEN MATCHUP: #19 vs #21",
+      "real_recent_form_advantage": "MODERATE AWAY FORM ADVANTAGE: 30.0% vs 40.0%",
+      "real_team_vs_team_advantage": "MODERATE AWAY H2H ADVANTAGE: 5-1 (83.3%)",
+      "h2h_season_record": "1-5",
+      "h2h_momentum": "Cold",
+      "gpt_key_factors": [
+        "H2H record: Away team leads 5-1 in 2024 season",
+        "H2H momentum: Away team is hot with 83.3% win rate",
+        "Recent form: Away team has better recent performance (8-12) compared to home (6-14)",
+        "Pythagorean W%: Away team has a higher expected win percentage (46.0%)",
+        "Bullpen rankings: Slight advantage to home team but not significant enough to sway prediction"
+      ],
+      "gpt_reasoning": "The strongest factor influencing the prediction is the team vs team matchup data, where the away team has dominated the head-to-head series with a 5-1 record this season. This indicates a significant psychological and tactical edge over the home team. Additionally, the away team has shown better recent form, winning more games in the last 20, which suggests they are in a relatively better position. The Pythagorean win percentage further supports the away team's advantage, indicating they have be...",
+      "market_inefficiencies": [
+        "Books may overlook the strong H2H record favoring the away team",
+        "Market might not fully price in the away team's recent form improvement",
+        "H2H patterns, such as psychological edge, might be undervalued"
+      ],
+      "betting_recommendations": [
+        "Bet on away team moneyline",
+        "Moderate confidence level for bet sizing",
+        "Consider betting on away team to win series",
+        "Explore prop bets on away team scoring first based on H2H trends"
+      ]
+    },
+    {
+      "game_id": "NYM@ATL_2025-08-23",
+      "game": "NYM @ ATL",
+      "venue": "Truist Park",
+      "predicted_winner": "home",
+      "overall_confidence": 85.5,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.5735000000000001,
+      "expected_roi": 0.31470000000000004,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "MODERATE AWAY ADVANTAGE: 12 point difference",
+      "real_bullpen_advantage": "STRONG AWAY BULLPEN ADVANTAGE: #23 vs #11",
+      "real_recent_form_advantage": "MASSIVE HOME FORM ADVANTAGE: 65.0% vs 30.0%",
+      "real_team_vs_team_advantage": "MODERATE HOME H2H ADVANTAGE: 7-4 (63.6%)",
+      "h2h_season_record": "7-4",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home team's recent form: 13-7 (65.0%) vs Away team's 6-14 (30.0%)",
+        "Home bullpen ranked #23 with ERA 4.71 vs Away bullpen ranked #11 with ERA 4.18",
+        "Home venue advantage: +0.029 OPS and favorable ballpark factors (runs_factor: 1.02, hr_factor: 1.04)",
+        "H2H record: Home 7-4 (63.6%) vs Away 4-7 (36.4%)",
+        "Pitcher advantage: Clay Holmes (36.0/100) over Cal Quantrill (24.0/100)"
+      ],
+      "gpt_reasoning": "The prediction for the home team to win is primarily driven by a convergence of factors. The home team has a significantly better recent form, winning 65% of their last 20 games compared to the away team's 30%. This indicates a strong current performance trend. Additionally, the home team has a historical advantage in head-to-head matchups, winning 63.6% of their games against the away team this season. The home venue provides a slight OPS advantage and favorable ballpark factors that could ampl...",
+      "market_inefficiencies": [
+        "Books may overvalue the away team's bullpen advantage",
+        "Home team's recent form and venue advantages might be undervalued",
+        "H2H patterns showing home dominance could be overlooked",
+        "Pitcher quality differences might be overemphasized"
+      ],
+      "betting_recommendations": [
+        "Bet on home team moneyline",
+        "Confidence level: Medium-High for standard bet sizing",
+        "Consider alternative bets on home team run line",
+        "Explore H2H-based prop bets on home team scoring"
+      ]
+    },
+    {
+      "game_id": "BOS@NYY_2025-08-23",
+      "game": "BOS @ NYY",
+      "venue": "Yankee Stadium",
+      "predicted_winner": "away",
+      "overall_confidence": 86.75,
+      "gpt_confidence": 90,
+      "win_probability": 0.68,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.5895000000000001,
+      "expected_roi": 0.31790000000000007,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "STRONG AWAY ADVANTAGE: 17 point difference",
+      "real_bullpen_advantage": "MODERATE AWAY BULLPEN ADVANTAGE: #14 vs #5",
+      "real_recent_form_advantage": "MODERATE AWAY FORM ADVANTAGE: 50.0% vs 60.0%",
+      "real_team_vs_team_advantage": "STRONG AWAY H2H ADVANTAGE: 7-1 (87.5% in 8 games)",
+      "h2h_season_record": "1-7",
+      "h2h_momentum": "Cold",
+      "gpt_key_factors": [
+        "Pitcher advantage: Garrett Crochet (58.0) over Will Warren (41.0)",
+        "Away bullpen ranked #5 with ERA 4.06 vs Home bullpen ranked #14 with ERA 4.32",
+        "Away team recent form: 12-8 with +1.9 run differential",
+        "H2H record: Away 7-1 vs Home 1-7 in 2024 season",
+        "H2H momentum: Away Hot, Home Cold"
+      ],
+      "gpt_reasoning": "The prediction leans heavily towards the away team due to a convergence of multiple factors. The away team has a significant advantage in pitching with Garrett Crochet rated at 58.0 compared to Will Warren's 41.0. This is further supported by the away team's superior bullpen, ranked #5 with an ERA of 4.06, compared to the home team's bullpen ranked #14 with an ERA of 4.32. The away team's recent form is stronger, with a 12-8 record and a +1.9 run differential over the last 20 games, indicating b...",
+      "market_inefficiencies": [
+        "Books may undervalue the away team's H2H dominance",
+        "Pitcher quality advantage might be underappreciated",
+        "Bullpen strength differences could be overlooked",
+        "H2H patterns and recent form not fully priced in"
+      ],
+      "betting_recommendations": [
+        "Bet on away team moneyline",
+        "High confidence level for larger bet sizing",
+        "Consider betting on away team to cover the spread",
+        "Explore H2H-based prop bets on away team performance"
+      ]
+    },
+    {
+      "game_id": "LAD@SD_2025-08-23",
+      "game": "LAD @ SD",
+      "venue": "Petco Park",
+      "predicted_winner": "away",
+      "overall_confidence": 85.5,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.3645,
+      "expected_roi": 0.27290000000000003,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "STRONG AWAY ADVANTAGE: 23 point difference",
+      "real_bullpen_advantage": "MASSIVE HOME BULLPEN ADVANTAGE: #2 vs #18",
+      "real_recent_form_advantage": "STRONG HOME FORM ADVANTAGE: 65.0% vs 50.0%",
+      "real_team_vs_team_advantage": "STRONG AWAY H2H ADVANTAGE: 8-3 (72.7% in 11 games)",
+      "h2h_season_record": "3-8",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Pitcher quality advantage: Tyler Glasnow (52.0) vs Nestor Cortes (29.0), 23-point difference",
+        "Team vs Team H2H record: Away team 8-3 against Home team in 2024 season",
+        "Away team's better performance against LHP: 0.769 vs Home team's 0.683",
+        "Away team's momentum: Hot, with a neutral home team",
+        "Bullpen advantage for Home team, but Away team has better starting pitcher"
+      ],
+      "gpt_reasoning": "The strongest factor in this matchup is the significant advantage in starting pitcher quality for the away team, with Tyler Glasnow rated at 52.0 compared to Nestor Cortes at 29.0. This 23-point difference is substantial and suggests a clear edge in starting pitching. Additionally, the away team has dominated the head-to-head matchups this season, holding an 8-3 record against the home team, which indicates a psychological and tactical advantage. The away team also performs better against left-h...",
+      "market_inefficiencies": [
+        "Books may undervalue the away team's H2H dominance",
+        "Pitcher quality differences might not be fully priced in",
+        "Away team's superior performance against LHP could be overlooked"
+      ],
+      "betting_recommendations": [
+        "Bet on away team to win",
+        "Confidence level: High, consider larger bet size",
+        "Explore alternative bets on away team run line",
+        "Consider props on away team scoring against LHP"
+      ]
+    },
+    {
+      "game_id": "COL@PIT_2025-08-23",
+      "game": "COL @ PIT",
+      "venue": "PNC Park",
+      "predicted_winner": "home",
+      "overall_confidence": 79.05,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.248,
+      "expected_roi": 0.24960000000000002,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "STRONG HOME ADVANTAGE: 17 point difference",
+      "real_bullpen_advantage": "STRONG HOME BULLPEN ADVANTAGE: #16 vs #30",
+      "real_recent_form_advantage": "NEUTRAL FORM: 40.0% vs 40.0%",
+      "real_team_vs_team_advantage": "LIMITED H2H SAMPLE: 2-2 (4 games)",
+      "h2h_season_record": "2-2",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Pitcher advantage: Home pitcher Mike Burrows rated 38.0 vs Away pitcher Kyle Freeland rated 21.0, a 17-point difference.",
+        "Bullpen advantage: Home bullpen ranked #16 with ERA 4.34 vs Away bullpen ranked #30 with ERA 6.37.",
+        "Venue performance: Home team has a 0.693 OPS and 3.47 ERA at home vs Away team's 0.611 OPS and 5.46 ERA on the road.",
+        "Pythagorean win percentage: Home 42.2% vs Away 25.8%, indicating a stronger underlying performance by the home team.",
+        "H2H run differential: Home team +2.2 vs Away team -2.2, suggesting a slight edge in direct matchups."
+      ],
+      "gpt_reasoning": "The prediction leans towards the home team due to a convergence of several factors. The most significant is the pitching advantage, with Mike Burrows having a substantially higher quality rating than Kyle Freeland. This is complemented by a notable bullpen advantage, as the home team's bullpen is ranked significantly higher than the away team's. Additionally, the home team's performance at PNC Park is superior, with better OPS and ERA metrics compared to the away team's road performance. The Pyt...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's pitching and bullpen advantage.",
+        "The away team's poor road performance might not be fully priced in.",
+        "H2H run differential and venue-specific advantages could be overlooked."
+      ],
+      "betting_recommendations": [
+        "Bet on home team to win, given the convergence of advantages.",
+        "Confidence level for bet sizing should be moderate due to recent form risks.",
+        "Consider betting on the home team to cover the run line, given the pitching and bullpen edge.",
+        "Explore prop bets on home team's pitching performance, leveraging the quality differential."
+      ]
+    },
+    {
+      "game_id": "KC@DET_2025-08-23",
+      "game": "KC @ DET",
+      "venue": "Comerica Park",
+      "predicted_winner": "home",
+      "overall_confidence": 78.75,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.1775,
+      "expected_roi": 0.23550000000000001,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "MODERATE AWAY ADVANTAGE: 12 point difference",
+      "real_bullpen_advantage": "NEUTRAL BULLPEN MATCHUP: #7 vs #4",
+      "real_recent_form_advantage": "NEUTRAL FORM: 65.0% vs 60.0%",
+      "real_team_vs_team_advantage": "MODERATE HOME H2H ADVANTAGE: 6-2 (75.0%)",
+      "h2h_season_record": "6-2",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home team recent form: 13-7 (65.0%) with a run differential of +0.8",
+        "Home team bullpen ranked #7 with ERA 4.12 vs Away bullpen ranked #4 with ERA 3.96",
+        "Home venue performance: 0.781 OPS and 3.61 ERA vs Away team on road: 0.707 OPS and 3.76 ERA",
+        "H2H record: Home 6-2 (75.0%) with a run differential of +1.8",
+        "Pythagorean W%: Home 58.4% vs Away 49.7%"
+      ],
+      "gpt_reasoning": "The prediction leans towards the home team due to a convergence of multiple favorable factors. The home team has demonstrated strong recent form with a 65% win rate over the last 20 games and a positive run differential, indicating consistent performance. The home bullpen, while slightly lower ranked than the away bullpen, still maintains a solid ERA of 4.12, providing reliability in late-game situations. Additionally, the home venue advantage is significant, with the team performing better at h...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's recent form and venue advantage",
+        "Specific edges in H2H performance and Pythagorean W% likely overlooked",
+        "Market may not fully account for the home team's superior situational matchups"
+      ],
+      "betting_recommendations": [
+        "Bet on home team to win with medium confidence",
+        "Consider betting on home team run line for higher value",
+        "Explore prop bets on home team scoring over expected runs based on venue performance",
+        "H2H-based prop opportunities: Home team to score first or lead after 5 innings"
+      ]
+    },
+    {
+      "game_id": "WSN@PHI_2025-08-23",
+      "game": "WSN @ PHI",
+      "venue": "Citizens Bank Park",
+      "predicted_winner": "home",
+      "overall_confidence": 82.0,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.1105,
+      "expected_roi": 0.22210000000000002,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "MODERATE HOME ADVANTAGE: 12 point difference",
+      "real_bullpen_advantage": "MASSIVE HOME BULLPEN ADVANTAGE: #7 vs #29",
+      "real_recent_form_advantage": "STRONG HOME FORM ADVANTAGE: 65.0% vs 45.0%",
+      "real_team_vs_team_advantage": "BALANCED H2H: Home 6-5, Away 5-6 (11 games)",
+      "h2h_season_record": "6-5",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home team's recent form: 13-7 (65.0%) with a run differential of +1.6",
+        "Pitcher quality advantage: Aaron Nola (32.0) vs Mitchell Parker (20.0)",
+        "Bullpen advantage: Home bullpen ranked #7 vs Away bullpen ranked #29",
+        "Venue performance: Home OPS 0.807 vs Away OPS 0.712",
+        "Pythagorean W%: Home 58.7% vs Away 38.2%"
+      ],
+      "gpt_reasoning": "The prediction for the home team to win is primarily driven by a convergence of factors that favor them significantly. The home team has been in strong recent form, winning 65% of their last 20 games with a positive run differential of +1.6, indicating consistent offensive and defensive performance. Aaron Nola, the home pitcher, holds a substantial quality advantage over Mitchell Parker, which is likely to suppress the away team's scoring opportunities. Additionally, the home bullpen is ranked #...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's bullpen advantage",
+        "Pitcher quality differences might not be fully priced in",
+        "H2H patterns and recent form could be overlooked by markets"
+      ],
+      "betting_recommendations": [
+        "Bet on home team moneyline with moderate confidence",
+        "Consider betting on home team to cover the spread",
+        "Explore prop bets on home team's bullpen performance",
+        "Look for value in home team's run line given recent form"
+      ]
+    },
+    {
+      "game_id": "SF@MIL_2025-08-23",
+      "game": "SF @ MIL",
+      "venue": "American Family Field",
+      "predicted_winner": "home",
+      "overall_confidence": 85.75,
+      "gpt_confidence": 90,
+      "win_probability": 0.68,
+      "edge_strength": "ELITE",
+      "bet_recommendation": "STRONG BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 1.0390000000000001,
+      "expected_roi": 0.20780000000000004,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "SLIGHT HOME ADVANTAGE: 5 point difference",
+      "real_bullpen_advantage": "NEUTRAL BULLPEN MATCHUP: #3 vs #6",
+      "real_recent_form_advantage": "MASSIVE HOME FORM ADVANTAGE: 80.0% vs 35.0%",
+      "real_team_vs_team_advantage": "BALANCED H2H: Home 3-3, Away 3-3 (6 games)",
+      "h2h_season_record": "3-3",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home team's recent form: 16-4 (80.0%) with a +3.2 run differential",
+        "Home bullpen ranked #3 with an ERA of 3.92, providing a significant late-game advantage",
+        "Home pitcher Freddy Peralta has a slight edge over Logan Webb with a quality rating of 54.0 vs 49.0",
+        "Home venue performance: 0.711 OPS and 3.19 ERA, indicating strong home field advantage",
+        "Pythagorean win percentage favors home team at 64.0% vs away team's 48.4%"
+      ],
+      "gpt_reasoning": "The strongest factor in predicting the home team as the winner is their recent form, boasting an impressive 16-4 record over the last 20 games with a +3.2 run differential. This indicates a team in excellent form, both offensively and defensively. The home bullpen, ranked #3 with an ERA of 3.92, further solidifies their late-game advantage, especially against an away bullpen ranked #6. Freddy Peralta's slight edge over Logan Webb in pitcher quality (54.0 vs 49.0) adds to the home team's advantag...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's recent form and bullpen strength",
+        "Pitcher quality differences might not be fully priced in",
+        "H2H patterns and home venue performance could be overlooked by markets"
+      ],
+      "betting_recommendations": [
+        "Bet on home team to win with high confidence",
+        "Consider betting on home team to cover the spread given their recent form",
+        "Explore prop bets on home bullpen performance, given their high ranking",
+        "Look for value in betting on home team scoring over expected runs"
+      ]
+    },
+    {
+      "game_id": "HOU@BAL_2025-08-23",
+      "game": "HOU @ BAL",
+      "venue": "Oriole Park at Camden Yards",
+      "predicted_winner": "away",
+      "overall_confidence": 68.4,
+      "gpt_confidence": 78,
+      "win_probability": 0.58,
+      "edge_strength": "MODERATE",
+      "bet_recommendation": "LEAN",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.854,
+      "expected_roi": 0.1708,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "MODERATE AWAY ADVANTAGE: 8 point difference",
+      "real_bullpen_advantage": "STRONG AWAY BULLPEN ADVANTAGE: #27 vs #13",
+      "real_recent_form_advantage": "NEUTRAL FORM: 45.0% vs 45.0%",
+      "real_team_vs_team_advantage": "LIMITED H2H SAMPLE: 2-3 (5 games)",
+      "h2h_season_record": "2-3",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Pitcher advantage: Cristian Javier (45.0) over Dean Kremer (37.0) with an 8.0 point difference",
+        "Bullpen advantage: Away bullpen ranked #13 with ERA 4.25 vs Home bullpen ranked #27 with ERA 5.04",
+        "Series context: Away team leads 2-0 in the series, indicating momentum",
+        "Pythagorean W%: Away 51.8% vs Home 43.9%",
+        "H2H win percentage: Away team 60.0% vs Home team 40.0% in 2024 season"
+      ],
+      "gpt_reasoning": "The prediction leans towards the away team due to a convergence of factors. The away team has a significant advantage in pitching, with Cristian Javier rated higher than Dean Kremer by 8 points. This is complemented by a stronger bullpen, ranked #13 compared to the home team's #27, which is crucial in close games. The away team also leads the series 2-0, suggesting they have the momentum. Additionally, the Pythagorean win percentage favors the away team at 51.8% compared to the home team's 43.9%...",
+      "market_inefficiencies": [
+        "Books may undervalue the away team's bullpen advantage",
+        "Pitcher quality differences might not be fully priced in",
+        "H2H patterns showing away dominance could be overlooked",
+        "Momentum from series context might not be reflected in odds"
+      ],
+      "betting_recommendations": [
+        "Bet on away team moneyline with moderate confidence",
+        "Consider betting on under 9.5 runs given bullpen and pitcher quality",
+        "Explore prop bets on away team scoring first",
+        "H2H-based prop opportunities on away team winning by 2+ runs"
+      ]
+    },
+    {
+      "game_id": "TOR@MIA_2025-08-23",
+      "game": "TOR @ MIA",
+      "venue": "loanDepot park",
+      "predicted_winner": "away",
+      "overall_confidence": 71.45,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "MODERATE",
+      "bet_recommendation": "LEAN",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.9165,
+      "expected_roi": 0.18330000000000002,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "real_bullpen_advantage": "MODERATE AWAY BULLPEN ADVANTAGE: #24 vs #19",
+      "real_recent_form_advantage": "MASSIVE AWAY FORM ADVANTAGE: 35.0% vs 60.0%",
+      "real_team_vs_team_advantage": "LIMITED H2H SAMPLE: 0-1 (1 games)",
+      "h2h_season_record": "0-1",
+      "h2h_momentum": "Cold",
+      "gpt_key_factors": [
+        "Away team's recent form: 12-8 (60.0%) with a +1.7 run differential",
+        "Home team's recent form: 7-13 (35.0%) with a -0.9 run differential",
+        "Away bullpen ranked #19 with ERA 4.55 vs Home bullpen ranked #24 with ERA 4.88",
+        "Pythagorean W% advantage for Away team: 54.6% vs Home team: 44.4%",
+        "H2H record: Away team leads 1-0 with a +3.0 run differential"
+      ],
+      "gpt_reasoning": "The prediction for the away team to win is primarily driven by a convergence of multiple factors favoring them. The away team has demonstrated superior recent form, winning 60% of their last 20 games with a positive run differential of +1.7, compared to the home team's 35% win rate and -0.9 run differential. This indicates stronger current performance and momentum. Additionally, the away team's bullpen is ranked higher (#19) with a better ERA (4.55) than the home team's bullpen (#24, ERA 4.88), ...",
+      "market_inefficiencies": [
+        "Books may undervalue the away team's recent form and bullpen advantage",
+        "H2H patterns and run differential might be overlooked by markets",
+        "Pythagorean win percentage discrepancy could be underappreciated"
+      ],
+      "betting_recommendations": [
+        "Bet on the away team to win",
+        "Confidence level for sizing: High, due to convergence of factors",
+        "Consider betting on the away team to cover the run line",
+        "Explore prop bets on away team scoring over their average due to bullpen mismatch"
+      ]
+    },
+    {
+      "game_id": "CIN@ARI_2025-08-23",
+      "game": "CIN @ ARI",
+      "venue": "Chase Field",
+      "predicted_winner": "home",
+      "overall_confidence": 78.25,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.882,
+      "expected_roi": 0.1764,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "MODERATE HOME ADVANTAGE: 12 point difference",
+      "real_bullpen_advantage": "MASSIVE AWAY BULLPEN ADVANTAGE: #25 vs #9",
+      "real_recent_form_advantage": "MODERATE HOME FORM ADVANTAGE: 60.0% vs 50.0%",
+      "real_team_vs_team_advantage": "MODERATE AWAY H2H ADVANTAGE: 5-2 (71.4%)",
+      "h2h_season_record": "2-5",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home pitcher Nabil Crismatt has a quality rating of 63.0, which is 12 points higher than Andrew Abbott's 51.0, providing a significant pitching advantage.",
+        "The home team's recent form is stronger at 12-8 compared to the away team's 10-10, indicating better current performance.",
+        "The home bullpen is ranked #25 with a 4.89 ERA, but the away bullpen is stronger at #9 with a 4.13 ERA, which could be a concern if the game is close late.",
+        "The home team has a slight venue advantage with a 0.787 OPS at home compared to the away team's 0.703 OPS on the road.",
+        "H2H data shows the away team has a better record at 5-2, but the home team won the last game, suggesting potential momentum shift."
+      ],
+      "gpt_reasoning": "The prediction leans towards the home team due to a convergence of factors. The primary edge comes from the pitching matchup, where Nabil Crismatt's higher quality rating provides a significant advantage over Andrew Abbott. This is further supported by the home team's recent form, which is stronger than the away team's. Although the away bullpen is ranked higher, the home team's ability to perform well at home, as indicated by their OPS, provides an additional edge. The H2H data shows the away t...",
+      "market_inefficiencies": [
+        "Books may misprice the game by overvaluing the away team's H2H record without considering recent momentum shifts.",
+        "Specific edges such as the home pitcher's quality and recent form may be undervalued by the market.",
+        "H2H patterns might be overlooked, especially the recent home win that could indicate a shift in dynamics."
+      ],
+      "betting_recommendations": [
+        "Consider betting on the home team to win, given the convergence of favorable factors.",
+        "Confidence level for sizing should be moderate to high, around 85%, due to the strong pitching advantage.",
+        "Alternative betting angles could include betting on the home team to lead after the first five innings.",
+        "H2H-based prop opportunities might include betting on the home team to score first, leveraging their recent momentum."
+      ]
+    },
+    {
+      "game_id": "CLE@TEX_2025-08-23",
+      "game": "CLE @ TEX",
+      "venue": "Globe Life Field",
+      "predicted_winner": "home",
+      "overall_confidence": 68.15,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "MODERATE",
+      "bet_recommendation": "LEAN",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.713,
+      "expected_roi": 0.1426,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "SLIGHT HOME ADVANTAGE: 3 point difference",
+      "real_bullpen_advantage": "STRONG HOME BULLPEN ADVANTAGE: #1 vs #12",
+      "real_recent_form_advantage": "STRONG AWAY FORM ADVANTAGE: 35.0% vs 55.0%",
+      "real_team_vs_team_advantage": "LIMITED H2H SAMPLE: 2-0 (2 games)",
+      "h2h_season_record": "2-0",
+      "h2h_momentum": "Hot",
+      "gpt_key_factors": [
+        "Home bullpen ranked #1 with ERA 3.83 vs Away bullpen ranked #12 with ERA 4.22",
+        "Home team has a 100% win rate in H2H matchups this season with a +2.5 run differential",
+        "Home venue advantage with a 1.000 H2H edge and favorable ballpark factors (runs_factor: 1.06, hr_factor: 1.12)",
+        "Pythagorean W% favors home team at 54.7% vs away team at 46.6%",
+        "Home team has superior performance in night games (0.696 OPS) compared to away team (0.667 OPS)"
+      ],
+      "gpt_reasoning": "The prediction for the home team to win is primarily driven by a convergence of factors that favor them. The home team's bullpen is ranked #1 in the league with an ERA of 3.83, significantly better than the away team's bullpen ranked #12 with an ERA of 4.22. This bullpen advantage is crucial in close games. Additionally, the home team has dominated the head-to-head matchups this season, winning both games with a +2.5 run differential, indicating a strong matchup advantage. The venue also plays a...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's bullpen advantage",
+        "H2H dominance and venue-specific performance might be overlooked",
+        "Ballpark factors enhancing offense could be underappreciated"
+      ],
+      "betting_recommendations": [
+        "Bet on home team moneyline with high confidence",
+        "Consider betting on total runs over due to ballpark factors",
+        "Explore prop bets on home team bullpen performance",
+        "H2H-based prop opportunities on home team run differential"
+      ]
+    },
+    {
+      "game_id": "CHC@LAA_2025-08-23",
+      "game": "CHC @ LAA",
+      "venue": "Angel Stadium",
+      "predicted_winner": "away",
+      "overall_confidence": 76.7,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.635,
+      "expected_roi": 0.127,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "STRONG AWAY ADVANTAGE: 19 point difference",
+      "real_bullpen_advantage": "MASSIVE AWAY BULLPEN ADVANTAGE: #26 vs #10",
+      "real_recent_form_advantage": "MODERATE AWAY FORM ADVANTAGE: 40.0% vs 50.0%",
+      "real_team_vs_team_advantage": "LIMITED H2H SAMPLE: 0-1 (1 games)",
+      "h2h_season_record": "0-1",
+      "h2h_momentum": "Cold",
+      "gpt_key_factors": [
+        "Pitcher advantage: Away pitcher Cade Horton has a quality rating of 42.0 compared to home pitcher Victor Mederos at 23.0, giving a 19-point advantage.",
+        "Bullpen advantage: Away team has a bullpen ranked #10 with an ERA of 4.14, significantly better than the home team's bullpen ranked #26 with an ERA of 5.01.",
+        "Recent form: Away team has a 10-10 record with a neutral run differential, while the home team is 8-12 with a negative run differential of -0.7.",
+        "Pythagorean win percentage: Away team has a higher Pythagorean W% of 59.8% compared to the home team's 43.7%.",
+        "H2H momentum: Away team won the only matchup this season, maintaining a 100% win rate against the home team."
+      ],
+      "gpt_reasoning": "The prediction for the away team to win is primarily driven by a convergence of multiple factors. The away team benefits from a significant pitching advantage with Cade Horton rated at 42.0 compared to Victor Mederos at 23.0. This disparity is further supported by the bullpen rankings, where the away team holds a clear edge with a #10 ranking versus the home team's #26. Additionally, the away team's recent form is more stable, with a 10-10 record and a neutral run differential, while the home te...",
+      "market_inefficiencies": [
+        "Books may misprice the game by overvaluing home field advantage despite negative indicators.",
+        "Pitcher quality and bullpen disparities might not be fully reflected in odds.",
+        "H2H patterns, particularly the away team's momentum, could be overlooked.",
+        "The convergence of multiple factors might not be fully appreciated by the market."
+      ],
+      "betting_recommendations": [
+        "Bet on the away team to win with a medium to high confidence level.",
+        "Consider alternative bets such as away team run line given the pitching and bullpen advantages.",
+        "Explore prop bets related to away team pitching performance, given Horton's advantage.",
+        "H2H-based prop opportunities focusing on away team scoring first or leading after specific innings."
+      ]
+    },
+    {
+      "game_id": "Athletics@SEA_2025-08-23",
+      "game": "Athletics @ SEA",
+      "venue": "T-Mobile Park",
+      "predicted_winner": "home",
+      "overall_confidence": 79.0,
+      "gpt_confidence": 85,
+      "win_probability": 0.62,
+      "edge_strength": "STRONG",
+      "bet_recommendation": "BET",
+      "primary_edge_source": "convergence_of_factors",
+      "total_system_ev": 0.5525,
+      "expected_roi": 0.1105,
+      "max_bet_amount": 500.0,
+      "hot_batter_advantage": "NO SIGNIFICANT ADVANTAGE",
+      "pitcher_quality_advantage": "SLIGHT HOME ADVANTAGE: 7 point difference",
+      "real_bullpen_advantage": "STRONG HOME BULLPEN ADVANTAGE: #14 vs #28",
+      "real_recent_form_advantage": "NEUTRAL FORM: 60.0% vs 60.0%",
+      "real_team_vs_team_advantage": "BALANCED H2H: Home 6-6, Away 6-6 (12 games)",
+      "h2h_season_record": "6-6",
+      "h2h_momentum": "Neutral",
+      "gpt_key_factors": [
+        "Home bullpen ranked #14 vs Away bullpen ranked #28, significant bullpen advantage",
+        "Home pitcher George Kirby rated 42.0 vs Away pitcher Jeffrey Springs rated 35.0, providing a 7-point pitcher advantage",
+        "Home team recent form 12-8 matches Away team, but home venue advantage with 0.689 OPS and 3.36 ERA",
+        "H2H last 6 games: Home team 4-2, indicating recent dominance in matchup",
+        "Pythagorean W% favors Home team at 51.4% vs Away team at 43.2%"
+      ],
+      "gpt_reasoning": "The prediction leans towards the home team due to a convergence of multiple factors. The home team's bullpen is significantly stronger, ranked #14 compared to the away team's #28, which is crucial in close games. Additionally, the home pitcher, George Kirby, has a higher quality rating than the away pitcher, Jeffrey Springs, providing a 7-point advantage. The home team has performed well at T-Mobile Park with a 0.689 OPS and a 3.36 ERA, indicating a strong home field performance. In recent head-...",
+      "market_inefficiencies": [
+        "Books may undervalue the home team's bullpen advantage",
+        "Pitcher quality differences might not be fully priced in",
+        "H2H recent dominance by the home team could be overlooked",
+        "The impact of the home venue performance on the game's outcome might be underestimated"
+      ],
+      "betting_recommendations": [
+        "Bet on home team moneyline with moderate confidence",
+        "Consider under on total runs due to ballpark factors and bullpen strength",
+        "Explore prop bets on home team bullpen performance",
+        "H2H-based prop opportunities on home team winning margin"
+      ]
+    }
+  ]
+}

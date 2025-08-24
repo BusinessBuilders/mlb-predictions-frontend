@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "generated_at": "2025-08-21T07:25:00.000Z",
+    "last_updated": "2025-08-21T07:25:00.000Z",
+    "data_source": "supabase"
+  },
+  "current_performance": {
+    "total_predictions": 34,
+    "correct_predictions": 20,
+    "accuracy_rate": 58.82,
+    "games": {
+      "total": 29,
+      "correct": 15,
+      "accuracy": 51.72
+    },
+    "nrfi": {
+      "total": 5,
+      "correct": 5,
+      "accuracy": 100.0
+    }
+  },
+  "daily_breakdown": [
+    {
+      "date": "2025-08-20",
+      "games": {
+        "total": 14,
+        "correct": 6,
+        "accuracy": 42.86
+      },
+      "nrfi": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 100.0
+      }
+    },
+    {
+      "date": "2025-08-19",
+      "games": {
+        "total": 15,
+        "correct": 9,
+        "accuracy": 60.0
+      },
+      "nrfi": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 100.0
+      }
+    }
+  ],
+  "last_7_days": {
+    "total_predictions": 34,
+    "correct_predictions": 20,
+    "accuracy_rate": 58.82,
+    "days_with_data": 2
+  }
+}

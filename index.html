@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- CSP Override - Allow all scripts and styles for development -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; style-src 'self' 'unsafe-inline' data:; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https: wss: ws:;">
+    <!-- CSP Override - Allow localhost, ngrok, and Supabase connections -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; style-src 'self' 'unsafe-inline' data:; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https: http: wss: ws: *;">
     
     <title>MLB Elite Predictions</title>
     <meta name="description" content="Advanced MLB betting predictions with AI analysis and real-time data" />

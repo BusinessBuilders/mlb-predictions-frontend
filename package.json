@@ -12,6 +12,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.55.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.535.0",
     "react": "^19.1.0",

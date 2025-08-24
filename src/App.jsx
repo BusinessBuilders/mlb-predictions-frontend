@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TrackingComponent from './TrackingComponent';
+import Login from './components/Login';
+import Register from './components/Register';
+import supabaseAuthService from './services/supabaseService';
 import {
   TrendingUp, TrendingDown, Target, DollarSign, Flame, Zap, AlertTriangle,
   Star, BarChart3, Calendar, Clock, Trophy, Bell, User, Settings, Menu,
@@ -16,6 +19,11 @@ import {
 } from 'lucide-react';
 
 const MLBPredictionsApp = () => {
+  // Authentication State
+  const [isAuthenticated, setIsAuthenticated] = useState(supabaseAuthService.isAuthenticated());
+  const [currentUser, setCurrentUser] = useState(supabaseAuthService.getCurrentUser());
+  const [showAuth, setShowAuth] = useState('login'); // 'login' or 'register'
+
   // State Management
   const [selectedTab, setSelectedTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
@@ -1927,6 +1935,32 @@ const MLBPredictionsApp = () => {
     </div>
   );
 
+  // Authentication handlers
+  const handleLogin = (user) => {
+    setCurrentUser(user);
+    setIsAuthenticated(true);
+  };
+
+  const handleRegister = (user) => {
+    setCurrentUser(user);
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = async () => {
+    await supabaseAuthService.logout();
+    setCurrentUser(null);
+    setIsAuthenticated(false);
+  };
+
+  // Show authentication screens if not logged in
+  if (!isAuthenticated) {
+    if (showAuth === 'login') {
+      return <Login onLogin={handleLogin} switchToRegister={() => setShowAuth('register')} />;
+    } else {
+      return <Register onRegister={handleRegister} switchToLogin={() => setShowAuth('login')} />;
+    }
+  }
+
   // Main App Render
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
@@ -2044,14 +2078,20 @@ const MLBPredictionsApp = () => {
                   <User className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-white">Pro Bettor</p>
+                  <p className="font-bold text-white">{currentUser?.username || 'User'}</p>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full"></div>
                     <span className="text-xs text-gray-300">{userTier} Member</span>
                   </div>
                   <p className="text-xs text-gray-400">System: {predictionData?.meta?.system_name || 'MLB System'}</p>
                 </div>
-                <Settings className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                <button
+                  onClick={handleLogout}
+                  className="w-5 h-5 text-gray-400 hover:text-red-400 cursor-pointer transition-colors"
+                  title="Logout"
+                >
+                  <X className="w-5 h-5" />
+                </button>
               </div>
             </div>
           )}

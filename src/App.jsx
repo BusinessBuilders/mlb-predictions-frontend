@@ -375,6 +375,7 @@ const MLBPredictionsApp = () => {
     }
   };
 
+
   // Filter and sort games
   const getFilteredGames = () => {
     if (!predictionData?.detailed_predictions) return [];
@@ -397,6 +398,21 @@ const MLBPredictionsApp = () => {
         break;
       case 'hot':
         games = games.filter(g => g.primary_edges.hot_batter_system.scorching_batters > 0);
+        break;
+      case 'high_confidence':
+        games = games.filter(g => g.system_metrics.overall_confidence >= 80);
+        break;
+      case 'medium_confidence':
+        games = games.filter(g => g.system_metrics.overall_confidence >= 65 && g.system_metrics.overall_confidence < 80);
+        break;
+      case 'nrfi_available':
+        games = games.filter(g => getNrfiDataForGame(g) !== null);
+        break;
+      case 'high_nrfi':
+        games = games.filter(g => {
+          const nrfiData = getNrfiDataForGame(g);
+          return nrfiData && nrfiData.probability >= 75;
+        });
         break;
     }
     
@@ -539,7 +555,7 @@ const MLBPredictionsApp = () => {
             color: 'from-green-400 to-emerald-600',
             change: '+12.3%',
             trend: 'up',
-            subtitle: `${formatCurrency(predictionData?.summary?.total_expected_profit || 0)} expected profit`
+            subtitle: `${formatCurrency(predictionData?.meta?.expected_profit || 0)} expected profit`
           },
           {
             label: "AI Confidence",
@@ -727,6 +743,10 @@ const MLBPredictionsApp = () => {
                   <option value="lean">LEAN Only</option>
                   <option value="strong">Strong Edge</option>
                   <option value="hot">Hot Batters</option>
+                  <option value="high_confidence">High Confidence (80%+)</option>
+                  <option value="medium_confidence">Medium Confidence (65-80%)</option>
+                  <option value="nrfi_available">NRFI Available</option>
+                  <option value="high_nrfi">High NRFI (75%+)</option>
                 </select>
               </div>
 
@@ -2007,7 +2027,7 @@ const MLBPredictionsApp = () => {
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-gray-400">Today's EV</span>
                   <span className="text-lg font-bold text-green-400">
-                    +{(predictionData.summary.total_system_ev * 100).toFixed(1)}%
+                    +{((predictionData?.meta?.system_ev || 0) * 100).toFixed(1)}%
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-xs">
@@ -2286,7 +2306,7 @@ const MLBPredictionsApp = () => {
                 {predictionData && (
                   <>
                     <span className="text-sm text-gray-400">
-                      <span className="text-green-400 font-bold">SYSTEM EV:</span> +{(predictionData.summary.total_system_ev * 100).toFixed(1)}%
+                      <span className="text-green-400 font-bold">SYSTEM EV:</span> +{((predictionData?.meta?.system_ev || 0) * 100).toFixed(1)}%
                     </span>
                     <span className="text-gray-400">•</span>
                     <span className="text-sm text-gray-400">
@@ -2323,7 +2343,7 @@ const MLBPredictionsApp = () => {
                 {predictionData && (
                   <>
                     <span className="text-sm text-gray-400">
-                      <span className="text-green-400 font-bold">SYSTEM EV:</span> +{(predictionData.summary.total_system_ev * 100).toFixed(1)}%
+                      <span className="text-green-400 font-bold">SYSTEM EV:</span> +{((predictionData?.meta?.system_ev || 0) * 100).toFixed(1)}%
                     </span>
                     <span className="text-gray-400">•</span>
                     <span className="text-sm text-gray-400">

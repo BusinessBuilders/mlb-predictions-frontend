@@ -1,15 +1,235 @@
 {
   "meta": {
-    "generated_at": "2025-08-22T07:19:39.091897",
-    "period_start": "2025-07-23",
-    "period_end": "2025-08-22",
+    "generated_at": "2025-08-25T07:26:51.083835",
+    "period_start": "2025-07-26",
+    "period_end": "2025-08-25",
     "days_analyzed": 30
   },
-  "overall_performance": {},
-  "by_prediction_type": {},
-  "confidence_analysis": {},
-  "daily_trends": [],
-  "best_performers": {},
-  "recent_predictions": [],
-  "roi_analysis": {}
+  "overall_performance": {
+    "total_predictions": 109,
+    "correct_predictions": 41,
+    "incorrect_predictions": 26,
+    "pending_predictions": 42,
+    "accuracy_rate": 61.19,
+    "average_confidence": 78.71,
+    "games_tracked": 106
+  },
+  "by_prediction_type": {
+    "game_outcome": {
+      "total_predictions": 64,
+      "correct_predictions": 39,
+      "accuracy_rate": 60.94,
+      "average_confidence": 77.52
+    },
+    "nrfi": {
+      "total_predictions": 3,
+      "correct_predictions": 2,
+      "accuracy_rate": 66.67,
+      "average_confidence": 91.67,
+      "average_probability": 0.23
+    },
+    "moneyline_by_confidence": {
+      "medium": {
+        "total_predictions": 33,
+        "correct_predictions": 22,
+        "accuracy_rate": 66.67,
+        "average_confidence": 75.37
+      },
+      "high": {
+        "total_predictions": 27,
+        "correct_predictions": 14,
+        "accuracy_rate": 51.85,
+        "average_confidence": 83.58
+      },
+      "low": {
+        "total_predictions": 4,
+        "correct_predictions": 3,
+        "accuracy_rate": 75.0,
+        "average_confidence": 54.3
+      }
+    }
+  },
+  "confidence_analysis": {
+    "high": {
+      "total": 27,
+      "correct": 14,
+      "accuracy": 51.85,
+      "avg_confidence": 83.58
+    },
+    "medium": {
+      "total": 33,
+      "correct": 22,
+      "accuracy": 66.67,
+      "avg_confidence": 75.37
+    },
+    "low": {
+      "total": 4,
+      "correct": 3,
+      "accuracy": 75.0,
+      "avg_confidence": 54.3
+    },
+    "nrfi_breakdown": [
+      {
+        "confidence_cat": "high",
+        "probability_cat": "low",
+        "total": 3,
+        "correct": 2,
+        "accuracy": 66.67,
+        "avg_confidence": 91.67,
+        "avg_probability": 0.23
+      }
+    ]
+  },
+  "daily_trends": [
+    {
+      "date": "2025-08-23",
+      "total_predictions": 13,
+      "correct_predictions": 9,
+      "accuracy_rate": 69.23,
+      "average_confidence": 76.49
+    },
+    {
+      "date": "2025-08-22",
+      "total_predictions": 14,
+      "correct_predictions": 10,
+      "accuracy_rate": 71.43,
+      "average_confidence": 75.27
+    },
+    {
+      "date": "2025-08-21",
+      "total_predictions": 8,
+      "correct_predictions": 5,
+      "accuracy_rate": 62.5,
+      "average_confidence": 78.21
+    },
+    {
+      "date": "2025-08-20",
+      "total_predictions": 14,
+      "correct_predictions": 6,
+      "accuracy_rate": 42.86,
+      "average_confidence": 78.16
+    },
+    {
+      "date": "2025-08-19",
+      "total_predictions": 15,
+      "correct_predictions": 9,
+      "accuracy_rate": 60.0,
+      "average_confidence": 79.53
+    }
+  ],
+  "best_performers": {
+    "top_teams": []
+  },
+  "recent_predictions": [
+    {
+      "date": "2025-08-23",
+      "type": "nrfi",
+      "description": "NRFI: SF vs MIL",
+      "confidence": 95.0,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "NRFI"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "nrfi",
+      "description": "NRFI: CIN vs ARI",
+      "confidence": 95.0,
+      "result": "\u274c INCORRECT",
+      "actual_outcome": null
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: SD vs LAD",
+      "confidence": 86.6,
+      "result": "\u274c INCORRECT",
+      "actual_outcome": "San Diego Padres team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: MIL vs SF",
+      "confidence": 85.75,
+      "result": "\u274c INCORRECT",
+      "actual_outcome": "San Francisco Giants team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: NYY vs BOS",
+      "confidence": 85.65,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Boston Red Sox team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: ATL vs NYM",
+      "confidence": 85.5,
+      "result": "\u274c INCORRECT",
+      "actual_outcome": "New York Mets team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: PHI vs WSN",
+      "confidence": 82.0,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Philadelphia Phillies team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: PIT vs COL",
+      "confidence": 79.05,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Pittsburgh Pirates team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: DET vs KC",
+      "confidence": 78.75,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Detroit Tigers team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: ARI vs CIN",
+      "confidence": 78.25,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Arizona Diamondbacks team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: LAA vs CHC",
+      "confidence": 76.7,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Chicago Cubs team won"
+    },
+    {
+      "date": "2025-08-23",
+      "type": "game_outcome",
+      "description": "Game: BAL vs HOU",
+      "confidence": 72.25,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "Houston Astros team won"
+    },
+    {
+      "date": "2025-08-21",
+      "type": "nrfi",
+      "description": "NRFI: TEX vs KC",
+      "confidence": 85.0,
+      "result": "\u2705 CORRECT",
+      "actual_outcome": "NRFI"
+    }
+  ],
+  "roi_analysis": {
+    "total_units_wagered": 15,
+    "total_units_won": 13.56,
+    "net_units": -1.44,
+    "roi_percentage": -9.6
+  }
 }

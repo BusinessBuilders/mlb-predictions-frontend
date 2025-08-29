@@ -35,9 +35,8 @@ Thumbs.db
 logs
 *.log
 
-# Generated data files
-public/data/*.json
-public/data/*.db
+# Data files (uncomment if you don't want to commit JSON files)
+# public/data/*.json
 
 # Temporary files
 *.tmp

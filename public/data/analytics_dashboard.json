@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generated_at": "2025-08-25T07:26:51.083835",
-    "period_start": "2025-07-26",
-    "period_end": "2025-08-25",
+    "generated_at": "2025-08-29T10:48:54.114533",
+    "period_start": "2025-07-30",
+    "period_end": "2025-08-29",
     "days_analyzed": 30
   },
   "overall_performance": {
-    "total_predictions": 109,
+    "total_predictions": 124,
     "correct_predictions": 41,
     "incorrect_predictions": 26,
-    "pending_predictions": 42,
+    "pending_predictions": 57,
     "accuracy_rate": 61.19,
-    "average_confidence": 78.71,
-    "games_tracked": 106
+    "average_confidence": 78.28,
+    "games_tracked": 121
   },
   "by_prediction_type": {
     "game_outcome": {
@@ -216,14 +216,6 @@
       "confidence": 72.25,
       "result": "\u2705 CORRECT",
       "actual_outcome": "Houston Astros team won"
-    },
-    {
-      "date": "2025-08-21",
-      "type": "nrfi",
-      "description": "NRFI: TEX vs KC",
-      "confidence": 85.0,
-      "result": "\u2705 CORRECT",
-      "actual_outcome": "NRFI"
     }
   ],
   "roi_analysis": {

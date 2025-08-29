@@ -1,23 +1,463 @@
 {
   "meta": {
-    "date": "2025-08-24",
-    "version": "5.0-supabase",
-    "timestamp": "2025-08-24T10:22:07.768598",
-    "data_source": "supabase"
+    "date": "2025-08-29",
+    "version": "5.0",
+    "timestamp": "2025-08-29T11:17:24.837041"
   },
   "summary": {
-    "date": "2025-08-24",
-    "total_games": 0,
-    "total_nrfi_opportunities": 0,
+    "date": "2025-08-29",
+    "total_games": 15,
+    "total_nrfi_opportunities": 1,
     "expected_value": {
-      "total": 0,
-      "premium_plays": 0
+      "total": 0.4531072386137227,
+      "premium_plays": 1
     }
   },
-  "games": [],
-  "betting_opportunities": {
-    "nrfi_bets": []
-  },
+  "games": [
+    {
+      "game_id": "STL@CIN_2025-08-29",
+      "away_team": "STL",
+      "home_team": "CIN",
+      "venue": "Great American Ball Park",
+      "status": "Scheduled",
+      "home_pitcher": "Zack Littell",
+      "away_pitcher": "Matthew Liberatore",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "TB@WSN_2025-08-29",
+      "away_team": "TB",
+      "home_team": "WSN",
+      "venue": "Nationals Park",
+      "status": "Scheduled",
+      "home_pitcher": "Mitchell Parker",
+      "away_pitcher": "Adrian Houser",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "ATL@PHI_2025-08-29",
+      "away_team": "ATL",
+      "home_team": "PHI",
+      "venue": "Citizens Bank Park",
+      "status": "Scheduled",
+      "home_pitcher": "Ranger Su\u00e1rez",
+      "away_pitcher": "Bryce Elder",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "MIL@TOR_2025-08-29",
+      "away_team": "MIL",
+      "home_team": "TOR",
+      "venue": "Rogers Centre",
+      "status": "Scheduled",
+      "home_pitcher": "Shane Bieber",
+      "away_pitcher": "Freddy Peralta",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "PIT@BOS_2025-08-29",
+      "away_team": "PIT",
+      "home_team": "BOS",
+      "venue": "Fenway Park",
+      "status": "Scheduled",
+      "home_pitcher": "TBD",
+      "away_pitcher": "Paul Skenes",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "SEA@CLE_2025-08-29",
+      "away_team": "SEA",
+      "home_team": "CLE",
+      "venue": "Progressive Field",
+      "status": "Scheduled",
+      "home_pitcher": "Logan Allen",
+      "away_pitcher": "George Kirby",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "MIA@NYM_2025-08-29",
+      "away_team": "MIA",
+      "home_team": "NYM",
+      "venue": "Citi Field",
+      "status": "Scheduled",
+      "home_pitcher": "Jonah Tong",
+      "away_pitcher": "Eury P\u00e9rez",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "NYY@CWS_2025-08-29",
+      "away_team": "NYY",
+      "home_team": "CWS",
+      "venue": "Rate Field",
+      "status": "Scheduled",
+      "home_pitcher": "Yoendrys G\u00f3mez",
+      "away_pitcher": "Carlos Rod\u00f3n",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "LAA@HOU_2025-08-29",
+      "away_team": "LAA",
+      "home_team": "HOU",
+      "venue": "Daikin Park",
+      "status": "Scheduled",
+      "home_pitcher": "Cristian Javier",
+      "away_pitcher": "Tyler Anderson",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "DET@KC_2025-08-29",
+      "away_team": "DET",
+      "home_team": "KC",
+      "venue": "Kauffman Stadium",
+      "status": "Scheduled",
+      "home_pitcher": "Seth Lugo",
+      "away_pitcher": "Chris Paddack",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "SD@MIN_2025-08-29",
+      "away_team": "SD",
+      "home_team": "MIN",
+      "venue": "Target Field",
+      "status": "Scheduled",
+      "home_pitcher": "Zebby Matthews",
+      "away_pitcher": "Nestor Cortes",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "CHC@COL_2025-08-29",
+      "away_team": "CHC",
+      "home_team": "COL",
+      "venue": "Coors Field",
+      "status": "Scheduled",
+      "home_pitcher": "Germ\u00e1n M\u00e1rquez",
+      "away_pitcher": "Cade Horton",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "TEX@Athletics_2025-08-29",
+      "away_team": "TEX",
+      "home_team": "Athletics",
+      "venue": "Sutter Health Park",
+      "status": "Scheduled",
+      "home_pitcher": "Jeffrey Springs",
+      "away_pitcher": "Jack Leiter",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "ARI@LAD_2025-08-29",
+      "away_team": "ARI",
+      "home_team": "LAD",
+      "venue": "Dodger Stadium",
+      "status": "Scheduled",
+      "home_pitcher": "Blake Snell",
+      "away_pitcher": "Zac Gallen",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    },
+    {
+      "game_id": "BAL@SF_2025-08-29",
+      "away_team": "BAL",
+      "home_team": "SF",
+      "venue": "Oracle Park",
+      "status": "Scheduled",
+      "home_pitcher": "Robbie Ray",
+      "away_pitcher": "Dean Kremer",
+      "hot_batters_count": 0,
+      "scorching_count": 0
+    }
+  ],
   "hot_batters": [],
-  "homer_predictions": []
+  "betting_opportunities": {
+    "nrfi_bets": [
+      {
+        "game_id": "MIL@TOR_2025-08-29",
+        "matchup": "MIL @ TOR",
+        "away_team": "MIL",
+        "home_team": "TOR",
+        "home_pitcher": "Shane Bieber",
+        "away_pitcher": "Freddy Peralta",
+        "probability": 79.3,
+        "confidence": 91.0,
+        "units": 2.3,
+        "strength": "\ud83d\udd25 STRONG ML NRFI",
+        "expected_value": 0.4531072386137227,
+        "recommendation": "",
+        "hot_batters_in_game": 0
+      }
+    ],
+    "strikeout_props": []
+  },
+  "homer_predictions": [
+    {
+      "player": "Aaron Judge",
+      "team": "NYY",
+      "game": "NYY @ CWS",
+      "hr_score": 73.69,
+      "season_hrs": 41,
+      "recent_hrs": 2,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 1.11,
+      "pitcher_era": 4.73,
+      "ballpark": "Rate Field",
+      "ballpark_factor": 1.0,
+      "trend": "ice_cold",
+      "batting_order": 6,
+      "composite_score": 100
+    },
+    {
+      "player": "Cal Raleigh",
+      "team": "SEA",
+      "game": "SEA @ CLE",
+      "hr_score": 78.1,
+      "season_hrs": 50,
+      "recent_hrs": 4,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.94,
+      "pitcher_era": 4.35,
+      "ballpark": "Progressive Field",
+      "ballpark_factor": 1.0,
+      "trend": "cold",
+      "batting_order": 8,
+      "composite_score": 100
+    },
+    {
+      "player": "George Springer",
+      "team": "TOR",
+      "game": "MIL @ TOR",
+      "hr_score": 79.89,
+      "season_hrs": 24,
+      "recent_hrs": 6,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.935,
+      "pitcher_era": 2.68,
+      "ballpark": "Rogers Centre",
+      "ballpark_factor": 1.0,
+      "trend": "scorching",
+      "batting_order": 6,
+      "composite_score": 100
+    },
+    {
+      "player": "Jurickson Profar",
+      "team": "ATL",
+      "game": "ATL @ PHI",
+      "hr_score": 81.34,
+      "season_hrs": 12,
+      "recent_hrs": 5,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.87,
+      "pitcher_era": 3.07,
+      "ballpark": "Citizens Bank Park",
+      "ballpark_factor": 1.06,
+      "trend": "scorching",
+      "batting_order": 3,
+      "composite_score": 100
+    },
+    {
+      "player": "Bryce Harper",
+      "team": "PHI",
+      "game": "ATL @ PHI",
+      "hr_score": 70.3,
+      "season_hrs": 22,
+      "recent_hrs": 3,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.869,
+      "pitcher_era": 6.12,
+      "ballpark": "Citizens Bank Park",
+      "ballpark_factor": 1.06,
+      "trend": "hot",
+      "batting_order": 4,
+      "composite_score": 100
+    },
+    {
+      "player": "Eugenio Su\u00e1rez",
+      "team": "SEA",
+      "game": "SEA @ CLE",
+      "hr_score": 83.37,
+      "season_hrs": 42,
+      "recent_hrs": 4,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.862,
+      "pitcher_era": 4.35,
+      "ballpark": "Progressive Field",
+      "ballpark_factor": 1.0,
+      "trend": "hot",
+      "batting_order": 7,
+      "composite_score": 100
+    },
+    {
+      "player": "Corey Seager",
+      "team": "TEX",
+      "game": "TEX @ Athletics",
+      "hr_score": 72.69,
+      "season_hrs": 21,
+      "recent_hrs": 3,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.862,
+      "pitcher_era": 4.15,
+      "ballpark": "Sutter Health Park",
+      "ballpark_factor": 1.0,
+      "trend": "scorching",
+      "batting_order": 2,
+      "composite_score": 100
+    },
+    {
+      "player": "Cody Bellinger",
+      "team": "NYY",
+      "game": "NYY @ CWS",
+      "hr_score": 80.59,
+      "season_hrs": 26,
+      "recent_hrs": 4,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.852,
+      "pitcher_era": 4.73,
+      "ballpark": "Rate Field",
+      "ballpark_factor": 1.0,
+      "trend": "scorching",
+      "batting_order": 3,
+      "composite_score": 100
+    },
+    {
+      "player": "Junior Caminero",
+      "team": "TB",
+      "game": "TB @ WSN",
+      "hr_score": 81.91,
+      "season_hrs": 39,
+      "recent_hrs": 4,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.838,
+      "pitcher_era": 6.01,
+      "ballpark": "Nationals Park",
+      "ballpark_factor": 1.0,
+      "trend": "neutral",
+      "batting_order": 7,
+      "composite_score": 100
+    },
+    {
+      "player": "Riley Greene",
+      "team": "DET",
+      "game": "DET @ KC",
+      "hr_score": 78.98,
+      "season_hrs": 32,
+      "recent_hrs": 4,
+      "vs_pitcher_hand": "R",
+      "vs_pitcher_ops": 0.837,
+      "pitcher_era": 3.99,
+      "ballpark": "Kauffman Stadium",
+      "ballpark_factor": 0.92,
+      "trend": "hot",
+      "batting_order": 3,
+      "composite_score": 100
+    }
+  ],
+  "top_nrfi_candidates": [
+    {
+      "rank": 1,
+      "game_id": "MIL@TOR_2025-08-29",
+      "matchup": "MIL @ TOR",
+      "away_team": "MIL",
+      "home_team": "TOR",
+      "venue": "Rogers Centre",
+      "probability": 79.3,
+      "confidence": 91.0,
+      "qualifies_for_bet": true,
+      "reason_not_qualified": null,
+      "analysis": "The NRFI probability of 79.3% for the MIL @ TOR game is supported by neutral pitcher and batter factors, indicating that neither team has a significant advantage in the first inning. The high confidence level of 91% suggests a strong historical trend or model backing this outcome, reducing uncertainty. Given these metrics, the game qualifies as a solid NRFI betting opportunity, with balanced matchups likely to result in a scoreless first inning.",
+      "component_breakdown": {
+        "pitcher_factor": 0,
+        "batter_factor": 0,
+        "situational_factor": 0,
+        "market_edge": 29.2
+      }
+    },
+    {
+      "rank": 2,
+      "game_id": "BAL@SF_2025-08-29",
+      "matchup": "BAL @ SF",
+      "away_team": "BAL",
+      "home_team": "SF",
+      "venue": "Oracle Park",
+      "probability": 63.0,
+      "confidence": 95.0,
+      "qualifies_for_bet": false,
+      "reason_not_qualified": "Analysis complete",
+      "analysis": "The BAL @ SF game presents a 63.0% probability for a No Run First Inning (NRFI), supported by a high confidence level of 95%. The neutral Pitcher and Batter Factors (+0.0) suggest balanced matchups, indicating neither side has a distinct advantage, which contributes to the NRFI potential. However, the bet does not qualify due to the completion of the analysis, implying that while the metrics are favorable, other unquantified factors may introduce uncertainty.",
+      "component_breakdown": {
+        "pitcher_factor": 0,
+        "batter_factor": 0,
+        "situational_factor": 0,
+        "market_edge": 13.0
+      }
+    },
+    {
+      "rank": 3,
+      "game_id": "TB@WSN_2025-08-29",
+      "matchup": "TB @ WSN",
+      "away_team": "TB",
+      "home_team": "WSN",
+      "venue": "Nationals Park",
+      "probability": 56.7,
+      "confidence": 93.0,
+      "qualifies_for_bet": false,
+      "reason_not_qualified": "Analysis complete",
+      "analysis": "The TB @ WSN game presents a moderate NRFI probability of 56.7%, supported by a neutral pitcher and batter factor, indicating neither side has a distinct advantage in the first inning. The high confidence level of 93% suggests reliability in the underlying data, yet the absence of strong pitcher or batter influences contributes to uncertainty, as neither team shows a clear propensity to score or prevent runs early. Despite these metrics, the bet does not qualify due to the completion of the analysis, suggesting that while the data is robust, it lacks the decisive factors needed for a confident wagering decision.",
+      "component_breakdown": {
+        "pitcher_factor": 0,
+        "batter_factor": 0,
+        "situational_factor": 0,
+        "market_edge": 6.7
+      }
+    },
+    {
+      "rank": 4,
+      "game_id": "NYY@CWS_2025-08-29",
+      "matchup": "NYY @ CWS",
+      "away_team": "NYY",
+      "home_team": "CWS",
+      "venue": "Rate Field",
+      "probability": 53.9,
+      "confidence": 83.0,
+      "qualifies_for_bet": false,
+      "reason_not_qualified": "Analysis complete",
+      "analysis": "The NYY @ CWS game presents a moderate NRFI potential with a probability of 53.9%, driven by neutral pitcher and batter factors, indicating neither side has a distinct advantage in the first inning. The confidence level of 83% suggests a strong analytical backing, yet the absence of standout pitching or hitting metrics introduces some uncertainty. Despite these factors, the game does not qualify for a bet due to the analysis being complete, likely indicating that the potential edge is not significant enough to warrant action.",
+      "component_breakdown": {
+        "pitcher_factor": 0,
+        "batter_factor": 0,
+        "situational_factor": 0,
+        "market_edge": 3.8
+      }
+    },
+    {
+      "rank": 5,
+      "game_id": "STL@CIN_2025-08-29",
+      "matchup": "STL @ CIN",
+      "away_team": "STL",
+      "home_team": "CIN",
+      "venue": "Great American Ball Park",
+      "probability": 50.5,
+      "confidence": 95.0,
+      "qualifies_for_bet": false,
+      "reason_not_qualified": "Analysis complete",
+      "analysis": "The STL @ CIN matchup presents a balanced NRFI probability of 50.5%, with a high confidence level of 95%, suggesting a well-analyzed scenario. Both the pitcher and batter factors are neutral at +0.0, indicating no significant advantage for either side in the first inning, which supports the NRFI potential. However, the bet does not qualify due to the analysis being complete, implying that while the probability is slightly in favor of a NRFI, the lack of a decisive edge in pitcher or batter performance contributes to the uncertainty.",
+      "component_breakdown": {
+        "pitcher_factor": 0,
+        "batter_factor": 0,
+        "situational_factor": 0,
+        "market_edge": 0.4
+      }
+    }
+  ]
 }

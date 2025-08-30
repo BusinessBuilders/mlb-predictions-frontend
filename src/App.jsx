@@ -23,6 +23,7 @@ const MLBPredictionsApp = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(supabaseAuthService.isAuthenticated());
   const [currentUser, setCurrentUser] = useState(supabaseAuthService.getCurrentUser());
   const [showAuth, setShowAuth] = useState('login'); // 'login' or 'register'
+  const [publicMode, setPublicMode] = useState(!isAuthenticated); // Show public content first
 
   // State Management
   const [selectedTab, setSelectedTab] = useState('dashboard');
@@ -42,6 +43,7 @@ const MLBPredictionsApp = () => {
   const [batterData, setBatterData] = useState(null);
   const [trackingData, setTrackingData] = useState(null);
   const [parlayData, setParlayData] = useState(null);
+  const [analyticsData, setAnalyticsData] = useState(null);
   const [parlayLoading, setParlayLoading] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -234,6 +236,7 @@ const MLBPredictionsApp = () => {
       }
       if (trackingDataResult) {
         setTrackingData(trackingDataResult);
+        setAnalyticsData(trackingDataResult); // Use same data for analytics
       } else {
         console.log('Could not load tracking data - dashboard will show placeholder');
       }
@@ -397,7 +400,12 @@ const MLBPredictionsApp = () => {
         games = games.filter(g => g.system_metrics.edge_strength === 'STRONG' || g.system_metrics.edge_strength === 'ELITE');
         break;
       case 'hot':
-        games = games.filter(g => g.primary_edges.hot_batter_system.scorching_batters > 0);
+        games = games.filter(g => {
+          // Try primary_edges first, then fall back to parsing GPT analysis
+          const scorching = g.primary_edges?.hot_batter_system?.scorching_batters || 
+                           parseInt(g.gpt_analysis?.key_factors?.find(f => f.includes('scorching'))?.match(/(\d+)\s*scorching/i)?.[1] || '0');
+          return scorching > 0;
+        });
         break;
       case 'high_confidence':
         games = games.filter(g => g.system_metrics.overall_confidence >= 80);
@@ -490,6 +498,37 @@ const MLBPredictionsApp = () => {
 
   // Render functions for different sections
   const renderContent = () => {
+    // Require authentication for detailed sections in public mode
+    const requiresAuth = ['predictions', 'nrfi', 'props', 'homers', 'hits', 'parlays', 'tracking', 'analytics'];
+    
+    if (publicMode && requiresAuth.includes(selectedTab)) {
+      return (
+        <div className="p-4 lg:p-6 text-center">
+          <div className="max-w-md mx-auto">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Lock className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Premium Feature</h3>
+            <p className="text-gray-400 mb-6">Sign up to access detailed predictions and analytics</p>
+            <div className="space-y-3">
+              <button
+                onClick={() => {setPublicMode(false); setShowAuth('login');}}
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium hover:from-purple-500 hover:to-pink-500 transition-all"
+              >
+                Sign In
+              </button>
+              <button
+                onClick={() => {setPublicMode(false); setShowAuth('register');}}
+                className="w-full py-3 border border-gray-600 rounded-lg font-medium hover:bg-gray-800 transition-all"
+              >
+                Create Account
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     switch(selectedTab) {
       case 'dashboard':
         return renderDashboard();
@@ -546,16 +585,16 @@ const MLBPredictionsApp = () => {
       </div>
 
       {/* Stats Dashboard */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-8">
         {[
           {
-            label: "System EV",
-            value: `+${((predictionData?.summary?.total_system_ev || 0) * 100).toFixed(1)}%`,
+            label: "ROI",
+            value: `${(analyticsData?.roi_analysis?.roi_percentage || 0).toFixed(1)}%`,
             icon: TrendingUp,
-            color: 'from-green-400 to-emerald-600',
-            change: '+12.3%',
-            trend: 'up',
-            subtitle: `${formatCurrency(predictionData?.meta?.expected_profit || 0)} expected profit`
+            color: (analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? 'from-green-400 to-emerald-600' : 'from-red-400 to-red-600',
+            change: `${(analyticsData?.roi_analysis?.net_units || 0).toFixed(1)} units`,
+            trend: (analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? 'up' : (analyticsData?.roi_analysis?.roi_percentage || 0) < 0 ? 'down' : 'neutral',
+            subtitle: `${analyticsData?.roi_analysis?.total_units_wagered || 0} units wagered`
           },
           {
             label: "AI Confidence",
@@ -583,6 +622,26 @@ const MLBPredictionsApp = () => {
             change: `${nrfiData?.summary?.expected_value?.premium_plays || 0} premium`,
             trend: 'up',
             subtitle: 'First inning opportunities'
+          },
+          {
+            label: "ML Accuracy",
+            value: `${analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate?.toFixed(1) || '0.0'}%`,
+            icon: Trophy,
+            color: 'from-yellow-400 to-orange-600',
+            change: `${analyticsData?.overall_performance?.total_predictions || 0} games`,
+            trend: analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate > 60 ? 'up' : analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate > 50 ? 'neutral' : 'down',
+            subtitle: '30-day moneyline record'
+          },
+          {
+            label: "Last Night",
+            value: `${analyticsData?.daily_trends?.[0]?.accuracy_rate?.toFixed(1) || '0.0'}%`,
+            icon: Clock,
+            color: analyticsData?.daily_trends?.[0]?.accuracy_rate > 60 ? 'from-green-400 to-emerald-600' : 
+                   analyticsData?.daily_trends?.[0]?.accuracy_rate > 50 ? 'from-yellow-400 to-orange-500' : 'from-red-400 to-red-600',
+            change: `${analyticsData?.daily_trends?.[0]?.correct_predictions || 0}/${analyticsData?.daily_trends?.[0]?.total_predictions || 0} correct`,
+            trend: (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) > (analyticsData?.overall_performance?.accuracy_rate || 0) ? 'up' : 
+                   (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) < (analyticsData?.overall_performance?.accuracy_rate || 0) ? 'down' : 'neutral',
+            subtitle: `${analyticsData?.daily_trends?.[0]?.date || 'Recent'} results`
           }
         ].map((stat, index) => (
           <div key={index} className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 hover:border-gray-600 transition-all group cursor-pointer p-4 lg:p-6">
@@ -702,6 +761,22 @@ const MLBPredictionsApp = () => {
   );
 
   const renderPredictions = () => {
+    if (!predictionData) {
+      return (
+        <div className="p-4 lg:p-6">
+          <div className="text-center text-gray-400">Loading predictions...</div>
+        </div>
+      );
+    }
+
+    if (!predictionData.detailed_predictions || predictionData.detailed_predictions.length === 0) {
+      return (
+        <div className="p-4 lg:p-6">
+          <div className="text-center text-gray-400">No predictions available for today.</div>
+        </div>
+      );
+    }
+
     const filteredGames = getFilteredGames();
     
     return (
@@ -917,8 +992,16 @@ const MLBPredictionsApp = () => {
                       <Flame className="w-4 lg:w-5 h-4 lg:h-5 text-orange-400" />
                       <span className="text-gray-400 text-xs lg:text-sm font-bold">Hot Batters</span>
                     </div>
-                    <div className="text-white font-bold text-sm lg:text-base">{game.primary_edges.hot_batter_system.scorching_batters} Scorching</div>
-                    <div className="text-xs text-gray-400 mt-1 line-clamp-2">{game.primary_edges.hot_batter_system.advantage}</div>
+                    <div className="text-white font-bold text-sm lg:text-base">
+                      {game.primary_edges?.hot_batter_system?.scorching_batters || 
+                       (game.gpt_analysis?.key_factors?.find(f => f.includes('scorching'))?.match(/(\d+)\s*scorching/i)?.[1] || 0)} 
+                      Scorching
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1 line-clamp-2">
+                      {game.primary_edges?.hot_batter_system?.advantage || 
+                       game.gpt_analysis?.key_factors?.find(f => f.includes('hot batter') || f.includes('Hot batter'))?.slice(0, 60) + '...' || 
+                       'Based on GPT analysis'}
+                    </div>
                   </div>
 
                   {/* Pitcher Quality */}
@@ -928,9 +1011,9 @@ const MLBPredictionsApp = () => {
                       <span className="text-gray-400 text-xs lg:text-sm font-bold">Pitching Edge</span>
                     </div>
                     <div className="text-white font-bold text-sm lg:text-base">
-                      H: {game.primary_edges.pitcher_quality.home_quality} | A: {game.primary_edges.pitcher_quality.away_quality}
+                      H: {game.primary_edges?.pitcher_quality?.home_quality || 'N/A'} | A: {game.primary_edges?.pitcher_quality?.away_quality || 'N/A'}
                     </div>
-                    <div className="text-xs text-gray-400 mt-1 line-clamp-2">{game.primary_edges.pitcher_quality.advantage}</div>
+                    <div className="text-xs text-gray-400 mt-1 line-clamp-2">{game.primary_edges?.pitcher_quality?.advantage || 'No pitcher data'}</div>
                   </div>
 
                   {/* Recent Form */}
@@ -1208,8 +1291,19 @@ const MLBPredictionsApp = () => {
 
       {(batterData?.homer_predictions?.length > 0 || nrfiData?.homer_predictions?.length > 0) ? (
         <>
-          {/* Homer Props Sorting Buttons */}
-          <div className="flex items-center justify-between mb-6">
+          {/* Search and Sorting */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search players or teams..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition-colors w-full lg:w-64"
+              />
+            </div>
             <div className="flex items-center space-x-2">
               <div className="text-sm text-gray-400 mr-4">Sort by:</div>
               {[
@@ -1239,6 +1333,15 @@ const MLBPredictionsApp = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {(batterData?.homer_predictions || nrfiData?.homer_predictions || [])
+              .filter(player => {
+                if (!searchQuery) return true;
+                const query = searchQuery.toLowerCase();
+                return (
+                  player.player?.toLowerCase().includes(query) ||
+                  player.team?.toLowerCase().includes(query) ||
+                  player.game?.toLowerCase().includes(query)
+                );
+              })
               .sort((a, b) => {
                 switch (homerSortBy) {
                   case 'confidence':
@@ -1348,8 +1451,19 @@ const MLBPredictionsApp = () => {
 
       {batterData?.hits_predictions?.length > 0 ? (
         <>
-          {/* Hit Props Sorting Buttons */}
-          <div className="flex items-center justify-between mb-6">
+          {/* Search and Sorting */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+            {/* Search Bar */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search players or teams..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors w-full lg:w-64"
+              />
+            </div>
             <div className="flex items-center space-x-2">
               <div className="text-sm text-gray-400 mr-4">Sort by:</div>
               {[
@@ -1379,6 +1493,15 @@ const MLBPredictionsApp = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {batterData.hits_predictions
+              .filter(player => {
+                if (!searchQuery) return true;
+                const query = searchQuery.toLowerCase();
+                return (
+                  player.player?.toLowerCase().includes(query) ||
+                  player.team?.toLowerCase().includes(query) ||
+                  player.game?.toLowerCase().includes(query)
+                );
+              })
               .sort((a, b) => {
                 switch (hitSortBy) {
                   case 'confidence':
@@ -1959,11 +2082,13 @@ const MLBPredictionsApp = () => {
   const handleLogin = (user) => {
     setCurrentUser(user);
     setIsAuthenticated(true);
+    setPublicMode(false); // Exit public mode after login
   };
 
   const handleRegister = (user) => {
     setCurrentUser(user);
     setIsAuthenticated(true);
+    setPublicMode(false); // Exit public mode after register
   };
 
   const handleLogout = async () => {
@@ -1972,12 +2097,12 @@ const MLBPredictionsApp = () => {
     setIsAuthenticated(false);
   };
 
-  // Show authentication screens if not logged in
-  if (!isAuthenticated) {
+  // Show authentication screens only when explicitly requested
+  if (!isAuthenticated && !publicMode) {
     if (showAuth === 'login') {
-      return <Login onLogin={handleLogin} switchToRegister={() => setShowAuth('register')} />;
+      return <Login onLogin={handleLogin} switchToRegister={() => setShowAuth('register')} onSkipToPublic={() => setPublicMode(true)} />;
     } else {
-      return <Register onRegister={handleRegister} switchToLogin={() => setShowAuth('login')} />;
+      return <Register onRegister={handleRegister} switchToLogin={() => setShowAuth('login')} onSkipToPublic={() => setPublicMode(true)} />;
     }
   }
 
@@ -2090,29 +2215,57 @@ const MLBPredictionsApp = () => {
             ))}
           </nav>
 
-          {/* User Profile */}
+          {/* User Profile / Login Prompt */}
           {sidebarOpen && (
             <div className="p-4 border-t border-gray-800">
-              <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <User className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-bold text-white">{currentUser?.username || 'User'}</p>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full"></div>
-                    <span className="text-xs text-gray-300">{userTier} Member</span>
+              {isAuthenticated ? (
+                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                    <User className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-xs text-gray-400">System: {predictionData?.meta?.system_name || 'MLB System'}</p>
+                  <div className="flex-1">
+                    <p className="font-bold text-white">{currentUser?.username || 'User'}</p>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full"></div>
+                      <span className="text-xs text-gray-300">{userTier} Member</span>
+                    </div>
+                    <p className="text-xs text-gray-400">System: {predictionData?.meta?.system_name || 'MLB System'}</p>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="w-5 h-5 text-gray-400 hover:text-red-400 cursor-pointer transition-colors"
+                    title="Logout"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
-                <button
-                  onClick={handleLogout}
-                  className="w-5 h-5 text-gray-400 hover:text-red-400 cursor-pointer transition-colors"
-                  title="Logout"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+              ) : (
+                <div className="p-4 bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-xl border border-purple-500/30">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                      <Lock className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white">Sign in for full access</p>
+                      <p className="text-xs text-gray-400">View detailed picks & betting units</p>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => {setPublicMode(false); setShowAuth('login');}}
+                      className="w-full py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-sm font-medium hover:from-purple-500 hover:to-pink-500 transition-all"
+                    >
+                      Sign In
+                    </button>
+                    <button
+                      onClick={() => {setPublicMode(false); setShowAuth('register');}}
+                      className="w-full py-2 border border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all"
+                    >
+                      Create Account
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -2542,14 +2695,14 @@ const MLBPredictionsApp = () => {
                       <div className="space-y-3">
                         <div className="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
                           <span className="text-gray-400">Scorching Batters:</span>
-                          <span className="text-orange-400 font-bold">{selectedGame.primary_edges.hot_batter_system.scorching_batters}</span>
+                          <span className="text-orange-400 font-bold">{selectedGame.primary_edges?.hot_batter_system?.scorching_batters || 0}</span>
                         </div>
                         <div className="flex justify-between items-center p-3 bg-gray-700 rounded-lg">
                           <span className="text-gray-400">HR Candidates:</span>
-                          <span className="text-red-400 font-bold">{selectedGame.primary_edges.hot_batter_system.hr_candidates}</span>
+                          <span className="text-red-400 font-bold">{selectedGame.primary_edges?.hot_batter_system?.hr_candidates || 0}</span>
                         </div>
                         <div className="p-3 bg-orange-500/10 border border-orange-500/20 rounded-lg">
-                          <div className="text-orange-400 font-medium text-sm">{selectedGame.primary_edges.hot_batter_system.advantage}</div>
+                          <div className="text-orange-400 font-medium text-sm">{selectedGame.primary_edges?.hot_batter_system?.advantage || 'No hot batter data available'}</div>
                         </div>
                       </div>
                     </div>

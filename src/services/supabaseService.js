@@ -6,8 +6,19 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'http://127.0.0.1:54321'
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0'
 
-// Initialize Supabase client
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Initialize Supabase client with extended session
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true,
+    // Set session to persist for ~1 week (7 days)
+    storage: window.localStorage,
+    storageKey: 'mlb-betting-auth',
+    // Extend token refresh interval
+    refreshTokenMargin: 60 * 60 * 24 * 7 // 7 days in seconds
+  }
+})
 
 class SupabaseAuthService {
   constructor() {

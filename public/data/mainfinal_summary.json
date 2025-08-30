@@ -2,32 +2,32 @@
   "meta": {
     "system_name": "Integrated MLB Betting System",
     "version": "5.0",
-    "date": "2025-08-23",
-    "generated_at": "2025-08-23T08:28:49.494012",
-    "total_predictions": 14,
-    "timestamp": "2025-08-23T08:28:49.494016"
+    "date": "2025-08-30",
+    "generated_at": "2025-08-30T07:23:14.861091",
+    "total_predictions": 15,
+    "timestamp": "2025-08-30T07:23:14.861095"
   },
   "summary": {
-    "date": "2025-08-23",
-    "total_games": 14,
-    "total_opportunities": 5,
+    "date": "2025-08-30",
+    "total_games": 15,
+    "total_opportunities": 2,
     "total_hot_batters": 0,
     "total_scorching_batters": 0,
     "hot_count": 0,
     "hr_candidates": 0,
     "average_gpt_confidence": 75.0,
-    "total_ev": 0.890206977270728
+    "total_ev": 0.09203727600000003
   },
   "detailed_predictions": [
     {
-      "game_id": "BOS@NYY_2025-08-23",
-      "matchup": "BOS @ NYY",
-      "venue": "Yankee Stadium",
-      "date": "2025-08-23",
-      "home_team": "NYY",
-      "away_team": "BOS",
-      "home_pitcher": "Will Warren",
-      "away_pitcher": "Garrett Crochet",
+      "game_id": "MIL@TOR_2025-08-30",
+      "matchup": "MIL @ TOR",
+      "venue": "Rogers Centre",
+      "date": "2025-08-30",
+      "home_team": "TOR",
+      "away_team": "MIL",
+      "home_pitcher": "Kevin Gausman",
+      "away_pitcher": "Quinn Priester",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,
@@ -54,116 +54,14 @@
       "opportunities": []
     },
     {
-      "game_id": "TOR@MIA_2025-08-23",
-      "matchup": "TOR @ MIA",
-      "venue": "loanDepot park",
-      "date": "2025-08-23",
-      "home_team": "MIA",
-      "away_team": "TOR",
-      "home_pitcher": "Janson Junk",
-      "away_pitcher": "Jos\u00e9 Berr\u00edos",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": []
-    },
-    {
-      "game_id": "WSN@PHI_2025-08-23",
-      "matchup": "WSN @ PHI",
-      "venue": "Citizens Bank Park",
-      "date": "2025-08-23",
-      "home_team": "PHI",
-      "away_team": "WSN",
-      "home_pitcher": "Aaron Nola",
-      "away_pitcher": "Mitchell Parker",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": []
-    },
-    {
-      "game_id": "KC@DET_2025-08-23",
-      "matchup": "KC @ DET",
-      "venue": "Comerica Park",
-      "date": "2025-08-23",
-      "home_team": "DET",
-      "away_team": "KC",
-      "home_pitcher": "Chris Paddack",
-      "away_pitcher": "Michael Wacha",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": []
-    },
-    {
-      "game_id": "COL@PIT_2025-08-23",
-      "matchup": "COL @ PIT",
-      "venue": "PNC Park",
-      "date": "2025-08-23",
-      "home_team": "PIT",
-      "away_team": "COL",
-      "home_pitcher": "Mike Burrows",
-      "away_pitcher": "Kyle Freeland",
+      "game_id": "TB@WSN_2025-08-30",
+      "matchup": "TB @ WSN",
+      "venue": "Nationals Park",
+      "date": "2025-08-30",
+      "home_team": "WSN",
+      "away_team": "TB",
+      "home_pitcher": "Jake Irvin",
+      "away_pitcher": "Ryan Pepiot",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,
@@ -191,136 +89,136 @@
         {
           "bet": true,
           "type": "strikeout",
-          "pitcher": "Kyle Freeland",
+          "pitcher": "Jake Irvin",
           "direction": "OVER",
           "line": 3.5,
-          "prediction": 4.1,
-          "edge": 0.7999999999999996,
-          "confidence": 89.53659999999999,
-          "expected_value": 0.06446635199999995,
-          "units": 1.0,
+          "prediction": 3.9,
+          "edge": 0.5999999999999999,
+          "confidence": 79.7064,
+          "expected_value": 0.04304145599999999,
+          "units": 0.5,
           "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "### Detailed Analysis for Kyle Freeland vs. PIT Strikeout Prop\n\n#### 1. BET_RECOMMENDATION: LEAN_OVER\n\n#### 2. CONFIDENCE_LEVEL: 7/10\n\n#### 3. EDGE_ADJUSTMENT: +0.2\n\n#### 4. KEY_INSIGHTS:\n\n- **Team K-Rate Advantage**: Pittsburgh's strikeout rate of 23.6% is slightly above the league average, providing a favorable matchup for Freeland, whose K/9 is below average at 6.4. This suggests that while Freeland is not a high strikeout pitcher, the Pirates' tendency to strike out more often than the league average could help him exceed his typical performance.\n\n- **Offensive Struggles**: Pittsburgh's recent offensive struggles, scoring only 3.2 runs per game compared to their season average of 3.6, indicate a lineup that is not in form. This could lead to more strikeouts as they face a pitcher like Freeland who can exploit their current weaknesses.\n\n- **Ballpark Factor**: The ballpark K-factor of 1.02 is slightly above neutral, suggesting a marginally favorable environment for strikeouts. This factor supports the potential for Freeland to achieve a higher strikeout total.\n\n- **Lineup Analysis**: With no hot or cold players identified in the lineup, the consistency of the Pirates' lineup in terms of strikeout tendencies remains steady. The balanced style of the lineup does not pose any significant threat to Freeland's ability to reach the strikeout line.\n\n#### 5. RISK_FACTORS:\n\n- **Freeland's Strikeout Ability**: Freeland's K/9 rate of 6.4 is significantly below the league average, indicating that he is not naturally a strikeout pitcher. This is a primary risk factor, as he may not capitalize on the Pirates' higher K-rate as effectively as a more strikeout-prone pitcher might.\n\n- **Lineup Strength Unknowns**: The lack of detailed information on the specific strengths or weaknesses of the Pirates' lineup could introduce variability in the prediction. If the lineup features players who are adept at making contact, this could reduce Freeland's strikeout opportunities.\n\n#### 6. VALUE_ASSESSMENT:\n\n- **Creating Value**: The combination of Pittsburgh's higher-than-average strikeout rate and their current offensive struggles creates a scenario where Freeland could surpass his typical strikeout performance. The comprehensive model predicting 4.1 strikeouts against a line of 3.5 provides a reasonable edge, especially given the matchup context.\n\n- **Destroying Value**: The primary concern is Freeland's inherent strikeout limitations. If Pittsburgh manages to improve their contact rate or if Freeland struggles with control (as suggested by his WHIP of 1.499), the value of the over bet could be diminished.\n\n#### Conclusion:\n\nThe analysis supports a **LEAN_OVER** recommendation due to the Pirates' propensity to strike out and their current offensive struggles. While Freeland is not a strikeout-heavy pitcher, the matchup conditions and team tendencies provide a slight edge that justifies a cautious bet on the over. The confidence level is moderate, acknowledging the risks associated with Freeland's strikeout ability. Adjusting the edge slightly to +0.2 accounts for these factors, making the over a reasonable play with a measured approach.",
+          "reasoning": "To provide a comprehensive betting analysis for Jake Irvin's strikeout prop against the Tampa Bay Rays, let's delve into the key aspects of the matchup using the provided data and insights.\n\n### 1. BET_RECOMMENDATION: LEAN_OVER\n\n### 2. CONFIDENCE_LEVEL: 6/10\n\n### 3. EDGE_ADJUSTMENT: +0.2\n\n### 4. KEY_INSIGHTS:\n\n- **Pitcher Analysis**: Jake Irvin's K/9 rate of 6.0 is significantly below the league average of 9.0, indicating a lower propensity for strikeouts. However, the line is set at 3.5 strikeouts, which is relatively low, reflecting his overall performance and the expectation of a short outing.\n\n- **Team K-Rate**: The Tampa Bay Rays have a team strikeout rate of 23.2%, slightly above the league average of 22.5%. This provides a marginal advantage for Irvin to potentially exceed his typical strikeout performance.\n\n- **Lineup Analysis**: The Rays' lineup does not feature any particularly hot or cold players, and their top three hitters' K-rate aligns with the team average. This balanced lineup suggests that while they are not overly prone to strikeouts, they are also not particularly adept at avoiding them.\n\n- **Recent Form**: The Rays' neutral recent offensive form, averaging 4.5 runs per game, suggests they are neither in a slump nor particularly hot, which could mean a standard performance is expected from both sides.\n\n### 5. RISK_FACTORS:\n\n- **Pitcher Performance**: Irvin's low quality score (13/100) and high ERA (5.40) indicate potential struggles in maintaining innings, which could limit his strikeout opportunities.\n\n- **Lineup Strength**: The unknown strength of the Rays' lineup could pose a risk if they perform above their average, reducing Irvin's chances of reaching the strikeout line.\n\n- **Ballpark and Weather Conditions**: With a neutral ballpark K-factor of 1.00 and clear weather conditions, external factors are unlikely to significantly influence the outcome.\n\n### 6. VALUE_ASSESSMENT:\n\n- **Edge Justification**: The +0.4 edge in the comprehensive model versus the line is modest but supported by the Rays' slightly higher-than-average K-rate. The analysis confidence of 93% suggests reliability in the data, though the average matchup quality tempers expectations.\n\n- **Value Creation**: The lean over recommendation stems from the combination of the Rays' K-rate advantage and the low strikeout line for Irvin. While his overall performance metrics are not strong, the specific matchup conditions provide a slight edge.\n\nIn conclusion, while Jake Irvin's overall metrics do not inspire high confidence, the specific matchup against a Rays team with a slightly elevated strikeout rate and a low strikeout line of 3.5 creates a marginal opportunity. The recommendation to lean over is supported by the data, albeit with moderate confidence due to the inherent risks associated with Irvin's performance variability.",
           "comprehensive_team_analysis": true,
           "lineup_analysis_available": true,
-          "pitcher_k9": 6.37,
-          "pitcher_era": 5.16,
-          "pitcher_whip": 1.499,
+          "pitcher_k9": 6.02,
+          "pitcher_era": 5.4,
+          "pitcher_whip": 1.431,
           "data_quality": "high",
           "comprehensive_team_matchup": {
-            "team_k_rate": 0.23579125290513417,
-            "k_rate_advantage": 0.010791252905134163,
-            "team_ops": 0.6551098947767822,
+            "team_k_rate": 0.23162134944612287,
+            "k_rate_advantage": 0.0066213494461228595,
+            "team_ops": 0.7174427876476314,
             "team_form_factor": 1.0,
-            "form_trend": "struggling",
-            "recent_runs": 3.2,
-            "season_runs": 3.550387596899225,
+            "form_trend": "neutral",
+            "recent_runs": 4.5,
+            "season_runs": 4.477611940298507,
             "lineup_strength": "unknown",
             "lineup_style": "balanced",
             "lineup_form_trend": "stable",
             "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.23579125290513417,
-            "top_order_advantage": 0.010791252905134163,
+            "top3_k_rate": 0.23162134944612287,
+            "top_order_advantage": 0.0066213494461228595,
             "hot_players": 0,
             "cold_players": 0,
             "lineup_quality_score": 16.5,
             "combined_form_factor": 1.0,
-            "pitcher_quality_score": 13.869999999999997,
-            "team_offense_score": 8.015874195630202,
-            "matchup_quality": "good",
+            "pitcher_quality_score": 13.479999999999997,
+            "team_offense_score": 20.532914058848174,
+            "matchup_quality": "average",
             "analysis_confidence": 93,
-            "ballpark_k_factor": 1.02,
-            "ballpark_offense_boost": 0.97,
+            "ballpark_k_factor": 1.0,
+            "ballpark_offense_boost": 1.0,
             "handedness_relevant": "R",
             "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": 0.21582505810268326,
+            "recommended_k_adjustment": 0.1324269889224572,
             "data_source": "statsapi_comprehensive",
             "data_reliability": "high",
             "lineup_data_available": true,
             "pitcher_data_quality": "high"
           },
-          "opponent_team": "PIT",
-          "team_k_rate": 0.23579125290513417,
-          "matchup_quality": "good",
+          "opponent_team": "TB",
+          "team_k_rate": 0.23162134944612287,
+          "matchup_quality": "average",
           "analysis_confidence": 93,
           "lineup_strength": "unknown",
-          "game_id": "COL@PIT_2025-08-23",
-          "game": "COL @ PIT",
-          "venue": "PNC Park"
+          "game_id": "TB@WSN_2025-08-30",
+          "game": "TB @ WSN",
+          "venue": "Nationals Park"
         }
       ],
       "strikeout_props": [
         {
           "bet": true,
           "type": "strikeout",
-          "pitcher": "Kyle Freeland",
+          "pitcher": "Jake Irvin",
           "direction": "OVER",
           "line": 3.5,
-          "prediction": 4.1,
-          "edge": 0.7999999999999996,
-          "confidence": 89.53659999999999,
-          "expected_value": 0.06446635199999995,
-          "units": 1.0,
+          "prediction": 3.9,
+          "edge": 0.5999999999999999,
+          "confidence": 79.7064,
+          "expected_value": 0.04304145599999999,
+          "units": 0.5,
           "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "### Detailed Analysis for Kyle Freeland vs. PIT Strikeout Prop\n\n#### 1. BET_RECOMMENDATION: LEAN_OVER\n\n#### 2. CONFIDENCE_LEVEL: 7/10\n\n#### 3. EDGE_ADJUSTMENT: +0.2\n\n#### 4. KEY_INSIGHTS:\n\n- **Team K-Rate Advantage**: Pittsburgh's strikeout rate of 23.6% is slightly above the league average, providing a favorable matchup for Freeland, whose K/9 is below average at 6.4. This suggests that while Freeland is not a high strikeout pitcher, the Pirates' tendency to strike out more often than the league average could help him exceed his typical performance.\n\n- **Offensive Struggles**: Pittsburgh's recent offensive struggles, scoring only 3.2 runs per game compared to their season average of 3.6, indicate a lineup that is not in form. This could lead to more strikeouts as they face a pitcher like Freeland who can exploit their current weaknesses.\n\n- **Ballpark Factor**: The ballpark K-factor of 1.02 is slightly above neutral, suggesting a marginally favorable environment for strikeouts. This factor supports the potential for Freeland to achieve a higher strikeout total.\n\n- **Lineup Analysis**: With no hot or cold players identified in the lineup, the consistency of the Pirates' lineup in terms of strikeout tendencies remains steady. The balanced style of the lineup does not pose any significant threat to Freeland's ability to reach the strikeout line.\n\n#### 5. RISK_FACTORS:\n\n- **Freeland's Strikeout Ability**: Freeland's K/9 rate of 6.4 is significantly below the league average, indicating that he is not naturally a strikeout pitcher. This is a primary risk factor, as he may not capitalize on the Pirates' higher K-rate as effectively as a more strikeout-prone pitcher might.\n\n- **Lineup Strength Unknowns**: The lack of detailed information on the specific strengths or weaknesses of the Pirates' lineup could introduce variability in the prediction. If the lineup features players who are adept at making contact, this could reduce Freeland's strikeout opportunities.\n\n#### 6. VALUE_ASSESSMENT:\n\n- **Creating Value**: The combination of Pittsburgh's higher-than-average strikeout rate and their current offensive struggles creates a scenario where Freeland could surpass his typical strikeout performance. The comprehensive model predicting 4.1 strikeouts against a line of 3.5 provides a reasonable edge, especially given the matchup context.\n\n- **Destroying Value**: The primary concern is Freeland's inherent strikeout limitations. If Pittsburgh manages to improve their contact rate or if Freeland struggles with control (as suggested by his WHIP of 1.499), the value of the over bet could be diminished.\n\n#### Conclusion:\n\nThe analysis supports a **LEAN_OVER** recommendation due to the Pirates' propensity to strike out and their current offensive struggles. While Freeland is not a strikeout-heavy pitcher, the matchup conditions and team tendencies provide a slight edge that justifies a cautious bet on the over. The confidence level is moderate, acknowledging the risks associated with Freeland's strikeout ability. Adjusting the edge slightly to +0.2 accounts for these factors, making the over a reasonable play with a measured approach.",
+          "reasoning": "To provide a comprehensive betting analysis for Jake Irvin's strikeout prop against the Tampa Bay Rays, let's delve into the key aspects of the matchup using the provided data and insights.\n\n### 1. BET_RECOMMENDATION: LEAN_OVER\n\n### 2. CONFIDENCE_LEVEL: 6/10\n\n### 3. EDGE_ADJUSTMENT: +0.2\n\n### 4. KEY_INSIGHTS:\n\n- **Pitcher Analysis**: Jake Irvin's K/9 rate of 6.0 is significantly below the league average of 9.0, indicating a lower propensity for strikeouts. However, the line is set at 3.5 strikeouts, which is relatively low, reflecting his overall performance and the expectation of a short outing.\n\n- **Team K-Rate**: The Tampa Bay Rays have a team strikeout rate of 23.2%, slightly above the league average of 22.5%. This provides a marginal advantage for Irvin to potentially exceed his typical strikeout performance.\n\n- **Lineup Analysis**: The Rays' lineup does not feature any particularly hot or cold players, and their top three hitters' K-rate aligns with the team average. This balanced lineup suggests that while they are not overly prone to strikeouts, they are also not particularly adept at avoiding them.\n\n- **Recent Form**: The Rays' neutral recent offensive form, averaging 4.5 runs per game, suggests they are neither in a slump nor particularly hot, which could mean a standard performance is expected from both sides.\n\n### 5. RISK_FACTORS:\n\n- **Pitcher Performance**: Irvin's low quality score (13/100) and high ERA (5.40) indicate potential struggles in maintaining innings, which could limit his strikeout opportunities.\n\n- **Lineup Strength**: The unknown strength of the Rays' lineup could pose a risk if they perform above their average, reducing Irvin's chances of reaching the strikeout line.\n\n- **Ballpark and Weather Conditions**: With a neutral ballpark K-factor of 1.00 and clear weather conditions, external factors are unlikely to significantly influence the outcome.\n\n### 6. VALUE_ASSESSMENT:\n\n- **Edge Justification**: The +0.4 edge in the comprehensive model versus the line is modest but supported by the Rays' slightly higher-than-average K-rate. The analysis confidence of 93% suggests reliability in the data, though the average matchup quality tempers expectations.\n\n- **Value Creation**: The lean over recommendation stems from the combination of the Rays' K-rate advantage and the low strikeout line for Irvin. While his overall performance metrics are not strong, the specific matchup conditions provide a slight edge.\n\nIn conclusion, while Jake Irvin's overall metrics do not inspire high confidence, the specific matchup against a Rays team with a slightly elevated strikeout rate and a low strikeout line of 3.5 creates a marginal opportunity. The recommendation to lean over is supported by the data, albeit with moderate confidence due to the inherent risks associated with Irvin's performance variability.",
           "comprehensive_team_analysis": true,
           "lineup_analysis_available": true,
-          "pitcher_k9": 6.37,
-          "pitcher_era": 5.16,
-          "pitcher_whip": 1.499,
+          "pitcher_k9": 6.02,
+          "pitcher_era": 5.4,
+          "pitcher_whip": 1.431,
           "data_quality": "high",
           "comprehensive_team_matchup": {
-            "team_k_rate": 0.23579125290513417,
-            "k_rate_advantage": 0.010791252905134163,
-            "team_ops": 0.6551098947767822,
+            "team_k_rate": 0.23162134944612287,
+            "k_rate_advantage": 0.0066213494461228595,
+            "team_ops": 0.7174427876476314,
             "team_form_factor": 1.0,
-            "form_trend": "struggling",
-            "recent_runs": 3.2,
-            "season_runs": 3.550387596899225,
+            "form_trend": "neutral",
+            "recent_runs": 4.5,
+            "season_runs": 4.477611940298507,
             "lineup_strength": "unknown",
             "lineup_style": "balanced",
             "lineup_form_trend": "stable",
             "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.23579125290513417,
-            "top_order_advantage": 0.010791252905134163,
+            "top3_k_rate": 0.23162134944612287,
+            "top_order_advantage": 0.0066213494461228595,
             "hot_players": 0,
             "cold_players": 0,
             "lineup_quality_score": 16.5,
             "combined_form_factor": 1.0,
-            "pitcher_quality_score": 13.869999999999997,
-            "team_offense_score": 8.015874195630202,
-            "matchup_quality": "good",
+            "pitcher_quality_score": 13.479999999999997,
+            "team_offense_score": 20.532914058848174,
+            "matchup_quality": "average",
             "analysis_confidence": 93,
-            "ballpark_k_factor": 1.02,
-            "ballpark_offense_boost": 0.97,
+            "ballpark_k_factor": 1.0,
+            "ballpark_offense_boost": 1.0,
             "handedness_relevant": "R",
             "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": 0.21582505810268326,
+            "recommended_k_adjustment": 0.1324269889224572,
             "data_source": "statsapi_comprehensive",
             "data_reliability": "high",
             "lineup_data_available": true,
             "pitcher_data_quality": "high"
           },
-          "opponent_team": "PIT",
-          "team_k_rate": 0.23579125290513417,
-          "matchup_quality": "good",
+          "opponent_team": "TB",
+          "team_k_rate": 0.23162134944612287,
+          "matchup_quality": "average",
           "analysis_confidence": 93,
           "lineup_strength": "unknown",
-          "game_id": "COL@PIT_2025-08-23",
-          "game": "COL @ PIT",
-          "venue": "PNC Park"
+          "game_id": "TB@WSN_2025-08-30",
+          "game": "TB @ WSN",
+          "venue": "Nationals Park"
         }
       ]
     },
     {
-      "game_id": "HOU@BAL_2025-08-23",
-      "matchup": "HOU @ BAL",
-      "venue": "Oriole Park at Camden Yards",
-      "date": "2025-08-23",
-      "home_team": "BAL",
-      "away_team": "HOU",
-      "home_pitcher": "Dean Kremer",
-      "away_pitcher": "Cristian Javier",
+      "game_id": "PIT@BOS_2025-08-30",
+      "matchup": "PIT @ BOS",
+      "venue": "Fenway Park",
+      "date": "2025-08-30",
+      "home_team": "BOS",
+      "away_team": "PIT",
+      "home_pitcher": "Dustin May",
+      "away_pitcher": "Johan Oviedo",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,
@@ -347,14 +245,14 @@
       "opportunities": []
     },
     {
-      "game_id": "CLE@TEX_2025-08-23",
-      "matchup": "CLE @ TEX",
-      "venue": "Globe Life Field",
-      "date": "2025-08-23",
-      "home_team": "TEX",
-      "away_team": "CLE",
-      "home_pitcher": "Jack Leiter",
-      "away_pitcher": "Logan Allen",
+      "game_id": "MIA@NYM_2025-08-30",
+      "matchup": "MIA @ NYM",
+      "venue": "Citi Field",
+      "date": "2025-08-30",
+      "home_team": "NYM",
+      "away_team": "MIA",
+      "home_pitcher": "David Peterson",
+      "away_pitcher": "Edward Cabrera",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,
@@ -381,13 +279,13 @@
       "opportunities": []
     },
     {
-      "game_id": "MIN@CWS_2025-08-23",
-      "matchup": "MIN @ CWS",
-      "venue": "Rate Field",
-      "date": "2025-08-23",
-      "home_team": "CWS",
-      "away_team": "MIN",
-      "home_pitcher": "Davis Martin",
+      "game_id": "ATL@PHI_2025-08-30",
+      "matchup": "ATL @ PHI",
+      "venue": "Citizens Bank Park",
+      "date": "2025-08-30",
+      "home_team": "PHI",
+      "away_team": "ATL",
+      "home_pitcher": "Cristopher S\u00e1nchez",
       "away_pitcher": "TBD",
       "primary_edges": {
         "hot_batter_system": {
@@ -415,994 +313,14 @@
       "opportunities": []
     },
     {
-      "game_id": "SF@MIL_2025-08-23",
-      "matchup": "SF @ MIL",
-      "venue": "American Family Field",
-      "date": "2025-08-23",
-      "home_team": "MIL",
-      "away_team": "SF",
-      "home_pitcher": "Freddy Peralta",
-      "away_pitcher": "Logan Webb",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": [
-        {
-          "bet": true,
-          "type": "nrfi",
-          "game": "SF @ MIL",
-          "probability": 76.9,
-          "confidence": 95.0,
-          "expected_value": 0.4100176040564296,
-          "units": 2.2,
-          "strength": "\ud83d\udd25 STRONG ML NRFI",
-          "reasoning": "ML ensemble: 76.9% NRFI probability | Confidence: 95% (16 models) | Market edge: +26.9% | Model agreement: 0.78 | GPT-4o: Freddy Peralta has been performing exceptionally w | Data quality: excellent (60% real)",
-          "analysis_version": "cutting_edge_ml_v5.0_with_historical",
-          "ml_models_used": [
-            "rf_balanced",
-            "rf_entropy",
-            "extra_trees",
-            "gb_classic",
-            "hist_gb",
-            "xgb_balanced",
-            "xgb_dart",
-            "lgb_balanced",
-            "lgb_dart",
-            "catboost",
-            "nn_deep",
-            "nn_wide",
-            "svm_rbf",
-            "logistic_l2",
-            "logistic_elastic",
-            "ridge"
-          ],
-          "gpt_analysis_available": true,
-          "historical_data_used": true,
-          "model_agreement": 0.7775769502577206,
-          "prediction_intervals": [
-            0.5428440289319834,
-            0.6491956376726274
-          ],
-          "component_analysis": {
-            "ml_probability": 87.6,
-            "gpt_probability": 85.0,
-            "ml_confidence": 95.0,
-            "market_edge": 26.9,
-            "primary_edge_source": "extreme_ml_confidence"
-          },
-          "top_features": [],
-          "data_quality_scores": {
-            "pitcher_data": "high",
-            "batter_data": "high",
-            "overall_quality": "excellent",
-            "real_data_percentage": 60.0,
-            "historical_data": "available"
-          },
-          "model_performance": {
-            "rf_balanced": {
-              "auc": 0.6776181219736566,
-              "std": 0.022786417720848197,
-              "brier": 0.24407902718163765
-            },
-            "rf_entropy": {
-              "auc": 0.6811541376620441,
-              "std": 0.032841689453005175,
-              "brier": 0.2433465134902904
-            },
-            "extra_trees": {
-              "auc": 0.7014500418650684,
-              "std": 0.024893238231710628,
-              "brier": 0.23092675632072138
-            },
-            "gb_classic": {
-              "auc": 0.6612646792530186,
-              "std": 0.03225728615873378,
-              "brier": 0.2453915708708359
-            },
-            "hist_gb": {
-              "auc": 0.6560983043787462,
-              "std": 0.03795687737006038,
-              "brier": 0.23952349183186453
-            },
-            "xgb_balanced": {
-              "auc": 0.6819941458045609,
-              "std": 0.037250171901983584,
-              "brier": 0.24087469631738304
-            },
-            "xgb_dart": {
-              "auc": 0.6878357601294232,
-              "std": 0.03527892408174649,
-              "brier": 0.2402038455109743
-            },
-            "lgb_balanced": {
-              "auc": 0.668365413691656,
-              "std": 0.02390184527708479,
-              "brier": 0.2414957060703751
-            },
-            "lgb_dart": {
-              "auc": 0.6888643868641451,
-              "std": 0.029127891054607252,
-              "brier": 0.24224103542446734
-            },
-            "catboost": {
-              "auc": 0.7089933435609519,
-              "std": 0.023683979260686605,
-              "brier": 0.24096045488581896
-            },
-            "nn_deep": {
-              "auc": 0.6665934880694027,
-              "std": 0.04326393357990775,
-              "brier": 0.24479270388771682
-            },
-            "nn_wide": {
-              "auc": 0.634329472823872,
-              "std": 0.03299001496838117,
-              "brier": 0.2518590973930859
-            },
-            "svm_rbf": {
-              "auc": 0.7031795095490835,
-              "std": 0.023831342449468725,
-              "brier": 0.24249388047592899
-            },
-            "logistic_l2": {
-              "auc": 0.7188015116570582,
-              "std": 0.03508381122017817,
-              "brier": 0.2405346968004825
-            },
-            "logistic_elastic": {
-              "auc": 0.7218245279256055,
-              "std": 0.03366087945547473,
-              "brier": 0.23765039949422564
-            },
-            "ridge": {
-              "auc": 0.7128314990748275,
-              "std": 0.04703706438826118,
-              "brier": 0.23756042309454348
-            }
-          },
-          "analysis_timestamp": "2025-08-23T08:25:00.465170",
-          "cache_key": "5826db33e71ab9efc015d64b92d0211f",
-          "hot_batter_adjustment": {
-            "original_probability": 76.9,
-            "hot_batters_in_game": 0,
-            "top_lineup_hot_batters": 0,
-            "nrfi_threat_score": 0,
-            "adjustment_penalty": 0.0
-          },
-          "game_id": "SF@MIL_2025-08-23",
-          "away_team": "SF",
-          "home_team": "MIL",
-          "home_pitcher": "Freddy Peralta",
-          "away_pitcher": "Logan Webb",
-          "venue": "American Family Field"
-        }
-      ],
-      "nrfi_analysis": {
-        "bet": true,
-        "type": "nrfi",
-        "game": "SF @ MIL",
-        "probability": 76.9,
-        "confidence": 95.0,
-        "expected_value": 0.4100176040564296,
-        "units": 2.2,
-        "strength": "\ud83d\udd25 STRONG ML NRFI",
-        "reasoning": "ML ensemble: 76.9% NRFI probability | Confidence: 95% (16 models) | Market edge: +26.9% | Model agreement: 0.78 | GPT-4o: Freddy Peralta has been performing exceptionally w | Data quality: excellent (60% real)",
-        "analysis_version": "cutting_edge_ml_v5.0_with_historical",
-        "ml_models_used": [
-          "rf_balanced",
-          "rf_entropy",
-          "extra_trees",
-          "gb_classic",
-          "hist_gb",
-          "xgb_balanced",
-          "xgb_dart",
-          "lgb_balanced",
-          "lgb_dart",
-          "catboost",
-          "nn_deep",
-          "nn_wide",
-          "svm_rbf",
-          "logistic_l2",
-          "logistic_elastic",
-          "ridge"
-        ],
-        "gpt_analysis_available": true,
-        "historical_data_used": true,
-        "model_agreement": 0.7775769502577206,
-        "prediction_intervals": [
-          0.5428440289319834,
-          0.6491956376726274
-        ],
-        "component_analysis": {
-          "ml_probability": 87.6,
-          "gpt_probability": 85.0,
-          "ml_confidence": 95.0,
-          "market_edge": 26.9,
-          "primary_edge_source": "extreme_ml_confidence"
-        },
-        "top_features": [],
-        "data_quality_scores": {
-          "pitcher_data": "high",
-          "batter_data": "high",
-          "overall_quality": "excellent",
-          "real_data_percentage": 60.0,
-          "historical_data": "available"
-        },
-        "model_performance": {
-          "rf_balanced": {
-            "auc": 0.6776181219736566,
-            "std": 0.022786417720848197,
-            "brier": 0.24407902718163765
-          },
-          "rf_entropy": {
-            "auc": 0.6811541376620441,
-            "std": 0.032841689453005175,
-            "brier": 0.2433465134902904
-          },
-          "extra_trees": {
-            "auc": 0.7014500418650684,
-            "std": 0.024893238231710628,
-            "brier": 0.23092675632072138
-          },
-          "gb_classic": {
-            "auc": 0.6612646792530186,
-            "std": 0.03225728615873378,
-            "brier": 0.2453915708708359
-          },
-          "hist_gb": {
-            "auc": 0.6560983043787462,
-            "std": 0.03795687737006038,
-            "brier": 0.23952349183186453
-          },
-          "xgb_balanced": {
-            "auc": 0.6819941458045609,
-            "std": 0.037250171901983584,
-            "brier": 0.24087469631738304
-          },
-          "xgb_dart": {
-            "auc": 0.6878357601294232,
-            "std": 0.03527892408174649,
-            "brier": 0.2402038455109743
-          },
-          "lgb_balanced": {
-            "auc": 0.668365413691656,
-            "std": 0.02390184527708479,
-            "brier": 0.2414957060703751
-          },
-          "lgb_dart": {
-            "auc": 0.6888643868641451,
-            "std": 0.029127891054607252,
-            "brier": 0.24224103542446734
-          },
-          "catboost": {
-            "auc": 0.7089933435609519,
-            "std": 0.023683979260686605,
-            "brier": 0.24096045488581896
-          },
-          "nn_deep": {
-            "auc": 0.6665934880694027,
-            "std": 0.04326393357990775,
-            "brier": 0.24479270388771682
-          },
-          "nn_wide": {
-            "auc": 0.634329472823872,
-            "std": 0.03299001496838117,
-            "brier": 0.2518590973930859
-          },
-          "svm_rbf": {
-            "auc": 0.7031795095490835,
-            "std": 0.023831342449468725,
-            "brier": 0.24249388047592899
-          },
-          "logistic_l2": {
-            "auc": 0.7188015116570582,
-            "std": 0.03508381122017817,
-            "brier": 0.2405346968004825
-          },
-          "logistic_elastic": {
-            "auc": 0.7218245279256055,
-            "std": 0.03366087945547473,
-            "brier": 0.23765039949422564
-          },
-          "ridge": {
-            "auc": 0.7128314990748275,
-            "std": 0.04703706438826118,
-            "brier": 0.23756042309454348
-          }
-        },
-        "analysis_timestamp": "2025-08-23T08:25:00.465170",
-        "cache_key": "5826db33e71ab9efc015d64b92d0211f",
-        "hot_batter_adjustment": {
-          "original_probability": 76.9,
-          "hot_batters_in_game": 0,
-          "top_lineup_hot_batters": 0,
-          "nrfi_threat_score": 0,
-          "adjustment_penalty": 0.0
-        },
-        "game_id": "SF@MIL_2025-08-23",
-        "away_team": "SF",
-        "home_team": "MIL",
-        "home_pitcher": "Freddy Peralta",
-        "away_pitcher": "Logan Webb",
-        "venue": "American Family Field"
-      }
-    },
-    {
-      "game_id": "NYM@ATL_2025-08-23",
-      "matchup": "NYM @ ATL",
-      "venue": "Truist Park",
-      "date": "2025-08-23",
-      "home_team": "ATL",
-      "away_team": "NYM",
-      "home_pitcher": "Cal Quantrill",
-      "away_pitcher": "Clay Holmes",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": [
-        {
-          "bet": true,
-          "type": "strikeout",
-          "pitcher": "Cal Quantrill",
-          "direction": "OVER",
-          "line": 3.5,
-          "prediction": 3.9,
-          "edge": 0.5999999999999999,
-          "confidence": 80.5128,
-          "expected_value": 0.043476911999999986,
-          "units": 0.6,
-          "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "### Detailed Betting Analysis\n\n#### 1. BET_RECOMMENDATION: LEAN_OVER\n\n#### 2. CONFIDENCE_LEVEL: 6/10\n\n#### 3. EDGE_ADJUSTMENT: +0.2\n\n#### 4. KEY_INSIGHTS:\n- **Pitcher Analysis**: Cal Quantrill's K/9 of 6.8 is below league average, indicating he is not a high strikeout pitcher. However, the line set at 3.5 strikeouts is relatively low, suggesting that even a modest performance could surpass this threshold.\n  \n- **Team K-Rate**: The New York Mets have a team strikeout rate of 21.4%, which is slightly below the league average of 22.5%. This indicates that they are relatively disciplined at the plate, which could limit Quantrill's strikeout opportunities. However, the difference is marginal, and their recent offensive surge might lead to more aggressive swings, potentially increasing strikeouts.\n\n- **Recent Form**: The Mets are in a hot streak, averaging 6.8 runs per game compared to their usual 4.5. This offensive momentum might lead to more aggressive at-bats, which could result in more strikeouts, especially against a pitcher like Quantrill who might struggle with command.\n\n- **Lineup Analysis**: The Mets' lineup is balanced with no standout hot or cold players, and their top three hitters have a K-rate identical to the team average. This suggests a consistent approach across the lineup, which could work in Quantrill's favor if he can exploit any weaknesses.\n\n- **Ballpark and Conditions**: The ballpark K-Factor of 0.99 is neutral, and the weather conditions (72\u00b0F, mist) are unlikely to significantly impact strikeout potential.\n\n#### 5. RISK_FACTORS:\n- **Pitcher Quality**: Quantrill's overall quality score of 18/100 and his ERA of 5.50 suggest he might struggle to stay in the game long enough to reach the strikeout line, especially if the Mets' offense continues its hot streak.\n  \n- **Lineup Strength**: While the lineup is balanced, the lack of standout performers means that Quantrill might not face any particularly easy outs, which could limit his ability to accumulate strikeouts.\n\n#### 6. VALUE_ASSESSMENT:\n- The comprehensive analysis suggests a slight edge for the over, primarily due to the low strikeout line and the potential for the Mets' aggressive recent form to lead to more strikeouts. However, the pitcher's low strikeout ability and the Mets' disciplined approach at the plate temper this edge.\n\n- The +0.4 edge in the model is supported by the low line and the potential for increased strikeouts due to the Mets' offensive aggression. However, given Quantrill's struggles and the Mets' overall lineup discipline, the edge is adjusted to +0.2 to reflect these risks.\n\nIn conclusion, while the matchup is average and the pitcher's strikeout ability is limited, the low line and potential for increased strikeouts due to the Mets' recent form justify a lean towards the over. However, the confidence level remains moderate due to the inherent risks associated with Quantrill's performance and the Mets' lineup discipline.",
-          "comprehensive_team_analysis": true,
-          "lineup_analysis_available": true,
-          "pitcher_k9": 6.76,
-          "pitcher_era": 5.5,
-          "pitcher_whip": 1.392,
-          "data_quality": "high",
-          "comprehensive_team_matchup": {
-            "team_k_rate": 0.21438998957247132,
-            "k_rate_advantage": -0.010610010427528682,
-            "team_ops": 0.7470783699578178,
-            "team_form_factor": 0.88,
-            "form_trend": "hot",
-            "recent_runs": 6.8,
-            "season_runs": 4.5390625,
-            "lineup_strength": "unknown",
-            "lineup_style": "balanced",
-            "lineup_form_trend": "stable",
-            "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.21438998957247132,
-            "top_order_advantage": -0.010610010427528682,
-            "hot_players": 0,
-            "cold_players": 0,
-            "lineup_quality_score": 16.5,
-            "combined_form_factor": 0.9159999999999999,
-            "pitcher_quality_score": 17.96,
-            "team_offense_score": 29.6872735552423,
-            "matchup_quality": "average",
-            "analysis_confidence": 93,
-            "ballpark_k_factor": 0.99,
-            "ballpark_offense_boost": 1.01,
-            "handedness_relevant": "R",
-            "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": -0.21220020855057364,
-            "data_source": "statsapi_comprehensive",
-            "data_reliability": "high",
-            "lineup_data_available": true,
-            "pitcher_data_quality": "high"
-          },
-          "opponent_team": "NYM",
-          "team_k_rate": 0.21438998957247132,
-          "matchup_quality": "average",
-          "analysis_confidence": 93,
-          "lineup_strength": "unknown",
-          "game_id": "NYM@ATL_2025-08-23",
-          "game": "NYM @ ATL",
-          "venue": "Truist Park"
-        }
-      ],
-      "strikeout_props": [
-        {
-          "bet": true,
-          "type": "strikeout",
-          "pitcher": "Cal Quantrill",
-          "direction": "OVER",
-          "line": 3.5,
-          "prediction": 3.9,
-          "edge": 0.5999999999999999,
-          "confidence": 80.5128,
-          "expected_value": 0.043476911999999986,
-          "units": 0.6,
-          "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "### Detailed Betting Analysis\n\n#### 1. BET_RECOMMENDATION: LEAN_OVER\n\n#### 2. CONFIDENCE_LEVEL: 6/10\n\n#### 3. EDGE_ADJUSTMENT: +0.2\n\n#### 4. KEY_INSIGHTS:\n- **Pitcher Analysis**: Cal Quantrill's K/9 of 6.8 is below league average, indicating he is not a high strikeout pitcher. However, the line set at 3.5 strikeouts is relatively low, suggesting that even a modest performance could surpass this threshold.\n  \n- **Team K-Rate**: The New York Mets have a team strikeout rate of 21.4%, which is slightly below the league average of 22.5%. This indicates that they are relatively disciplined at the plate, which could limit Quantrill's strikeout opportunities. However, the difference is marginal, and their recent offensive surge might lead to more aggressive swings, potentially increasing strikeouts.\n\n- **Recent Form**: The Mets are in a hot streak, averaging 6.8 runs per game compared to their usual 4.5. This offensive momentum might lead to more aggressive at-bats, which could result in more strikeouts, especially against a pitcher like Quantrill who might struggle with command.\n\n- **Lineup Analysis**: The Mets' lineup is balanced with no standout hot or cold players, and their top three hitters have a K-rate identical to the team average. This suggests a consistent approach across the lineup, which could work in Quantrill's favor if he can exploit any weaknesses.\n\n- **Ballpark and Conditions**: The ballpark K-Factor of 0.99 is neutral, and the weather conditions (72\u00b0F, mist) are unlikely to significantly impact strikeout potential.\n\n#### 5. RISK_FACTORS:\n- **Pitcher Quality**: Quantrill's overall quality score of 18/100 and his ERA of 5.50 suggest he might struggle to stay in the game long enough to reach the strikeout line, especially if the Mets' offense continues its hot streak.\n  \n- **Lineup Strength**: While the lineup is balanced, the lack of standout performers means that Quantrill might not face any particularly easy outs, which could limit his ability to accumulate strikeouts.\n\n#### 6. VALUE_ASSESSMENT:\n- The comprehensive analysis suggests a slight edge for the over, primarily due to the low strikeout line and the potential for the Mets' aggressive recent form to lead to more strikeouts. However, the pitcher's low strikeout ability and the Mets' disciplined approach at the plate temper this edge.\n\n- The +0.4 edge in the model is supported by the low line and the potential for increased strikeouts due to the Mets' offensive aggression. However, given Quantrill's struggles and the Mets' overall lineup discipline, the edge is adjusted to +0.2 to reflect these risks.\n\nIn conclusion, while the matchup is average and the pitcher's strikeout ability is limited, the low line and potential for increased strikeouts due to the Mets' recent form justify a lean towards the over. However, the confidence level remains moderate due to the inherent risks associated with Quantrill's performance and the Mets' lineup discipline.",
-          "comprehensive_team_analysis": true,
-          "lineup_analysis_available": true,
-          "pitcher_k9": 6.76,
-          "pitcher_era": 5.5,
-          "pitcher_whip": 1.392,
-          "data_quality": "high",
-          "comprehensive_team_matchup": {
-            "team_k_rate": 0.21438998957247132,
-            "k_rate_advantage": -0.010610010427528682,
-            "team_ops": 0.7470783699578178,
-            "team_form_factor": 0.88,
-            "form_trend": "hot",
-            "recent_runs": 6.8,
-            "season_runs": 4.5390625,
-            "lineup_strength": "unknown",
-            "lineup_style": "balanced",
-            "lineup_form_trend": "stable",
-            "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.21438998957247132,
-            "top_order_advantage": -0.010610010427528682,
-            "hot_players": 0,
-            "cold_players": 0,
-            "lineup_quality_score": 16.5,
-            "combined_form_factor": 0.9159999999999999,
-            "pitcher_quality_score": 17.96,
-            "team_offense_score": 29.6872735552423,
-            "matchup_quality": "average",
-            "analysis_confidence": 93,
-            "ballpark_k_factor": 0.99,
-            "ballpark_offense_boost": 1.01,
-            "handedness_relevant": "R",
-            "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": -0.21220020855057364,
-            "data_source": "statsapi_comprehensive",
-            "data_reliability": "high",
-            "lineup_data_available": true,
-            "pitcher_data_quality": "high"
-          },
-          "opponent_team": "NYM",
-          "team_k_rate": 0.21438998957247132,
-          "matchup_quality": "average",
-          "analysis_confidence": 93,
-          "lineup_strength": "unknown",
-          "game_id": "NYM@ATL_2025-08-23",
-          "game": "NYM @ ATL",
-          "venue": "Truist Park"
-        }
-      ]
-    },
-    {
-      "game_id": "CIN@ARI_2025-08-23",
-      "matchup": "CIN @ ARI",
-      "venue": "Chase Field",
-      "date": "2025-08-23",
-      "home_team": "ARI",
-      "away_team": "CIN",
-      "home_pitcher": "Nabil Crismatt",
-      "away_pitcher": "Andrew Abbott",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": [
-        {
-          "bet": true,
-          "type": "nrfi",
-          "game": "CIN @ ARI",
-          "probability": 71.6,
-          "confidence": 95.0,
-          "expected_value": 0.31343200921429837,
-          "units": 1.9,
-          "strength": "\ud83d\udcb0 VALUE ML NRFI",
-          "reasoning": "ML ensemble: 71.6% NRFI probability | Confidence: 95% (16 models) | Market edge: +21.6% | Model agreement: 0.72 | GPT-4o: Overall, this matchup leans towards an NRFI, but b | Data quality: excellent (45% real)",
-          "analysis_version": "cutting_edge_ml_v5.0_with_historical",
-          "ml_models_used": [
-            "rf_balanced",
-            "rf_entropy",
-            "extra_trees",
-            "gb_classic",
-            "hist_gb",
-            "xgb_balanced",
-            "xgb_dart",
-            "lgb_balanced",
-            "lgb_dart",
-            "catboost",
-            "nn_deep",
-            "nn_wide",
-            "svm_rbf",
-            "logistic_l2",
-            "logistic_elastic",
-            "ridge"
-          ],
-          "gpt_analysis_available": true,
-          "historical_data_used": true,
-          "model_agreement": 0.7191368039496069,
-          "prediction_intervals": [
-            0.5668323776136153,
-            0.7035585344432962
-          ],
-          "component_analysis": {
-            "ml_probability": 70.3,
-            "gpt_probability": 70.3,
-            "ml_confidence": 95.0,
-            "market_edge": 21.6,
-            "primary_edge_source": "gpt_strategic_insight"
-          },
-          "top_features": [],
-          "data_quality_scores": {
-            "pitcher_data": "low",
-            "batter_data": "high",
-            "overall_quality": "excellent",
-            "real_data_percentage": 45.0,
-            "historical_data": "available"
-          },
-          "model_performance": {
-            "rf_balanced": {
-              "auc": 0.6776181219736566,
-              "std": 0.022786417720848197,
-              "brier": 0.24407902718163765
-            },
-            "rf_entropy": {
-              "auc": 0.6811541376620441,
-              "std": 0.032841689453005175,
-              "brier": 0.2433465134902904
-            },
-            "extra_trees": {
-              "auc": 0.7014500418650684,
-              "std": 0.024893238231710628,
-              "brier": 0.23092675632072138
-            },
-            "gb_classic": {
-              "auc": 0.6612646792530186,
-              "std": 0.03225728615873378,
-              "brier": 0.2453915708708359
-            },
-            "hist_gb": {
-              "auc": 0.6560983043787462,
-              "std": 0.03795687737006038,
-              "brier": 0.23952349183186453
-            },
-            "xgb_balanced": {
-              "auc": 0.6819941458045609,
-              "std": 0.037250171901983584,
-              "brier": 0.24087469631738304
-            },
-            "xgb_dart": {
-              "auc": 0.6878357601294232,
-              "std": 0.03527892408174649,
-              "brier": 0.2402038455109743
-            },
-            "lgb_balanced": {
-              "auc": 0.668365413691656,
-              "std": 0.02390184527708479,
-              "brier": 0.2414957060703751
-            },
-            "lgb_dart": {
-              "auc": 0.6888643868641451,
-              "std": 0.029127891054607252,
-              "brier": 0.24224103542446734
-            },
-            "catboost": {
-              "auc": 0.7089933435609519,
-              "std": 0.023683979260686605,
-              "brier": 0.24096045488581896
-            },
-            "nn_deep": {
-              "auc": 0.6665934880694027,
-              "std": 0.04326393357990775,
-              "brier": 0.24479270388771682
-            },
-            "nn_wide": {
-              "auc": 0.634329472823872,
-              "std": 0.03299001496838117,
-              "brier": 0.2518590973930859
-            },
-            "svm_rbf": {
-              "auc": 0.7031795095490835,
-              "std": 0.023831342449468725,
-              "brier": 0.24249388047592899
-            },
-            "logistic_l2": {
-              "auc": 0.7188015116570582,
-              "std": 0.03508381122017817,
-              "brier": 0.2405346968004825
-            },
-            "logistic_elastic": {
-              "auc": 0.7218245279256055,
-              "std": 0.03366087945547473,
-              "brier": 0.23765039949422564
-            },
-            "ridge": {
-              "auc": 0.7128314990748275,
-              "std": 0.04703706438826118,
-              "brier": 0.23756042309454348
-            }
-          },
-          "analysis_timestamp": "2025-08-23T08:26:14.149439",
-          "cache_key": "75134a1ffeb7c97470c622d823e116ea",
-          "hot_batter_adjustment": {
-            "original_probability": 71.6,
-            "hot_batters_in_game": 0,
-            "top_lineup_hot_batters": 0,
-            "nrfi_threat_score": 0,
-            "adjustment_penalty": 0.0
-          },
-          "game_id": "CIN@ARI_2025-08-23",
-          "away_team": "CIN",
-          "home_team": "ARI",
-          "home_pitcher": "Nabil Crismatt",
-          "away_pitcher": "Andrew Abbott",
-          "venue": "Chase Field"
-        }
-      ],
-      "nrfi_analysis": {
-        "bet": true,
-        "type": "nrfi",
-        "game": "CIN @ ARI",
-        "probability": 71.6,
-        "confidence": 95.0,
-        "expected_value": 0.31343200921429837,
-        "units": 1.9,
-        "strength": "\ud83d\udcb0 VALUE ML NRFI",
-        "reasoning": "ML ensemble: 71.6% NRFI probability | Confidence: 95% (16 models) | Market edge: +21.6% | Model agreement: 0.72 | GPT-4o: Overall, this matchup leans towards an NRFI, but b | Data quality: excellent (45% real)",
-        "analysis_version": "cutting_edge_ml_v5.0_with_historical",
-        "ml_models_used": [
-          "rf_balanced",
-          "rf_entropy",
-          "extra_trees",
-          "gb_classic",
-          "hist_gb",
-          "xgb_balanced",
-          "xgb_dart",
-          "lgb_balanced",
-          "lgb_dart",
-          "catboost",
-          "nn_deep",
-          "nn_wide",
-          "svm_rbf",
-          "logistic_l2",
-          "logistic_elastic",
-          "ridge"
-        ],
-        "gpt_analysis_available": true,
-        "historical_data_used": true,
-        "model_agreement": 0.7191368039496069,
-        "prediction_intervals": [
-          0.5668323776136153,
-          0.7035585344432962
-        ],
-        "component_analysis": {
-          "ml_probability": 70.3,
-          "gpt_probability": 70.3,
-          "ml_confidence": 95.0,
-          "market_edge": 21.6,
-          "primary_edge_source": "gpt_strategic_insight"
-        },
-        "top_features": [],
-        "data_quality_scores": {
-          "pitcher_data": "low",
-          "batter_data": "high",
-          "overall_quality": "excellent",
-          "real_data_percentage": 45.0,
-          "historical_data": "available"
-        },
-        "model_performance": {
-          "rf_balanced": {
-            "auc": 0.6776181219736566,
-            "std": 0.022786417720848197,
-            "brier": 0.24407902718163765
-          },
-          "rf_entropy": {
-            "auc": 0.6811541376620441,
-            "std": 0.032841689453005175,
-            "brier": 0.2433465134902904
-          },
-          "extra_trees": {
-            "auc": 0.7014500418650684,
-            "std": 0.024893238231710628,
-            "brier": 0.23092675632072138
-          },
-          "gb_classic": {
-            "auc": 0.6612646792530186,
-            "std": 0.03225728615873378,
-            "brier": 0.2453915708708359
-          },
-          "hist_gb": {
-            "auc": 0.6560983043787462,
-            "std": 0.03795687737006038,
-            "brier": 0.23952349183186453
-          },
-          "xgb_balanced": {
-            "auc": 0.6819941458045609,
-            "std": 0.037250171901983584,
-            "brier": 0.24087469631738304
-          },
-          "xgb_dart": {
-            "auc": 0.6878357601294232,
-            "std": 0.03527892408174649,
-            "brier": 0.2402038455109743
-          },
-          "lgb_balanced": {
-            "auc": 0.668365413691656,
-            "std": 0.02390184527708479,
-            "brier": 0.2414957060703751
-          },
-          "lgb_dart": {
-            "auc": 0.6888643868641451,
-            "std": 0.029127891054607252,
-            "brier": 0.24224103542446734
-          },
-          "catboost": {
-            "auc": 0.7089933435609519,
-            "std": 0.023683979260686605,
-            "brier": 0.24096045488581896
-          },
-          "nn_deep": {
-            "auc": 0.6665934880694027,
-            "std": 0.04326393357990775,
-            "brier": 0.24479270388771682
-          },
-          "nn_wide": {
-            "auc": 0.634329472823872,
-            "std": 0.03299001496838117,
-            "brier": 0.2518590973930859
-          },
-          "svm_rbf": {
-            "auc": 0.7031795095490835,
-            "std": 0.023831342449468725,
-            "brier": 0.24249388047592899
-          },
-          "logistic_l2": {
-            "auc": 0.7188015116570582,
-            "std": 0.03508381122017817,
-            "brier": 0.2405346968004825
-          },
-          "logistic_elastic": {
-            "auc": 0.7218245279256055,
-            "std": 0.03366087945547473,
-            "brier": 0.23765039949422564
-          },
-          "ridge": {
-            "auc": 0.7128314990748275,
-            "std": 0.04703706438826118,
-            "brier": 0.23756042309454348
-          }
-        },
-        "analysis_timestamp": "2025-08-23T08:26:14.149439",
-        "cache_key": "75134a1ffeb7c97470c622d823e116ea",
-        "hot_batter_adjustment": {
-          "original_probability": 71.6,
-          "hot_batters_in_game": 0,
-          "top_lineup_hot_batters": 0,
-          "nrfi_threat_score": 0,
-          "adjustment_penalty": 0.0
-        },
-        "game_id": "CIN@ARI_2025-08-23",
-        "away_team": "CIN",
-        "home_team": "ARI",
-        "home_pitcher": "Nabil Crismatt",
-        "away_pitcher": "Andrew Abbott",
-        "venue": "Chase Field"
-      }
-    },
-    {
-      "game_id": "LAD@SD_2025-08-23",
-      "matchup": "LAD @ SD",
-      "venue": "Petco Park",
-      "date": "2025-08-23",
-      "home_team": "SD",
-      "away_team": "LAD",
-      "home_pitcher": "Nestor Cortes",
-      "away_pitcher": "Tyler Glasnow",
-      "primary_edges": {
-        "hot_batter_system": {
-          "scorching_batters": 0,
-          "hot_batters": 0,
-          "hr_candidates": 0,
-          "total_ev": 0,
-          "advantage": "0 hot batters identified"
-        }
-      },
-      "hot_batters": {
-        "home": [],
-        "away": [],
-        "total": 0
-      },
-      "gpt_analysis": {
-        "confidence": 75.0,
-        "key_insights": [
-          "Identified 0 hot batters",
-          "0 scorching hot",
-          "0 HR threats"
-        ],
-        "betting_recommendations": []
-      },
-      "opportunities": [
-        {
-          "bet": true,
-          "type": "strikeout",
-          "pitcher": "Nestor Cortes",
-          "direction": "OVER",
-          "line": 4.5,
-          "prediction": 5.3,
-          "edge": 0.9999999999999998,
-          "confidence": 65.349,
-          "expected_value": 0.05881409999999999,
-          "units": 0.5,
-          "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "1. **BET_RECOMMENDATION: LEAN_OVER**\n\n2. **CONFIDENCE_LEVEL: 6/10**\n\n3. **EDGE_ADJUSTMENT: +0.2**\n\n4. **KEY_INSIGHTS:**\n   - **Pitcher Analysis:** Nestor Cortes has a K/9 of 8.6, which is slightly below the league average of 9.0. His ERA of 5.87 and WHIP of 1.652 indicate struggles with control and effectiveness, potentially leading to shorter outings. However, his strikeout ability remains relatively intact, which is crucial for this prop.\n   - **LAD Team K-Rate:** The Dodgers' team strikeout rate of 22.3% is slightly below the league average, indicating they are not particularly prone to striking out more than the typical team. This slightly unfavorable matchup suggests that Cortes might not exceed expectations significantly.\n   - **Recent Offense:** The Dodgers' recent offensive form, averaging 5.2 runs per game, suggests they are performing well at the plate. This could mean more contact and fewer strikeouts, but it also implies more plate appearances, which could give Cortes more opportunities to accumulate strikeouts.\n   - **Ballpark Factor:** The ballpark K-Factor of 1.04 slightly favors strikeouts, providing a marginal boost to Cortes' potential to hit the over on his strikeout line.\n\n5. **RISK_FACTORS:**\n   - **Pitcher Quality:** Cortes' overall quality score of 13/100 is concerning, indicating he may not pitch deep into games, limiting his strikeout opportunities.\n   - **Sample Size and Data Quality:** With only 23 innings pitched, the sample size is limited, and the data quality is medium, which adds uncertainty to the prediction.\n   - **Lineup Strength:** The balanced style of the Dodgers' lineup, with no hot or cold players, suggests a consistent approach that might not favor strikeouts.\n\n6. **VALUE_ASSESSMENT:**\n   - The comprehensive analysis suggests a slight edge for the over, primarily due to the combination of Cortes' strikeout ability and the Dodgers' average K-rate. The recent offensive performance of the Dodgers could lead to more plate appearances, increasing strikeout opportunities despite their ability to score runs.\n   - The +0.8 edge is justified by the combination of Cortes' strikeout capability and the ballpark factor, which slightly enhances his chances of surpassing the line. However, the poor matchup quality and limited data reduce the confidence level, making this a lean rather than a strong recommendation.\n\nIn conclusion, while the matchup is not overwhelmingly favorable, the factors such as Cortes' strikeout potential and the ballpark conditions provide enough of an edge to lean towards the over on his strikeout prop, albeit with moderate confidence.",
-          "comprehensive_team_analysis": true,
-          "lineup_analysis_available": true,
-          "pitcher_k9": 8.61,
-          "pitcher_era": 5.87,
-          "pitcher_whip": 1.652,
-          "data_quality": "medium",
-          "comprehensive_team_matchup": {
-            "team_k_rate": 0.22290263319044704,
-            "k_rate_advantage": -0.0020973668095529696,
-            "team_ops": 0.7734609101564851,
-            "team_form_factor": 1.0,
-            "form_trend": "good",
-            "recent_runs": 5.2,
-            "season_runs": 5.170542635658915,
-            "lineup_strength": "unknown",
-            "lineup_style": "balanced",
-            "lineup_form_trend": "stable",
-            "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.22290263319044704,
-            "top_order_advantage": -0.0020973668095529696,
-            "hot_players": 0,
-            "cold_players": 0,
-            "lineup_quality_score": 16.5,
-            "combined_form_factor": 1.0,
-            "pitcher_quality_score": 13.049999999999997,
-            "team_offense_score": 31.114953443473205,
-            "matchup_quality": "poor",
-            "analysis_confidence": 68,
-            "ballpark_k_factor": 1.04,
-            "ballpark_offense_boost": 0.95,
-            "handedness_relevant": "R",
-            "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": -0.04194733619105939,
-            "data_source": "statsapi_comprehensive",
-            "data_reliability": "high",
-            "lineup_data_available": true,
-            "pitcher_data_quality": "medium"
-          },
-          "opponent_team": "LAD",
-          "team_k_rate": 0.22290263319044704,
-          "matchup_quality": "poor",
-          "analysis_confidence": 68,
-          "lineup_strength": "unknown",
-          "game_id": "LAD@SD_2025-08-23",
-          "game": "LAD @ SD",
-          "venue": "Petco Park"
-        }
-      ],
-      "strikeout_props": [
-        {
-          "bet": true,
-          "type": "strikeout",
-          "pitcher": "Nestor Cortes",
-          "direction": "OVER",
-          "line": 4.5,
-          "prediction": 5.3,
-          "edge": 0.9999999999999998,
-          "confidence": 65.349,
-          "expected_value": 0.05881409999999999,
-          "units": 0.5,
-          "conviction": "\ud83d\udcb0 VALUE PLAY",
-          "reasoning": "1. **BET_RECOMMENDATION: LEAN_OVER**\n\n2. **CONFIDENCE_LEVEL: 6/10**\n\n3. **EDGE_ADJUSTMENT: +0.2**\n\n4. **KEY_INSIGHTS:**\n   - **Pitcher Analysis:** Nestor Cortes has a K/9 of 8.6, which is slightly below the league average of 9.0. His ERA of 5.87 and WHIP of 1.652 indicate struggles with control and effectiveness, potentially leading to shorter outings. However, his strikeout ability remains relatively intact, which is crucial for this prop.\n   - **LAD Team K-Rate:** The Dodgers' team strikeout rate of 22.3% is slightly below the league average, indicating they are not particularly prone to striking out more than the typical team. This slightly unfavorable matchup suggests that Cortes might not exceed expectations significantly.\n   - **Recent Offense:** The Dodgers' recent offensive form, averaging 5.2 runs per game, suggests they are performing well at the plate. This could mean more contact and fewer strikeouts, but it also implies more plate appearances, which could give Cortes more opportunities to accumulate strikeouts.\n   - **Ballpark Factor:** The ballpark K-Factor of 1.04 slightly favors strikeouts, providing a marginal boost to Cortes' potential to hit the over on his strikeout line.\n\n5. **RISK_FACTORS:**\n   - **Pitcher Quality:** Cortes' overall quality score of 13/100 is concerning, indicating he may not pitch deep into games, limiting his strikeout opportunities.\n   - **Sample Size and Data Quality:** With only 23 innings pitched, the sample size is limited, and the data quality is medium, which adds uncertainty to the prediction.\n   - **Lineup Strength:** The balanced style of the Dodgers' lineup, with no hot or cold players, suggests a consistent approach that might not favor strikeouts.\n\n6. **VALUE_ASSESSMENT:**\n   - The comprehensive analysis suggests a slight edge for the over, primarily due to the combination of Cortes' strikeout ability and the Dodgers' average K-rate. The recent offensive performance of the Dodgers could lead to more plate appearances, increasing strikeout opportunities despite their ability to score runs.\n   - The +0.8 edge is justified by the combination of Cortes' strikeout capability and the ballpark factor, which slightly enhances his chances of surpassing the line. However, the poor matchup quality and limited data reduce the confidence level, making this a lean rather than a strong recommendation.\n\nIn conclusion, while the matchup is not overwhelmingly favorable, the factors such as Cortes' strikeout potential and the ballpark conditions provide enough of an edge to lean towards the over on his strikeout prop, albeit with moderate confidence.",
-          "comprehensive_team_analysis": true,
-          "lineup_analysis_available": true,
-          "pitcher_k9": 8.61,
-          "pitcher_era": 5.87,
-          "pitcher_whip": 1.652,
-          "data_quality": "medium",
-          "comprehensive_team_matchup": {
-            "team_k_rate": 0.22290263319044704,
-            "k_rate_advantage": -0.0020973668095529696,
-            "team_ops": 0.7734609101564851,
-            "team_form_factor": 1.0,
-            "form_trend": "good",
-            "recent_runs": 5.2,
-            "season_runs": 5.170542635658915,
-            "lineup_strength": "unknown",
-            "lineup_style": "balanced",
-            "lineup_form_trend": "stable",
-            "lineup_form_factor": 1.0,
-            "top3_k_rate": 0.22290263319044704,
-            "top_order_advantage": -0.0020973668095529696,
-            "hot_players": 0,
-            "cold_players": 0,
-            "lineup_quality_score": 16.5,
-            "combined_form_factor": 1.0,
-            "pitcher_quality_score": 13.049999999999997,
-            "team_offense_score": 31.114953443473205,
-            "matchup_quality": "poor",
-            "analysis_confidence": 68,
-            "ballpark_k_factor": 1.04,
-            "ballpark_offense_boost": 0.95,
-            "handedness_relevant": "R",
-            "historical_context": "Standard matchup - rely on current season metrics and team form",
-            "recommended_k_adjustment": -0.04194733619105939,
-            "data_source": "statsapi_comprehensive",
-            "data_reliability": "high",
-            "lineup_data_available": true,
-            "pitcher_data_quality": "medium"
-          },
-          "opponent_team": "LAD",
-          "team_k_rate": 0.22290263319044704,
-          "matchup_quality": "poor",
-          "analysis_confidence": 68,
-          "lineup_strength": "unknown",
-          "game_id": "LAD@SD_2025-08-23",
-          "game": "LAD @ SD",
-          "venue": "Petco Park"
-        }
-      ]
-    },
-    {
-      "game_id": "CHC@LAA_2025-08-23",
-      "matchup": "CHC @ LAA",
-      "venue": "Angel Stadium",
-      "date": "2025-08-23",
-      "home_team": "LAA",
-      "away_team": "CHC",
-      "home_pitcher": "Victor Mederos",
-      "away_pitcher": "Cade Horton",
+      "game_id": "STL@CIN_2025-08-30",
+      "matchup": "STL @ CIN",
+      "venue": "Great American Ball Park",
+      "date": "2025-08-30",
+      "home_team": "CIN",
+      "away_team": "STL",
+      "home_pitcher": "Andrew Abbott",
+      "away_pitcher": "Michael McGreevy",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,
@@ -1429,14 +347,409 @@
       "opportunities": []
     },
     {
-      "game_id": "Athletics@SEA_2025-08-23",
-      "matchup": "Athletics @ SEA",
-      "venue": "T-Mobile Park",
-      "date": "2025-08-23",
-      "home_team": "SEA",
-      "away_team": "Athletics",
-      "home_pitcher": "George Kirby",
-      "away_pitcher": "Jeffrey Springs",
+      "game_id": "LAA@HOU_2025-08-30",
+      "matchup": "LAA @ HOU",
+      "venue": "Daikin Park",
+      "date": "2025-08-30",
+      "home_team": "HOU",
+      "away_team": "LAA",
+      "home_pitcher": "Spencer Arrighetti",
+      "away_pitcher": "Kyle Hendricks",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "SD@MIN_2025-08-30",
+      "matchup": "SD @ MIN",
+      "venue": "Target Field",
+      "date": "2025-08-30",
+      "home_team": "MIN",
+      "away_team": "SD",
+      "home_pitcher": "Taj Bradley",
+      "away_pitcher": "Nick Pivetta",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "NYY@CWS_2025-08-30",
+      "matchup": "NYY @ CWS",
+      "venue": "Rate Field",
+      "date": "2025-08-30",
+      "home_team": "CWS",
+      "away_team": "NYY",
+      "home_pitcher": "Shane Smith",
+      "away_pitcher": "Cam Schlittler",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "DET@KC_2025-08-30",
+      "matchup": "DET @ KC",
+      "venue": "Kauffman Stadium",
+      "date": "2025-08-30",
+      "home_team": "KC",
+      "away_team": "DET",
+      "home_pitcher": "Stephen Kolek",
+      "away_pitcher": "Jack Flaherty",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "SEA@CLE_2025-08-30",
+      "matchup": "SEA @ CLE",
+      "venue": "Progressive Field",
+      "date": "2025-08-30",
+      "home_team": "CLE",
+      "away_team": "SEA",
+      "home_pitcher": "Gavin Williams",
+      "away_pitcher": "Logan Gilbert",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "BAL@SF_2025-08-30",
+      "matchup": "BAL @ SF",
+      "venue": "Oracle Park",
+      "date": "2025-08-30",
+      "home_team": "SF",
+      "away_team": "BAL",
+      "home_pitcher": "Carson Seymour",
+      "away_pitcher": "Trevor Rogers",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "CHC@COL_2025-08-30",
+      "matchup": "CHC @ COL",
+      "venue": "Coors Field",
+      "date": "2025-08-30",
+      "home_team": "COL",
+      "away_team": "CHC",
+      "home_pitcher": "McCade Brown",
+      "away_pitcher": "Javier Assad",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": []
+    },
+    {
+      "game_id": "ARI@LAD_2025-08-30",
+      "matchup": "ARI @ LAD",
+      "venue": "Dodger Stadium",
+      "date": "2025-08-30",
+      "home_team": "LAD",
+      "away_team": "ARI",
+      "home_pitcher": "Tyler Glasnow",
+      "away_pitcher": "Eduardo Rodriguez",
+      "primary_edges": {
+        "hot_batter_system": {
+          "scorching_batters": 0,
+          "hot_batters": 0,
+          "hr_candidates": 0,
+          "total_ev": 0,
+          "advantage": "0 hot batters identified"
+        }
+      },
+      "hot_batters": {
+        "home": [],
+        "away": [],
+        "total": 0
+      },
+      "gpt_analysis": {
+        "confidence": 75.0,
+        "key_insights": [
+          "Identified 0 hot batters",
+          "0 scorching hot",
+          "0 HR threats"
+        ],
+        "betting_recommendations": []
+      },
+      "opportunities": [
+        {
+          "bet": true,
+          "type": "strikeout",
+          "pitcher": "Eduardo Rodriguez",
+          "direction": "OVER",
+          "line": 5.0,
+          "prediction": 5.4,
+          "edge": 0.6000000000000003,
+          "confidence": 90.733,
+          "expected_value": 0.04899582000000003,
+          "units": 0.8,
+          "conviction": "\ud83d\udcb0 VALUE PLAY",
+          "reasoning": "To provide a comprehensive betting analysis for Eduardo Rodriguez's strikeout prop against the Los Angeles Dodgers, we will delve into the key metrics and matchup dynamics. Here's the detailed breakdown:\n\n### 1. BET_RECOMMENDATION: LEAN_OVER\n\n### 2. CONFIDENCE_LEVEL: 7/10\n\n### 3. EDGE_ADJUSTMENT: +0.2\n\n### 4. KEY_INSIGHTS:\n\n- **Pitcher Analysis**: Eduardo Rodriguez has a K/9 of 8.8, slightly below the league average of 9.0. His ERA of 5.67 and WHIP of 1.639 suggest he has struggled with control and effectiveness, which could impact his ability to go deep into games. However, his strikeout ability remains relatively intact, which is crucial for this prop.\n\n- **Team K-Rate**: The Dodgers have a team strikeout rate of 22.3%, which is slightly below the league average of 22.5%. This indicates a marginally tougher matchup for Rodriguez in terms of strikeouts, as the Dodgers are less prone to strikeouts compared to an average team.\n\n- **Lineup Analysis**: The Dodgers' lineup is balanced, with the top three hitters matching the team's average K-rate of 22.3%. There are no hot or cold players, suggesting a stable lineup performance. The lineup quality score of 16/100 indicates a relatively weaker lineup, which could be advantageous for Rodriguez in accumulating strikeouts.\n\n- **Recent Form**: The Dodgers' offense has been consistent, averaging 5.1 runs per game recently. This offensive output suggests they are capable of putting pressure on Rodriguez, potentially limiting his innings pitched, which is a risk factor for the strikeout prop.\n\n### 5. RISK_FACTORS:\n\n- **Pitcher Efficiency**: Rodriguez's high ERA and WHIP indicate potential inefficiencies that could lead to shorter outings. If he struggles with control or allows too many baserunners, he may not pitch deep enough to reach the strikeout line.\n\n- **Dodgers' Offensive Consistency**: The Dodgers' ability to score consistently could lead to early exits for Rodriguez, reducing his strikeout opportunities.\n\n### 6. VALUE_ASSESSMENT:\n\n- **Edge Justification**: The model's prediction of 5.4 strikeouts versus the line of 5.0 provides a +0.4 edge. Given the Dodgers' slightly below-average K-rate and Rodriguez's ability to strike out batters, there is a reasonable expectation that he can surpass the line, albeit slightly.\n\n- **Good Matchup Quality**: The matchup quality scores (Rodriguez 26/100 vs. Dodgers 31/100) suggest a relatively even contest, with a slight edge towards the Dodgers. However, Rodriguez's strikeout potential remains a viable factor.\n\n- **Analysis Confidence**: With a 93% confidence level based on high data quality, the analysis supports a lean towards the over, though with caution due to the aforementioned risks.\n\n### Conclusion:\n\nWhile the matchup presents some challenges, particularly with Rodriguez's inefficiencies and the Dodgers' consistent offense, the slightly favorable strikeout potential and the balanced nature of the Dodgers' lineup provide a modest edge. The recommendation is to lean over on the strikeout prop, with a confidence level of 7/10, acknowledging the risks and the need for Rodriguez to maintain control to achieve the over.",
+          "comprehensive_team_analysis": true,
+          "lineup_analysis_available": true,
+          "pitcher_k9": 8.77,
+          "pitcher_era": 5.67,
+          "pitcher_whip": 1.639,
+          "data_quality": "high",
+          "comprehensive_team_matchup": {
+            "team_k_rate": 0.22337509788566953,
+            "k_rate_advantage": -0.0016249021143304732,
+            "team_ops": 0.7709435414515872,
+            "team_form_factor": 1.0,
+            "form_trend": "good",
+            "recent_runs": 5.1,
+            "season_runs": 5.140740740740741,
+            "lineup_strength": "unknown",
+            "lineup_style": "balanced",
+            "lineup_form_trend": "stable",
+            "lineup_form_factor": 1.0,
+            "top3_k_rate": 0.22337509788566953,
+            "top_order_advantage": -0.0016249021143304732,
+            "hot_players": 0,
+            "cold_players": 0,
+            "lineup_quality_score": 16.5,
+            "combined_form_factor": 1.0,
+            "pitcher_quality_score": 25.849999999999998,
+            "team_offense_score": 30.673102998505286,
+            "matchup_quality": "good",
+            "analysis_confidence": 93,
+            "ballpark_k_factor": 1.01,
+            "ballpark_offense_boost": 0.99,
+            "handedness_relevant": "R",
+            "historical_context": "Standard matchup - rely on current season metrics and team form",
+            "recommended_k_adjustment": -0.03249804228660946,
+            "data_source": "statsapi_comprehensive",
+            "data_reliability": "high",
+            "lineup_data_available": true,
+            "pitcher_data_quality": "high"
+          },
+          "opponent_team": "LAD",
+          "team_k_rate": 0.22337509788566953,
+          "matchup_quality": "good",
+          "analysis_confidence": 93,
+          "lineup_strength": "unknown",
+          "game_id": "ARI@LAD_2025-08-30",
+          "game": "ARI @ LAD",
+          "venue": "Dodger Stadium"
+        }
+      ],
+      "strikeout_props": [
+        {
+          "bet": true,
+          "type": "strikeout",
+          "pitcher": "Eduardo Rodriguez",
+          "direction": "OVER",
+          "line": 5.0,
+          "prediction": 5.4,
+          "edge": 0.6000000000000003,
+          "confidence": 90.733,
+          "expected_value": 0.04899582000000003,
+          "units": 0.8,
+          "conviction": "\ud83d\udcb0 VALUE PLAY",
+          "reasoning": "To provide a comprehensive betting analysis for Eduardo Rodriguez's strikeout prop against the Los Angeles Dodgers, we will delve into the key metrics and matchup dynamics. Here's the detailed breakdown:\n\n### 1. BET_RECOMMENDATION: LEAN_OVER\n\n### 2. CONFIDENCE_LEVEL: 7/10\n\n### 3. EDGE_ADJUSTMENT: +0.2\n\n### 4. KEY_INSIGHTS:\n\n- **Pitcher Analysis**: Eduardo Rodriguez has a K/9 of 8.8, slightly below the league average of 9.0. His ERA of 5.67 and WHIP of 1.639 suggest he has struggled with control and effectiveness, which could impact his ability to go deep into games. However, his strikeout ability remains relatively intact, which is crucial for this prop.\n\n- **Team K-Rate**: The Dodgers have a team strikeout rate of 22.3%, which is slightly below the league average of 22.5%. This indicates a marginally tougher matchup for Rodriguez in terms of strikeouts, as the Dodgers are less prone to strikeouts compared to an average team.\n\n- **Lineup Analysis**: The Dodgers' lineup is balanced, with the top three hitters matching the team's average K-rate of 22.3%. There are no hot or cold players, suggesting a stable lineup performance. The lineup quality score of 16/100 indicates a relatively weaker lineup, which could be advantageous for Rodriguez in accumulating strikeouts.\n\n- **Recent Form**: The Dodgers' offense has been consistent, averaging 5.1 runs per game recently. This offensive output suggests they are capable of putting pressure on Rodriguez, potentially limiting his innings pitched, which is a risk factor for the strikeout prop.\n\n### 5. RISK_FACTORS:\n\n- **Pitcher Efficiency**: Rodriguez's high ERA and WHIP indicate potential inefficiencies that could lead to shorter outings. If he struggles with control or allows too many baserunners, he may not pitch deep enough to reach the strikeout line.\n\n- **Dodgers' Offensive Consistency**: The Dodgers' ability to score consistently could lead to early exits for Rodriguez, reducing his strikeout opportunities.\n\n### 6. VALUE_ASSESSMENT:\n\n- **Edge Justification**: The model's prediction of 5.4 strikeouts versus the line of 5.0 provides a +0.4 edge. Given the Dodgers' slightly below-average K-rate and Rodriguez's ability to strike out batters, there is a reasonable expectation that he can surpass the line, albeit slightly.\n\n- **Good Matchup Quality**: The matchup quality scores (Rodriguez 26/100 vs. Dodgers 31/100) suggest a relatively even contest, with a slight edge towards the Dodgers. However, Rodriguez's strikeout potential remains a viable factor.\n\n- **Analysis Confidence**: With a 93% confidence level based on high data quality, the analysis supports a lean towards the over, though with caution due to the aforementioned risks.\n\n### Conclusion:\n\nWhile the matchup presents some challenges, particularly with Rodriguez's inefficiencies and the Dodgers' consistent offense, the slightly favorable strikeout potential and the balanced nature of the Dodgers' lineup provide a modest edge. The recommendation is to lean over on the strikeout prop, with a confidence level of 7/10, acknowledging the risks and the need for Rodriguez to maintain control to achieve the over.",
+          "comprehensive_team_analysis": true,
+          "lineup_analysis_available": true,
+          "pitcher_k9": 8.77,
+          "pitcher_era": 5.67,
+          "pitcher_whip": 1.639,
+          "data_quality": "high",
+          "comprehensive_team_matchup": {
+            "team_k_rate": 0.22337509788566953,
+            "k_rate_advantage": -0.0016249021143304732,
+            "team_ops": 0.7709435414515872,
+            "team_form_factor": 1.0,
+            "form_trend": "good",
+            "recent_runs": 5.1,
+            "season_runs": 5.140740740740741,
+            "lineup_strength": "unknown",
+            "lineup_style": "balanced",
+            "lineup_form_trend": "stable",
+            "lineup_form_factor": 1.0,
+            "top3_k_rate": 0.22337509788566953,
+            "top_order_advantage": -0.0016249021143304732,
+            "hot_players": 0,
+            "cold_players": 0,
+            "lineup_quality_score": 16.5,
+            "combined_form_factor": 1.0,
+            "pitcher_quality_score": 25.849999999999998,
+            "team_offense_score": 30.673102998505286,
+            "matchup_quality": "good",
+            "analysis_confidence": 93,
+            "ballpark_k_factor": 1.01,
+            "ballpark_offense_boost": 0.99,
+            "handedness_relevant": "R",
+            "historical_context": "Standard matchup - rely on current season metrics and team form",
+            "recommended_k_adjustment": -0.03249804228660946,
+            "data_source": "statsapi_comprehensive",
+            "data_reliability": "high",
+            "lineup_data_available": true,
+            "pitcher_data_quality": "high"
+          },
+          "opponent_team": "LAD",
+          "team_k_rate": 0.22337509788566953,
+          "matchup_quality": "good",
+          "analysis_confidence": 93,
+          "lineup_strength": "unknown",
+          "game_id": "ARI@LAD_2025-08-30",
+          "game": "ARI @ LAD",
+          "venue": "Dodger Stadium"
+        }
+      ]
+    },
+    {
+      "game_id": "TEX@Athletics_2025-08-30",
+      "matchup": "TEX @ Athletics",
+      "venue": "Sutter Health Park",
+      "date": "2025-08-30",
+      "home_team": "Athletics",
+      "away_team": "TEX",
+      "home_pitcher": "Mason Barnett",
+      "away_pitcher": "Merrill Kelly",
       "primary_edges": {
         "hot_batter_system": {
           "scorching_batters": 0,

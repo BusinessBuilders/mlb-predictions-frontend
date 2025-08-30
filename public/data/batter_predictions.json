@@ -1,15 +1,3323 @@
 {
   "meta": {
-    "date": "2025-08-24",
-    "timestamp": "2025-08-24T10:22:07.769028",
-    "version": "5.0-supabase",
-    "data_source": "supabase"
+    "date": "2025-08-30",
+    "timestamp": "2025-08-30T07:07:05.824595",
+    "total_hot_batters": 216,
+    "filtering_applied": {
+      "min_hr_prob": 0.05,
+      "min_hit_prob": 0.08,
+      "min_avg": 0.08,
+      "require_names": true
+    }
   },
-  "summary": {
-    "total_homer_predictions": 0,
-    "total_hit_predictions": 0,
-    "total_predictions": 0
-  },
-  "homer_predictions": [],
-  "hits_predictions": []
+  "homer_predictions": [
+    {
+      "player": "Caleb Durbin",
+      "team": "MIL",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Durbin's recent hot streak gives him an edge against Gausman's strong right-handed pitching. However, Gausman's strikeout ability may limit Durbin's effectiveness. \u2022 60% chance of a hit, 10% chance of a homer. \n\nKEY_FACTOR \u2022 Gausman's slider effectiveness could significantly impact Durbin's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_ops": 0.877
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.259,
+        "obp": 0.335,
+        "ops": 0.731
+      }
+    },
+    {
+      "player": "Brice Turang",
+      "team": "MIL",
+      "confidence": 60.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 Turang's recent surge gives him confidence, but Gausman's strong strikeout rate may challenge him. \u2022 Moderate chance of a hit, low homer probability due to Gausman's dominance. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_ops": 1.106
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.288,
+        "obp": 0.357,
+        "ops": 0.79
+      }
+    },
+    {
+      "player": "William Contreras",
+      "team": "MIL",
+      "confidence": 80.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 Contreras is hot with a solid recent performance, but Gausman\u2019s strikeout ability may limit his effectiveness. \u2022 Contreras has a moderate chance of a hit, but a home run is less likely against Gausman\u2019s strong fastball.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_ops": 0.92
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.26,
+        "obp": 0.36,
+        "ops": 0.767
+      }
+    },
+    {
+      "player": "Daulton Varsho",
+      "team": "TOR",
+      "confidence": 60.0,
+      "reasoning": "COLD STREAK \u2022 Varsho's recent power surge may clash with Priester's solid command, giving him a slight disadvantage. \u2022 Varsho has a moderate chance of a hit but low homer probability against a righty. \u2022 PITCHING LOCATION could significantly impact Varsho's ability to connect effectively.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 0.598
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.226,
+        "obp": 0.287,
+        "ops": 0.854
+      }
+    },
+    {
+      "player": "Andr\u00e9s Gim\u00e9nez",
+      "team": "TOR",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Gim\u00e9nez's recent hot streak against Priester's inconsistent performance gives him a slight edge. However, his low season average suggests a risk. \u2022 60% chance of a hit, 15% chance of a homer. \u2022 PITCHER'S CONTROL: Priester's command issues could lead to favorable pitches for Gim\u00e9nez.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 0.635
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.219,
+        "obp": 0.303,
+        "ops": 0.635
+      }
+    },
+    {
+      "player": "Davis Schneider",
+      "team": "TOR",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Schneider is on fire with a .340 average over the last 10 games, while Priester has struggled against lefties. Expect a solid chance for a hit, with a moderate chance for a homer. \u2022 PITCHING LOCATION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 1.217
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.255,
+        "obp": 0.372,
+        "ops": 0.869
+      }
+    },
+    {
+      "player": "Ty France",
+      "team": "TOR",
+      "confidence": 40.0,
+      "reasoning": "COLD STREAK \u2022 France's recent power surge contrasts with his overall struggles, while Priester's right-handed delivery may exploit France's weaknesses. \u2022 Moderate chance of a hit, low homer probability due to France's cold status. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 0.623
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.257,
+        "obp": 0.327,
+        "ops": 0.692
+      }
+    },
+    {
+      "player": "Vladimir Guerrero Jr.",
+      "team": "TOR",
+      "confidence": 65.0,
+      "reasoning": "COLD STREAK \u2022 Guerrero's recent struggles may hinder his elite power against Priester, who has shown promise as a rookie. \u2022 Guerrero is likely to get a hit, but a home run seems less probable given his current form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 0.61
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.29,
+        "obp": 0.389,
+        "ops": 0.871
+      }
+    },
+    {
+      "player": "George Springer",
+      "team": "TOR",
+      "confidence": 90.0,
+      "reasoning": "POWER_HITTER \u2022 Springer\u2019s scorching form and high OPS give him a significant advantage over Priester, a rookie pitcher. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Priester\u2019s command issues could lead to favorable pitches for Springer.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 1.306
+      },
+      "stats": {
+        "recent_hrs": 5,
+        "season_hrs": 5,
+        "avg": 0.301,
+        "obp": 0.395,
+        "ops": 0.933
+      }
+    },
+    {
+      "player": "Alejandro Kirk",
+      "team": "TOR",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Kirk's scorching form and high average give him a significant advantage against Priester. \u2022 High probability of a hit, with a decent chance for a homer given recent performance. \u2022 Priester's ability to limit hard contact will be a crucial factor.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_ops": 1.11
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.299,
+        "obp": 0.368,
+        "ops": 0.793
+      }
+    },
+    {
+      "player": "Brandon Lowe",
+      "team": "TB",
+      "confidence": 90.0,
+      "reasoning": "COLD STRETCH \u2022 Lowe's recent cold streak may hinder his performance against Irvin, who has shown effectiveness against lefties. \u2022 Given Lowe's HR potential, a hit is more likely than a homer, but caution is warranted. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_ops": 0.732
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.264,
+        "obp": 0.323,
+        "ops": 0.813
+      }
+    },
+    {
+      "player": "Christopher Morel",
+      "team": "TB",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Morel's recent hot streak gives him an edge against Irvin, but his overall low average suggests inconsistency. \u2022 Given Morel's current form, a hit is likely, but a home run remains a long shot. \n\nKEY_FACTOR \u2022 Recent performance trends.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_ops": 0.959
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.219,
+        "obp": 0.28,
+        "ops": 0.685
+      }
+    },
+    {
+      "player": "Yandy D\u00edaz",
+      "team": "TB",
+      "confidence": 65.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 D\u00edaz's elite power and recent form give him an advantage against Irvin, who may struggle with command. \u2022 High probability of a hit, with a moderate chance for a homer. \u2022 Irvin's ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_ops": 0.986
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.287,
+        "obp": 0.349,
+        "ops": 0.822
+      }
+    },
+    {
+      "player": "Junior Caminero",
+      "team": "TB",
+      "confidence": 90.0,
+      "reasoning": "HR_HOT \u2022 Caminero's recent power surge (4 HRs in 10 games) gives him an edge against Irvin, who may struggle with long balls. \u2022 High probability of a hit, with a decent chance for a homer if he connects well. \u2022 Irvin's command and ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_ops": 0.837
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.258,
+        "obp": 0.304,
+        "ops": 0.837
+      }
+    },
+    {
+      "player": "Jacob Young",
+      "team": "WSN",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Young's recent hot streak gives him an advantage against Pepiot, but his overall low OPS suggests vulnerability. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Pepiot's ability to control his fastball will be crucial in limiting Young's effectiveness.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Ryan Pepiot",
+        "hand": "R",
+        "adjusted_ops": 0.806
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.229,
+        "obp": 0.298,
+        "ops": 0.576
+      }
+    },
+    {
+      "player": "Luis Garc\u00eda Jr.",
+      "team": "WSN",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Garc\u00eda's recent hitting surge could exploit Pepiot's inconsistency, but his low OPS suggests a struggle against righties. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Pepiot's ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Ryan Pepiot",
+        "hand": "R",
+        "adjusted_ops": 0.709
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.26,
+        "obp": 0.303,
+        "ops": 0.709
+      }
+    },
+    {
+      "player": "James Wood",
+      "team": "WSN",
+      "confidence": 65.0,
+      "reasoning": "POWER_POTENTIAL \u2022 Wood's elite power may challenge Pepiot, but his recent low HR output suggests caution. \u2022 Moderate chance of a hit, low for a homer due to Pepiot's control. \u2022 PITCHING_STYLE: Pepiot's ability to limit hard contact could significantly impact Wood's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Ryan Pepiot",
+        "hand": "R",
+        "adjusted_ops": 0.837
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.26,
+        "obp": 0.359,
+        "ops": 0.837
+      }
+    },
+    {
+      "player": "Daylen Lile",
+      "team": "WSN",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Lile's recent hitting streak gives him confidence against Pepiot, but his low season OPS indicates vulnerability. \u2022 Moderate chance of a hit, low for a homer due to Pepiot's strikeout ability. \n\nKEY_FACTOR \u2022 Lile's plate discipline against right-handers could impact his success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Ryan Pepiot",
+        "hand": "R",
+        "adjusted_ops": 0.709
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.262,
+        "obp": 0.315,
+        "ops": 0.709
+      }
+    },
+    {
+      "player": "Alexander Canario",
+      "team": "PIT",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Canario's recent hits suggest improving form, but his low season average indicates struggles against quality pitching like May. \u2022 Moderate chance of a hit, low for a homer due to May's strong command and ground-ball tendency. \n\nKEY_FACTOR \u2022 Recent performance trends. \u2022 MATCHUP_ANALYSIS \u2022 Canario may find success with line drives, but May's skill limits damage. \u2022 PREDICTION: Single probability around 40%, homer under 10%.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_ops": 0.698
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.206,
+        "obp": 0.27,
+        "ops": 0.582
+      }
+    },
+    {
+      "player": "Spencer Horwitz",
+      "team": "PIT",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Horwitz is hot with a solid recent performance, but May's strong ground ball rate may limit his power. \u2022 Moderate hit probability, low homer chance due to May's pitching style.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_ops": 0.859
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.256,
+        "obp": 0.327,
+        "ops": 0.716
+      }
+    },
+    {
+      "player": "Tommy Pham",
+      "team": "PIT",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Pham's recent surge gives him an edge against May, but May's high ground ball rate could limit hard contact. \u2022 Pham has a solid chance for a hit, with a lower probability for a homer due to May's effectiveness. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_ops": 1.035
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.265,
+        "obp": 0.346,
+        "ops": 0.739
+      }
+    },
+    {
+      "player": "Joey Bart",
+      "team": "PIT",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Bart is hot with a recent uptick in hits, but May's strong ground ball rate may limit his power potential. \u2022 Bart has a moderate chance of getting a hit, but a homer seems unlikely against May's solid pitching. \n\nKEY_FACTOR \u2022 Bart's ability to handle May's sinker could be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_ops": 0.784
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.24,
+        "obp": 0.344,
+        "ops": 0.653
+      }
+    },
+    {
+      "player": "David Hamilton",
+      "team": "BOS",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Hamilton's recent hot streak contrasts with his overall low season stats, while Oviedo's right-handed pitching may neutralize him. \u2022 Hamilton is more likely to get a hit than a homer, given his current form. \u2022 Pitch location could significantly impact Hamilton's ability to capitalize.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Johan Oviedo",
+        "hand": "R",
+        "adjusted_ops": 0.823
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.207,
+        "obp": 0.261,
+        "ops": 0.588
+      }
+    },
+    {
+      "player": "Carlos Narv\u00e1ez",
+      "team": "BOS",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Narv\u00e1ez's recent surge contrasts with his overall cold season, facing Oviedo's solid right-handed pitching. \u2022 Moderate chance of a hit, low for a homer due to Oviedo's effectiveness against righties. \u2022 KEY_FACTOR: Narv\u00e1ez's ability to adjust to fastballs could determine success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Johan Oviedo",
+        "hand": "R",
+        "adjusted_ops": 0.649
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.243,
+        "obp": 0.315,
+        "ops": 0.721
+      }
+    },
+    {
+      "player": "Dane Myers",
+      "team": "MIA",
+      "confidence": 40.0,
+      "reasoning": "COLD STREAK \u2022 Myers is struggling with a low average and OPS, facing Peterson's solid right-handed pitching. \u2022 Low likelihood of a hit, minimal chance for a homer due to current form. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: Recent performance decline; expect a groundout or weak fly ball.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_ops": 0.559
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.234,
+        "obp": 0.294,
+        "ops": 0.621
+      }
+    },
+    {
+      "player": "Javier Sanoja",
+      "team": "MIA",
+      "confidence": 40.0,
+      "reasoning": "WARMING \u2022 Sanoja's recent surge gives him an edge against Peterson, who struggles with left-handed hitters. However, Sanoja's low season power (1 HR) suggests limited home run potential. \u2022 Weather conditions could impact ball flight, enhancing hit probability. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_ops": 0.684
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.245,
+        "obp": 0.293,
+        "ops": 0.684
+      }
+    },
+    {
+      "player": "Eric Wagaman",
+      "team": "MIA",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Wagaman's recent hot streak gives him an advantage against Peterson, who has struggled with power hitters. However, his low season average indicates inconsistency. \u2022 60% chance of a hit, 20% chance of a homer. \n\nPITCHER'S CONTROL \u2022 KEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_ops": 0.787
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.235,
+        "obp": 0.287,
+        "ops": 0.656
+      }
+    },
+    {
+      "player": "Connor Norby",
+      "team": "MIA",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Norby\u2019s recent form against Peterson\u2019s inconsistent pitching gives him an edge, but his low season OPS suggests vulnerability. \u2022 60% chance of a hit, 15% chance of a homer. \u2022 Peterson's ability to control his fastball will be crucial in limiting Norby\u2019s power.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_ops": 0.662
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.244,
+        "obp": 0.293,
+        "ops": 0.662
+      }
+    },
+    {
+      "player": "Liam Hicks",
+      "team": "MIA",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Hicks has a neutral matchup against Peterson, but his recent surge suggests potential for hits. Peterson's left-handedness may challenge Hicks' consistency. \u2022 60% hit probability, 5% homer probability. \u2022 Hicks' ability to handle breaking balls will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_ops": 0.722
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.262,
+        "obp": 0.356,
+        "ops": 0.722
+      }
+    },
+    {
+      "player": "Jeff McNeil",
+      "team": "NYM",
+      "confidence": 80.0,
+      "reasoning": "HOT_STREAK \u2022 McNeil's recent surge with 27 hits and 3 HRs suggests a favorable matchup against Cabrera, who has struggled with consistency. \u2022 High likelihood of a hit, with a moderate chance for a homer given McNeil's current form. \n\nPLATE_DISCIPLINE \u2022 McNeil's ability to make contact could be crucial against Cabrera's strikeout tendencies.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 0.952
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.253,
+        "obp": 0.35,
+        "ops": 0.793
+      }
+    },
+    {
+      "player": "Brandon Nimmo",
+      "team": "NYM",
+      "confidence": 65.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 Nimmo's elite power and recent scorching performance give him an advantage against Cabrera, who struggles with command. \u2022 High likelihood of a hit, with a moderate chance for a homer. \u2022 Cabrera's ability to limit walks will be crucial in this matchup.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 1.099
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.262,
+        "obp": 0.335,
+        "ops": 0.785
+      }
+    },
+    {
+      "player": "Pete Alonso",
+      "team": "NYM",
+      "confidence": 90.0,
+      "reasoning": "WARMING \u2022 Alonso's recent power surge against Cabrera's inconsistency gives him an edge. Expect a solid chance for a hit, with a moderate probability for a home run. \u2022 Weather conditions affecting ball flight could significantly impact performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 0.873
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.269,
+        "obp": 0.353,
+        "ops": 0.873
+      }
+    },
+    {
+      "player": "Juan Soto",
+      "team": "NYM",
+      "confidence": 65.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 Soto's elite power could exploit Cabrera's inconsistency, but his neutral category suggests potential vulnerability. \u2022 60% chance of a hit, 15% chance of a homer. \u2022 Cabrera's ability to control his breaking pitches will significantly impact Soto's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 0.887
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.251,
+        "obp": 0.393,
+        "ops": 0.887
+      }
+    },
+    {
+      "player": "Mark Vientos",
+      "team": "NYM",
+      "confidence": 80.0,
+      "reasoning": "POWER_HITTER \u2022 Vientos is on fire with 5 HRs in 10 games, facing Cabrera, who struggles with power hitters. \u2022 High likelihood of a hit or homer due to Vientos' current form and Cabrera's inconsistency. \u2022 PITCHING_COMMAND: Cabrera's control issues could lead to mistakes in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 1.025
+      },
+      "stats": {
+        "recent_hrs": 5,
+        "season_hrs": 5,
+        "avg": 0.246,
+        "obp": 0.298,
+        "ops": 0.732
+      }
+    },
+    {
+      "player": "Luis Torrens",
+      "team": "NYM",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Torrens is hot with 22 hits in 10 games, but Cabrera's strong strikeout rate poses a challenge. Expect a higher chance of a hit than a homer. \u2022 Pitch selection and pitcher's ability to locate fastballs will be crucial. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_ops": 0.739
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.218,
+        "obp": 0.284,
+        "ops": 0.616
+      }
+    },
+    {
+      "player": "Michael Harris II",
+      "team": "ATL",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Harris is cold but has shown recent power; S\u00e1nchez's left-handed pitching may neutralize him. \u2022 Moderate chance of a hit, low probability of a homer due to matchup. \u2022 KEY_FACTOR: Harris's ability to adjust to lefties could significantly impact his performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_ops": 0.484
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.251,
+        "obp": 0.275,
+        "ops": 0.691
+      }
+    },
+    {
+      "player": "Ozzie Albies",
+      "team": "ATL",
+      "confidence": 80.0,
+      "reasoning": "HITTER_FAVORABLE \u2022 Albies is scorching hot with a solid recent performance, while S\u00e1nchez has been inconsistent. Expect Albies to capitalize on this matchup. \u2022 HIGH_HIT_PROBABILITY",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_ops": 0.917
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.234,
+        "obp": 0.304,
+        "ops": 0.655
+      }
+    },
+    {
+      "player": "Jurickson Profar",
+      "team": "ATL",
+      "confidence": 90.0,
+      "reasoning": "HOT_STREAK \u2022 Profar's recent performance gives him an advantage against S\u00e1nchez, who has struggled with left-handed hitters. \u2022 High probability of a hit, with a decent chance for a homer given Profar's current form. \u2022 S\u00e1nchez's command issues could lead to more favorable pitches for Profar.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_ops": 1.032
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.265,
+        "obp": 0.371,
+        "ops": 0.86
+      }
+    },
+    {
+      "player": "Matt Olson",
+      "team": "ATL",
+      "confidence": 65.0,
+      "reasoning": "POWER_HITTER \u2022 Olson's elite power against S\u00e1nchez's inconsistent command gives him a notable advantage. \u2022 High probability of a hit, with a moderate chance for a homer. \u2022 S\u00e1nchez's ability to limit hard contact will be crucial in determining the outcome.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_ops": 0.826
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.269,
+        "obp": 0.369,
+        "ops": 0.826
+      }
+    },
+    {
+      "player": "Bryson Stott",
+      "team": "PHI",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Stott's recent hot streak gives him an advantage against RHP, but his overall season stats suggest inconsistency. \u2022 Increased likelihood of a hit, but a homer is less probable given his limited power this season. \u2022 KEY_FACTOR: Pitcher\u2019s ability to limit hard contact.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_ops": 0.958
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.244,
+        "obp": 0.32,
+        "ops": 0.684
+      }
+    },
+    {
+      "player": "Bryce Harper",
+      "team": "PHI",
+      "confidence": 65.0,
+      "reasoning": "POWER_HITTER \u2022 Harper's elite power against RHP gives him an advantage, despite recent struggles with only 1 HR in 10 games. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Pitcher's ability to locate fastballs will significantly impact Harper's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_ops": 0.87
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.272,
+        "obp": 0.365,
+        "ops": 0.87
+      }
+    },
+    {
+      "player": "Edmundo Sosa",
+      "team": "PHI",
+      "confidence": 60.0,
+      "reasoning": "KEY_FACTOR \u2022 Sosa's recent surge indicates strong form, but facing an unknown RHP could present challenges. \u2022 Likely outcome favors a hit given his current streak, with a lower probability for a homer. \u2022 Pitch type and location from the RHP will significantly impact Sosa's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_ops": 1.049
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.272,
+        "obp": 0.313,
+        "ops": 0.749
+      }
+    },
+    {
+      "player": "J.T. Realmuto",
+      "team": "PHI",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Realmuto's recent surge gives him a significant advantage against any RHP, especially with his power potential. \u2022 High likelihood of a hit, with a decent chance for a homer given his current form. \u2022 Pitcher's ability to locate fastballs will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_ops": 1.033
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.271,
+        "obp": 0.327,
+        "ops": 0.738
+      }
+    },
+    {
+      "player": "Willson Contreras",
+      "team": "STL",
+      "confidence": 80.0,
+      "reasoning": "COLD_STREAK \u2022 Contreras struggles recently, facing a solid righty in Abbott, who limits power. \u2022 Low likelihood of a home run, with a better chance for a single or double. \n\nKEY_FACTOR: Abbott's ability to induce ground balls could limit Contreras' effectiveness.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Andrew Abbott",
+        "hand": "R",
+        "adjusted_ops": 0.706
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.253,
+        "obp": 0.34,
+        "ops": 0.784
+      }
+    },
+    {
+      "player": "Jordan Walker",
+      "team": "STL",
+      "confidence": 40.0,
+      "reasoning": "COLD STRETCH \u2022 Walker's recent struggles and low OPS against righties give Abbott the advantage, despite Walker's power potential. \u2022 Low probability of a hit, minimal chance for a homer. \u2022 Abbott's ability to induce ground balls could further limit Walker's effectiveness.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Andrew Abbott",
+        "hand": "R",
+        "adjusted_ops": 0.546
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.229,
+        "obp": 0.283,
+        "ops": 0.607
+      }
+    },
+    {
+      "player": "Spencer Steer",
+      "team": "CIN",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Steer is showing improved form with a recent surge, but McGreevy's right-handed pitching may neutralize his power. \u2022 Moderate chance of a hit, low for a homer given Steer's season stats. \u2022 Key Factor: McGreevy's command and pitch selection against left-handed hitters.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Michael McGreevy",
+        "hand": "R",
+        "adjusted_ops": 0.705
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.235,
+        "obp": 0.305,
+        "ops": 0.705
+      }
+    },
+    {
+      "player": "Ke'Bryan Hayes",
+      "team": "CIN",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Hayes is heating up with 25 hits recently, but McGreevy's right-handed pitching may neutralize him. \u2022 Moderate chance of a hit, low for a homer given Hayes' season stats. \u2022 Key Factor: McGreevy's ability to control his fastball could dictate the matchup's outcome.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Michael McGreevy",
+        "hand": "R",
+        "adjusted_ops": 0.846
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.237,
+        "obp": 0.287,
+        "ops": 0.604
+      }
+    },
+    {
+      "player": "Gavin Lux",
+      "team": "CIN",
+      "confidence": 40.0,
+      "reasoning": "COLD STREAK \u2022 Lux's recent struggles against righties may hinder his performance against McGreevy, who has shown solid control. \u2022 Low probability of a homer; likely a single or out due to Lux's current form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Michael McGreevy",
+        "hand": "R",
+        "adjusted_ops": 0.66
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.275,
+        "obp": 0.353,
+        "ops": 0.733
+      }
+    },
+    {
+      "player": "Noelvi Marte",
+      "team": "CIN",
+      "confidence": 80.0,
+      "reasoning": "WARMING \u2022 Marte's recent hot streak and solid OPS give him an advantage against McGreevy, who may struggle with power hitters. Expect a high probability of a hit, with a decent chance for a homer. Pitching location will be crucial for McGreevy's success. \u2022 HIT, possible HR.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Michael McGreevy",
+        "hand": "R",
+        "adjusted_ops": 0.861
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.295,
+        "obp": 0.337,
+        "ops": 0.861
+      }
+    },
+    {
+      "player": "Mike Trout",
+      "team": "LAA",
+      "confidence": 65.0,
+      "reasoning": "COLD STREAK \u2022 Trout's recent struggles against right-handers, combined with Arrighetti's solid command, give the pitcher an advantage. \u2022 Low probability of a hit, minimal chance for a homer. \u2022 KEY_FACTOR: Trout's ability to adjust to Arrighetti's fastball could be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Spencer Arrighetti",
+        "hand": "R",
+        "adjusted_ops": 0.553
+      },
+      "stats": {
+        "recent_hrs": 0,
+        "season_hrs": 0,
+        "avg": 0.23,
+        "obp": 0.365,
+        "ops": 0.79
+      }
+    },
+    {
+      "player": "Yo\u00e1n Moncada",
+      "team": "LAA",
+      "confidence": 80.0,
+      "reasoning": "WARMING TREND \u2022 Moncada's recent surge (3 HRs in 10 games) contrasts with his season struggles (.230 AVG). Arrighetti's right-handed pitching may neutralize Moncada's lefty swing. \u2022 Increased confidence could lead to a hit, but a homer remains less likely. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Spencer Arrighetti",
+        "hand": "R",
+        "adjusted_ops": 0.786
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.23,
+        "obp": 0.326,
+        "ops": 0.786
+      }
+    },
+    {
+      "player": "Logan O'Hoppe",
+      "team": "LAA",
+      "confidence": 40.0,
+      "reasoning": "COLD STREAK \u2022 O'Hoppe's recent struggles against righties and Arrighetti's solid strikeout rate create a disadvantage for the batter. \u2022 Low probability of a hit; homer unlikely given current form. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: O'Hoppe's cold streak limits effectiveness; expect a weak groundout or strikeout.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Spencer Arrighetti",
+        "hand": "R",
+        "adjusted_ops": 0.463
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.222,
+        "obp": 0.262,
+        "ops": 0.662
+      }
+    },
+    {
+      "player": "Christian Walker",
+      "team": "HOU",
+      "confidence": 80.0,
+      "reasoning": "POWER_HITTER \u2022 Walker's recent surge (5 HRs in 10 games) gives him an advantage against Hendricks, who has struggled with power hitters. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Walker's ability to handle off-speed pitches could significantly impact his performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kyle Hendricks",
+        "hand": "R",
+        "adjusted_ops": 1.012
+      },
+      "stats": {
+        "recent_hrs": 5,
+        "season_hrs": 5,
+        "avg": 0.24,
+        "obp": 0.307,
+        "ops": 0.723
+      }
+    },
+    {
+      "player": "Cam Smith",
+      "team": "HOU",
+      "confidence": 40.0,
+      "reasoning": "COLD STREAK \u2022 Smith's recent struggles (.239 AVG) against Hendricks' control may limit his effectiveness, despite a power surge. \u2022 Low probability of a hit, minimal chance for a homer due to Hendricks' ground ball tendencies.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kyle Hendricks",
+        "hand": "R",
+        "adjusted_ops": 0.468
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.239,
+        "obp": 0.311,
+        "ops": 0.669
+      }
+    },
+    {
+      "player": "Gavin Sheets",
+      "team": "SD",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Sheets is scorching with a solid recent performance, while Bradley's right-handed delivery may be less favorable against him. \u2022 High probability of a hit, moderate chance for a homer. \u2022 Sheets' ability to handle breaking balls could significantly impact his success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Taj Bradley",
+        "hand": "R",
+        "adjusted_ops": 1.106
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.265,
+        "obp": 0.33,
+        "ops": 0.79
+      }
+    },
+    {
+      "player": "Manny Machado",
+      "team": "SD",
+      "confidence": 65.0,
+      "reasoning": "COLD STREAK \u2022 Machado's recent struggles against righties may hinder his elite power against Bradley, who has shown solid control. \u2022 Low probability of a homer; likely outcome is a single or double due to Machado's contact ability.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Taj Bradley",
+        "hand": "R",
+        "adjusted_ops": 0.571
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.285,
+        "obp": 0.349,
+        "ops": 0.816
+      }
+    },
+    {
+      "player": "Edouard Julien",
+      "team": "MIN",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Julien's recent hitting suggests an upward trend, but his overall low average and OPS indicate vulnerability against Pivetta's right-handed pitching. \u2022 40% chance of a hit, 5% chance of a homer. \u2022 Pivetta's command and ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Nick Pivetta",
+        "hand": "R",
+        "adjusted_ops": 0.591
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.194,
+        "obp": 0.282,
+        "ops": 0.591
+      }
+    },
+    {
+      "player": "Matt Wallner",
+      "team": "MIN",
+      "confidence": 90.0,
+      "reasoning": "WARMING \u2022 Wallner's recent power surge (4 HRs in 10 games) gives him an advantage against Pivetta, who has struggled with home runs. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Pivetta's ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Nick Pivetta",
+        "hand": "R",
+        "adjusted_ops": 0.822
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.215,
+        "obp": 0.324,
+        "ops": 0.822
+      }
+    },
+    {
+      "player": "Brooks Lee",
+      "team": "MIN",
+      "confidence": 60.0,
+      "reasoning": "WARMING TREND \u2022 Lee's recent power surge against Pivetta's inconsistent command gives him an advantage. However, Pivetta's strikeout ability poses a challenge. \u2022 60% chance of a hit, 15% for a homer. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Nick Pivetta",
+        "hand": "R",
+        "adjusted_ops": 0.822
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.246,
+        "obp": 0.297,
+        "ops": 0.685
+      }
+    },
+    {
+      "player": "Royce Lewis",
+      "team": "MIN",
+      "confidence": 80.0,
+      "reasoning": "WARMING TREND \u2022 Lewis is heating up with 23 hits and 3 HRs in 10 games, but his overall .229 AVG suggests inconsistency. Pivetta's right-handed pitching could neutralize Lewis, but his recent form gives him a chance. \u2022 Moderate hit probability; low homer likelihood.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Nick Pivetta",
+        "hand": "R",
+        "adjusted_ops": 0.81
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.229,
+        "obp": 0.292,
+        "ops": 0.675
+      }
+    },
+    {
+      "player": "Trent Grisham",
+      "team": "NYY",
+      "confidence": 90.0,
+      "reasoning": "POWER SURGE \u2022 Grisham's recent hot streak and HR prowess give him an edge against Smith, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Smith's command issues could lead to mistakes in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 1.17
+      },
+      "stats": {
+        "recent_hrs": 7,
+        "season_hrs": 7,
+        "avg": 0.248,
+        "obp": 0.354,
+        "ops": 0.836
+      }
+    },
+    {
+      "player": "Jazz Chisholm Jr.",
+      "team": "NYY",
+      "confidence": 90.0,
+      "reasoning": "POWER_HITTER \u2022 Chisholm's recent surge (31 hits, 4 HRs) gives him an edge against Smith, but his overall .240 AVG suggests inconsistency. \u2022 High likelihood of a hit, moderate chance for a homer. \u2022 Smith's ability to limit hard contact will be crucial. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 1.165
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.24,
+        "obp": 0.342,
+        "ops": 0.832
+      }
+    },
+    {
+      "player": "Cody Bellinger",
+      "team": "NYY",
+      "confidence": 65.0,
+      "reasoning": "POWER_HITTER \u2022 Bellinger's elite power and recent hitting surge give him an advantage against Smith. However, Smith's right-handedness may neutralize some of Bellinger's effectiveness. \u2022 HIGH_HIT_PROBABILITY, MODERATE_HOMER_PROBABILITY \u2022 PITCHING_LOCATION: If Smith leaves pitches over the plate, Bellinger could capitalize.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 1.187
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.281,
+        "obp": 0.34,
+        "ops": 0.848
+      }
+    },
+    {
+      "player": "Ben Rice",
+      "team": "NYY",
+      "confidence": 90.0,
+      "reasoning": "POWER_HITTER \u2022 Rice's recent surge and HR-hitting form give him an edge against Smith, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Smith's ability to locate his fastball will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 1.169
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.247,
+        "obp": 0.343,
+        "ops": 0.835
+      }
+    },
+    {
+      "player": "Aaron Judge",
+      "team": "NYY",
+      "confidence": 65.0,
+      "reasoning": "COLD STRETCH \u2022 Judge's recent struggles against righties, combined with Smith's solid command, gives the pitcher an edge. \u2022 Low homer probability, but a hit is likely due to Judge's elite power potential.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 0.776
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.322,
+        "obp": 0.446,
+        "ops": 1.109
+      }
+    },
+    {
+      "player": "Austin Wells",
+      "team": "NYY",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Wells is heating up with 27 hits in 10 games, facing Smith, a less experienced RHP. However, his season stats show struggles. \u2022 Increased confidence could lead to a hit, but a homer is less likely.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_ops": 0.977
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.21,
+        "obp": 0.274,
+        "ops": 0.698
+      }
+    },
+    {
+      "player": "Tim Elko",
+      "team": "CWS",
+      "confidence": 40.0,
+      "reasoning": "COLD_STREAK \u2022 Elko's struggles against righties and low average create a disadvantage against Schlittler. \u2022 Low probability of a hit, minimal chance for a homer. \u2022 KEY_FACTOR: Schlittler's ability to exploit Elko's current form could lead to a strikeout.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cam Schlittler",
+        "hand": "R",
+        "adjusted_ops": 0.478
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.136,
+        "obp": 0.197,
+        "ops": 0.531
+      }
+    },
+    {
+      "player": "Colt Keith",
+      "team": "DET",
+      "confidence": 60.0,
+      "reasoning": "HOT BAT \u2022 Colt Keith's recent surge gives him an edge against Kolek, who may struggle with power hitters. \u2022 Likely outcome: hit, with a moderate chance for a homer due to Keith's current form. \u2022 KEY_FACTOR: Kolek's command issues could lead to mistakes over the plate.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_ops": 0.924
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.262,
+        "obp": 0.343,
+        "ops": 0.77
+      }
+    },
+    {
+      "player": "Riley Greene",
+      "team": "DET",
+      "confidence": 90.0,
+      "reasoning": "POWER_HITTER \u2022 Greene's recent surge against right-handers gives him a distinct advantage over Kolek, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer given Greene's current form. \u2022 Kolek's command issues could lead to mistakes in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_ops": 1.179
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.269,
+        "obp": 0.325,
+        "ops": 0.842
+      }
+    },
+    {
+      "player": "Spencer Torkelson",
+      "team": "DET",
+      "confidence": 65.0,
+      "reasoning": "POWER_HITTER \u2022 Torkelson's elite power could exploit Kolek's weaknesses, but his low average suggests inconsistency. \u2022 Moderate chance of a hit, low for a homer due to Kolek's potential effectiveness against righties. \u2022 PITCHER'S_COMMAND: Kolek's ability to locate pitches will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_ops": 0.812
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.239,
+        "obp": 0.336,
+        "ops": 0.812
+      }
+    },
+    {
+      "player": "Andy Ib\u00e1\u00f1ez",
+      "team": "DET",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Ib\u00e1\u00f1ez is hot with 27 hits recently, but Kolek's right-handed dominance could neutralize him. \u2022 Given Ib\u00e1\u00f1ez's recent form, a hit is likely, but a homer seems less probable. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_ops": 0.974
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.25,
+        "obp": 0.306,
+        "ops": 0.696
+      }
+    },
+    {
+      "player": "Nick Loftin",
+      "team": "KC",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Loftin's recent hits suggest potential against Flaherty, but his overall low average and OPS indicate struggles. Flaherty's right-handed dominance may limit Loftin's effectiveness. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Loftin's ability to handle breaking pitches will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_ops": 0.631
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.2,
+        "obp": 0.28,
+        "ops": 0.631
+      }
+    },
+    {
+      "player": "Vinnie Pasquantino",
+      "team": "KC",
+      "confidence": 90.0,
+      "reasoning": "SCORCHING FORM \u2022 Pasquantino's recent hot streak gives him an advantage against Flaherty, who has struggled with consistency. Expect a high probability of a hit, with a decent chance for a homer. \u2022 Flaherty's command issues could lead to more pitches in the strike zone. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_ops": 1.109
+      },
+      "stats": {
+        "recent_hrs": 5,
+        "season_hrs": 5,
+        "avg": 0.26,
+        "obp": 0.322,
+        "ops": 0.792
+      }
+    },
+    {
+      "player": "Maikel Garcia",
+      "team": "KC",
+      "confidence": 60.0,
+      "reasoning": "COLD STREAK \u2022 Garcia's recent power surge contrasts with Flaherty's solid right-handed pitching, giving Flaherty an advantage. However, Garcia's strong season average suggests potential for hits. \u2022 60% chance of a hit, 15% chance of a homer. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_ops": 0.747
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.297,
+        "obp": 0.364,
+        "ops": 0.83
+      }
+    },
+    {
+      "player": "Mike Yastrzemski",
+      "team": "KC",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Yastrzemski's recent hot streak gives him an advantage against Flaherty, who has struggled with home runs. \u2022 High probability for a hit, moderate chance for a homer. \u2022 Flaherty's command issues could lead to more favorable pitches for Yastrzemski.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_ops": 1.054
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.241,
+        "obp": 0.34,
+        "ops": 0.753
+      }
+    },
+    {
+      "player": "Salvador Perez",
+      "team": "KC",
+      "confidence": 65.0,
+      "reasoning": "POWER_HITTER \u2022 Perez's elite power may challenge Flaherty, but his recent performance shows limited power with only 1 HR in 10 games. \u2022 Moderate chance of a hit, low for a homer due to Flaherty's solid strikeout ability. \u2022 PITCHING_COMMAND could significantly impact Perez's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_ops": 0.737
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.244,
+        "obp": 0.29,
+        "ops": 0.737
+      }
+    },
+    {
+      "player": "Julio Rodr\u00edguez",
+      "team": "SEA",
+      "confidence": 65.0,
+      "reasoning": "POWER_ADVANTAGE \u2022 Rodr\u00edguez's elite power could challenge Williams, but his recent performance shows limited power with only 1 HR in 10 games. \u2022 Given the matchup, a hit is more likely than a homer, especially if Williams can locate his fastball effectively.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 0.774
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.263,
+        "obp": 0.317,
+        "ops": 0.774
+      }
+    },
+    {
+      "player": "Cole Young",
+      "team": "SEA",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Young's recent performance shows improvement, but his overall stats indicate struggles against righties like Williams. \u2022 Low probability of a hit or homer given Young's cold streak and low OPS. \u2022 Pitch selection could significantly impact Young's ability to capitalize on any mistakes.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 0.588
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.228,
+        "obp": 0.318,
+        "ops": 0.653
+      }
+    },
+    {
+      "player": "Randy Arozarena",
+      "team": "SEA",
+      "confidence": 65.0,
+      "reasoning": "COLD STREAK \u2022 Arozarena's recent struggles may hinder his power against Williams, who has shown solid command. \u2022 Low probability of a hit, minimal chance for a homer due to Arozarena's cold form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 0.709
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.24,
+        "obp": 0.34,
+        "ops": 0.788
+      }
+    },
+    {
+      "player": "Eugenio Su\u00e1rez",
+      "team": "SEA",
+      "confidence": 90.0,
+      "reasoning": "POWER_HITTER \u2022 Su\u00e1rez's recent surge against righties gives him an edge over Williams, who is still adjusting to MLB hitters. \u2022 High probability of a hit, with a decent chance for a homer given Su\u00e1rez's current form. \u2022 Pitch location could significantly impact Su\u00e1rez's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 1.032
+      },
+      "stats": {
+        "recent_hrs": 4,
+        "season_hrs": 4,
+        "avg": 0.237,
+        "obp": 0.313,
+        "ops": 0.86
+      }
+    },
+    {
+      "player": "Cal Raleigh",
+      "team": "SEA",
+      "confidence": 90.0,
+      "reasoning": "COLD STREAK \u2022 Raleigh's cold status contrasts with his HR potential; Williams' inexperience may allow for a hit. \u2022 Raleigh has a moderate chance for a hit, low for a homer due to recent struggles. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 0.659
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.243,
+        "obp": 0.356,
+        "ops": 0.942
+      }
+    },
+    {
+      "player": "Mitch Garver",
+      "team": "SEA",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Garver's recent performance shows improvement, but his overall season stats indicate struggles against righties like Williams. \u2022 Moderate chance of a hit, low probability for a homer due to Williams' strong strikeout rate. \n\nKEY_FACTOR \u2022 Recent form vs. season stats \u2022 PREDICTION: Hit probability around 40%, homer probability under 10%.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_ops": 0.653
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.214,
+        "obp": 0.308,
+        "ops": 0.653
+      }
+    },
+    {
+      "player": "Nolan Jones",
+      "team": "CLE",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Jones is heating up, but Gilbert's strong strikeout rate poses a challenge. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Key Factor: Gilbert's ability to locate his fastball effectively could limit Jones' power surge.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Logan Gilbert",
+        "hand": "R",
+        "adjusted_ops": 0.889
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.219,
+        "obp": 0.314,
+        "ops": 0.635
+      }
+    },
+    {
+      "player": "Jos\u00e9 Ram\u00edrez",
+      "team": "CLE",
+      "confidence": 65.0,
+      "reasoning": "COLD_STRETCH \u2022 Ram\u00edrez's recent struggles against righties could hinder his performance against Gilbert, who excels at limiting power. \u2022 Low probability of a homer, but a moderate chance for a hit if he adjusts. \n\nKEY_FACTOR \u2022 COLD STRETCH \u2022 MATCHUP_ANALYSIS \u2022 Ram\u00edrez's recent struggles against righties could hinder his performance against Gilbert, who excels at limiting power. \u2022 Low probability of a homer, but a moderate chance for a hit if he adjusts",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Logan Gilbert",
+        "hand": "R",
+        "adjusted_ops": 0.607
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.285,
+        "obp": 0.362,
+        "ops": 0.867
+      }
+    },
+    {
+      "player": "Colton Cowser",
+      "team": "BAL",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Cowser's recent surge contrasts with his overall season struggles, giving him a potential edge against Seymour. However, Seymour's right-handed pitching could neutralize Cowser's power. \u2022 High probability of a hit, but a homer seems less likely. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Carson Seymour",
+        "hand": "R",
+        "adjusted_ops": 0.823
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.215,
+        "obp": 0.28,
+        "ops": 0.686
+      }
+    },
+    {
+      "player": "Drew Gilbert",
+      "team": "SF",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Gilbert's recent hot streak contrasts with his poor season stats, while Rogers has struggled against lefties. \u2022 Increased likelihood of a hit, but low homer probability due to Gilbert's overall power numbers. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: Gilbert's recent performance boosts hit potential, but a homer remains unlikely.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_ops": 0.584
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.139,
+        "obp": 0.139,
+        "ops": 0.417
+      }
+    },
+    {
+      "player": "Heliot Ramos",
+      "team": "SF",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Ramos has a slight advantage against lefties, and Rogers has struggled with consistency. Expect Ramos to capitalize on this matchup. \u2022 60% chance of a hit, 15% chance of a homer. \n\nPITCHING_COMMAND \u2022 KEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_ops": 0.75
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.265,
+        "obp": 0.342,
+        "ops": 0.75
+      }
+    },
+    {
+      "player": "Wilmer Flores",
+      "team": "SF",
+      "confidence": 60.0,
+      "reasoning": "PLATE DISCIPLINE \u2022 Flores shows recent power, but Rogers' left-handedness may neutralize him. Expect a modest chance for a hit, but a homer is less likely. \u2022 If Rogers struggles with command, Flores could capitalize for extra-base hits.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_ops": 0.698
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.245,
+        "obp": 0.316,
+        "ops": 0.698
+      }
+    },
+    {
+      "player": "Luis Matos",
+      "team": "SF",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Matos is on a hot streak with 38 hits in 10 games, giving him an advantage against Rogers, who has struggled this season. \u2022 High probability of a hit, moderate chance for a homer. \u2022 Rogers' command issues could lead to more favorable pitches for Matos.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_ops": 1.019
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.222,
+        "obp": 0.263,
+        "ops": 0.728
+      }
+    },
+    {
+      "player": "Casey Schmitt",
+      "team": "SF",
+      "confidence": 60.0,
+      "reasoning": "COLD_STREAK \u2022 Schmitt's recent power surge contrasts with his overall cold season, facing Rogers, a lefty who may exploit his struggles. \u2022 Moderate chance of a hit, low homer probability due to Schmitt's inconsistency. \u2022 PITCHING_STYLE: Rogers' ability to neutralize right-handed batters could hinder Schmitt's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_ops": 0.64
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.239,
+        "obp": 0.312,
+        "ops": 0.711
+      }
+    },
+    {
+      "player": "Pete Crow-Armstrong",
+      "team": "CHC",
+      "confidence": 65.0,
+      "reasoning": "COLD STREAK \u2022 Crow-Armstrong's recent struggles against right-handed pitchers may hinder his performance against Brown, who has solid strikeout potential. \u2022 Low probability of a hit, minimal chance of a homer due to current form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_ops": 0.559
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.254,
+        "obp": 0.296,
+        "ops": 0.798
+      }
+    },
+    {
+      "player": "Nico Hoerner",
+      "team": "CHC",
+      "confidence": 40.0,
+      "reasoning": "WARMING \u2022 Hoerner's recent hitting surge gives him an advantage against Brown, but his power is limited. Expect a solid chance for a hit, but a home run is less likely. \u2022 Pitch selection and Brown's command could significantly impact the outcome. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_ops": 0.871
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.292,
+        "obp": 0.344,
+        "ops": 0.726
+      }
+    },
+    {
+      "player": "Michael Busch",
+      "team": "CHC",
+      "confidence": 65.0,
+      "reasoning": "POWER_ADVANTAGE \u2022 Busch's elite power against Brown's right-handed pitching gives him a favorable matchup, especially with recent form. \u2022 High probability of a hit, moderate chance for a homer. \u2022 Pitch location and command will significantly impact Busch's ability to capitalize on this matchup.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_ops": 0.84
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.262,
+        "obp": 0.341,
+        "ops": 0.84
+      }
+    },
+    {
+      "player": "Kyle Tucker",
+      "team": "CHC",
+      "confidence": 80.0,
+      "reasoning": "WARMING \u2022 Tucker's recent form and HR potential give him an edge against Brown, who may struggle with power hitters. \u2022 High probability of a hit, moderate chance of a homer. \u2022 Brown's command issues could lead to favorable pitches for Tucker.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_ops": 1.009
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.264,
+        "obp": 0.379,
+        "ops": 0.841
+      }
+    },
+    {
+      "player": "Reese McGuire",
+      "team": "CHC",
+      "confidence": 40.0,
+      "reasoning": "COLD_STREAK \u2022 McGuire's recent struggles against right-handed pitchers like Brown may hinder his performance despite elite power potential. \u2022 Low probability of a hit, minimal chance for a homer due to current form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_ops": 0.626
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.225,
+        "obp": 0.255,
+        "ops": 0.696
+      }
+    },
+    {
+      "player": "Brenton Doyle",
+      "team": "COL",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Doyle is scorching with 32 hits and 3 HRs in 10 games, while Assad has been inconsistent. \u2022 High probability of a hit, with a decent chance for a homer given Doyle's current form. \u2022 Assad's pitch location could significantly impact Doyle's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_ops": 0.972
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.245,
+        "obp": 0.293,
+        "ops": 0.694
+      }
+    },
+    {
+      "player": "Kyle Farmer",
+      "team": "COL",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Farmer's recent hot streak gives him an advantage against Assad, but his overall low average suggests inconsistency. \u2022 Moderate chance of a hit, low for a homer. \u2022 Assad's ability to limit hard contact could impact Farmer's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_ops": 0.911
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.229,
+        "obp": 0.283,
+        "ops": 0.651
+      }
+    },
+    {
+      "player": "Kyle Karros",
+      "team": "COL",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Karros is cold with only 1 HR in 10 games, facing Assad, who limits power hitters effectively. \u2022 Low probability of a homer, but a moderate chance for a hit due to recent contact. \u2022 Pitch location could significantly impact Karros's ability to drive the ball.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_ops": 0.655
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.274,
+        "obp": 0.357,
+        "ops": 0.728
+      }
+    },
+    {
+      "player": "Hunter Goodman",
+      "team": "COL",
+      "confidence": 65.0,
+      "reasoning": "POWER_VS_CONTROL \u2022 Goodman\u2019s elite power faces Assad\u2019s solid control, but Goodman is cold, limiting his impact. \u2022 Moderate chance of a hit, low for a homer given recent struggles. \u2022 KEY_FACTOR: Assad's ability to induce ground balls could neutralize Goodman\u2019s power.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_ops": 0.76
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.275,
+        "obp": 0.324,
+        "ops": 0.844
+      }
+    },
+    {
+      "player": "Lourdes Gurriel Jr.",
+      "team": "ARI",
+      "confidence": 80.0,
+      "reasoning": "HOT_STREAK \u2022 Gurriel's recent surge gives him confidence against Glasnow, but his low season average indicates potential struggles. \u2022 Moderate chance of a hit, low for a homer due to Glasnow's strikeout ability. \n\nPLATE_DISCIPLINE \u2022 Gurriel's ability to lay off high fastballs could impact his performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_ops": 0.866
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.249,
+        "obp": 0.302,
+        "ops": 0.722
+      }
+    },
+    {
+      "player": "Adrian Del Castillo",
+      "team": "ARI",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Del Castillo's recent hitting success contrasts with Glasnow's strikeout ability, giving the pitcher an advantage. Expect a hit probability over a homer due to Glasnow's dominance. \u2022 Pitch selection and command could significantly impact Del Castillo's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_ops": 0.657
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.244,
+        "obp": 0.279,
+        "ops": 0.657
+      }
+    },
+    {
+      "player": "Corbin Carroll",
+      "team": "ARI",
+      "confidence": 65.0,
+      "reasoning": "POWER_DISPARITY \u2022 Carroll's elite power potential contrasts with Glasnow's strikeout ability, giving Glasnow the advantage. \u2022 Low probability for a homer; likely a hit due to Carroll's recent contact.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_ops": 0.877
+      },
+      "stats": {
+        "recent_hrs": 0,
+        "season_hrs": 0,
+        "avg": 0.254,
+        "obp": 0.332,
+        "ops": 0.877
+      }
+    },
+    {
+      "player": "Ketel Marte",
+      "team": "ARI",
+      "confidence": 65.0,
+      "reasoning": "COLD_STREAK \u2022 Marte's recent struggles (0 HRs in 10 games) face a tough matchup against Glasnow's elite strikeout ability. \u2022 Low probability of a hit, minimal chance for a homer due to Glasnow's dominance. \n\nKEY_FACTOR \u2022 Recent performance trend. \u2022 MATCHUP_ANALYSIS \u2022 Marte's cold streak vs. Glasnow's power pitching. \u2022 PREDICTION: Likely a weak groundout or strikeout.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_ops": 0.642
+      },
+      "stats": {
+        "recent_hrs": 0,
+        "season_hrs": 0,
+        "avg": 0.289,
+        "obp": 0.392,
+        "ops": 0.917
+      }
+    },
+    {
+      "player": "Gabriel Moreno",
+      "team": "ARI",
+      "confidence": 80.0,
+      "reasoning": "WARMING \u2022 Moreno's recent hot streak against Glasnow's high strikeout rate gives him an edge, but Glasnow's velocity poses a challenge. \u2022 Likely outcome: hit, with a lower probability for a homer due to Glasnow's effectiveness against right-handed hitters. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_ops": 0.774
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.281,
+        "obp": 0.332,
+        "ops": 0.774
+      }
+    },
+    {
+      "player": "Andy Pages",
+      "team": "LAD",
+      "confidence": 80.0,
+      "reasoning": "WARMING \u2022 Pages is hitting well with a .275 AVG and HR potential against Rodriguez, who has struggled against lefties. \u2022 High probability of a hit, with a chance for a homer given Pages' recent power surge. **Pitch location** could significantly impact his success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_ops": 0.789
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.275,
+        "obp": 0.322,
+        "ops": 0.789
+      }
+    },
+    {
+      "player": "Freddie Freeman",
+      "team": "LAD",
+      "confidence": 80.0,
+      "reasoning": "HITTER'S FORM \u2022 Freeman's scorching form gives him a significant advantage over Rodriguez, who has struggled against left-handed hitters. \u2022 High probability of a hit, with a decent chance for a homer given Freeman's recent power surge. \u2022 Pitch location could greatly impact Freeman's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_ops": 1.048
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.3,
+        "obp": 0.375,
+        "ops": 0.873
+      }
+    },
+    {
+      "player": "Alex Call",
+      "team": "LAD",
+      "confidence": 40.0,
+      "reasoning": "POWER_SURGE \u2022 Call's recent hitting streak gives him confidence, but Rodriguez's right-handed dominance may limit his effectiveness. \u2022 Moderate chance of a hit, low probability of a homer due to Rodriguez's strikeout ability and Call's power limitations.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_ops": 1.075
+      },
+      "stats": {
+        "recent_hrs": 1,
+        "season_hrs": 1,
+        "avg": 0.274,
+        "obp": 0.375,
+        "ops": 0.768
+      }
+    },
+    {
+      "player": "Alex Freeland",
+      "team": "LAD",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Freeland's recent hot streak contrasts with his overall struggles, facing Rodriguez's solid right-handed pitching. \u2022 Moderate chance of a hit, low for a homer due to Rodriguez's effectiveness against lefties. \u2022 Key Factor: Rodriguez's ability to limit hard contact could stifle Freeland's momentum.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_ops": 0.889
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.192,
+        "obp": 0.306,
+        "ops": 0.635
+      }
+    },
+    {
+      "player": "Dalton Rushing",
+      "team": "LAD",
+      "confidence": 60.0,
+      "reasoning": "HOT STREAK \u2022 Rushing's recent power surge contrasts with his overall low season stats, but facing a righty like Rodriguez may favor him. \u2022 Moderate chance of a hit, low homer probability due to Rodriguez's effectiveness against lefties. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_ops": 0.664
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.189,
+        "obp": 0.256,
+        "ops": 0.553
+      }
+    },
+    {
+      "player": "Michael Helman",
+      "team": "TEX",
+      "confidence": 90.0,
+      "reasoning": "HR_HOT \u2022 Helman\u2019s recent power surge against Barnett's right-handed pitching gives him an advantage. Expect a solid chance for a hit, with a moderate probability for a homer. \u2022 Pitching location could significantly impact Helman's ability to capitalize on his current form.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_ops": 0.958
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.25,
+        "obp": 0.333,
+        "ops": 0.958
+      }
+    },
+    {
+      "player": "Joc Pederson",
+      "team": "TEX",
+      "confidence": 80.0,
+      "reasoning": "SCORCHING FORM \u2022 Pederson's recent surge contrasts with his poor season stats, giving him a potential edge against Barnett. However, Barnett's right-handed delivery may neutralize Pederson's power. \u2022 60% chance of a hit, 20% for a homer. \n\nPITCHING CONSISTENCY \u2022 Pederson's ability to adjust to Barnett's fastball could be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_ops": 0.853
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.171,
+        "obp": 0.283,
+        "ops": 0.609
+      }
+    },
+    {
+      "player": "Rowdy Tellez",
+      "team": "TEX",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Tellez is heating up with 23 hits in 10 games, but his overall low average and OPS suggest inconsistency. Barnett's right-handed delivery may neutralize Tellez's power. \u2022 60% chance of a hit, 15% chance of a homer. \n\nKEY_FACTOR \u2022 Tellez's recent form could lead to a breakthrough against Barnett.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_ops": 0.723
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.223,
+        "obp": 0.277,
+        "ops": 0.723
+      }
+    },
+    {
+      "player": "Adolis Garc\u00eda",
+      "team": "TEX",
+      "confidence": 60.0,
+      "reasoning": "POWER_SURGE \u2022 Garc\u00eda's recent hot streak gives him an advantage against Barnett, who may struggle with power hitters. Expect a solid chance for a hit, with a moderate homer probability. \u2022 Pitching location and control will be key factors impacting Garc\u00eda's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_ops": 0.963
+      },
+      "stats": {
+        "recent_hrs": 2,
+        "season_hrs": 2,
+        "avg": 0.232,
+        "obp": 0.278,
+        "ops": 0.688
+      }
+    },
+    {
+      "player": "Kyle Higashioka",
+      "team": "TEX",
+      "confidence": 80.0,
+      "reasoning": "HR_HOT \u2022 Higashioka's recent power surge and Barnett's inexperience could favor the batter, but Barnett's right-handedness may neutralize some advantage. \u2022 60% chance of a hit, 20% chance of a homer. \u2022 KEY_FACTOR: Barnett's ability to locate fastballs effectively.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_ops": 0.722
+      },
+      "stats": {
+        "recent_hrs": 3,
+        "season_hrs": 3,
+        "avg": 0.25,
+        "obp": 0.297,
+        "ops": 0.722
+      }
+    }
+  ],
+  "hits_predictions": [
+    {
+      "player": "Anthony Seigler",
+      "team": "MIL",
+      "confidence": 20.07,
+      "reasoning": "POWER_DISPARITY \u2022 Seigler's lack of power and low OPS face Gausman's strong strikeout ability, giving the pitcher a clear advantage. \u2022 Low probability of a hit, minimal chance for a homer. \u2022 Gausman's command could significantly impact Seigler's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_avg": 0.207
+      },
+      "stats": {
+        "recent_hits": 20,
+        "avg": 0.207,
+        "obp": 0.313,
+        "slg": 0.224
+      }
+    },
+    {
+      "player": "Brandon Lockridge",
+      "team": "MIL",
+      "confidence": 25.379999999999995,
+      "reasoning": "POWER_DISPARITY \u2022 Lockridge's lack of power (0 HRs) contrasts with Gausman's strong strikeout ability, giving the pitcher a clear advantage. \u2022 Low likelihood of a home run; moderate chance of a hit due to Lockridge's recent contact. \u2022 Gausman's command and pitch selection could heavily influence the outcome.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_avg": 0.231
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.231,
+        "obp": 0.28,
+        "slg": 0.299
+      }
+    },
+    {
+      "player": "Caleb Durbin",
+      "team": "MIL",
+      "confidence": 26.61,
+      "reasoning": "POWER_SURGE \u2022 Durbin's recent hitting surge gives him confidence, but Gausman's strong strikeout ability poses a challenge. \u2022 Moderate chance of a hit, low probability of a homer due to Gausman's effectiveness against righties. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_avg": 0.259
+      },
+      "stats": {
+        "recent_hits": 26,
+        "avg": 0.259,
+        "obp": 0.335,
+        "slg": 0.396
+      }
+    },
+    {
+      "player": "Brice Turang",
+      "team": "MIL",
+      "confidence": 31.8,
+      "reasoning": "POWER_SURGE \u2022 Turang's recent hitting streak gives him confidence, but Gausman's strong strikeout rate poses a challenge. \u2022 Turang has a moderate chance of a hit, but a homer is less likely against Gausman's fastball. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: Gausman's command. \u2022 Turang's recent form vs. Gausman's strikeouts. \u2022 Hit probability: 40%, Homer probability: 10%.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_avg": 0.288
+      },
+      "stats": {
+        "recent_hits": 31,
+        "avg": 0.288,
+        "obp": 0.357,
+        "slg": 0.433
+      }
+    },
+    {
+      "player": "William Contreras",
+      "team": "MIL",
+      "confidence": 26.49,
+      "reasoning": "PLATE DISCIPLINE \u2022 Contreras is hot with a solid recent performance, but Gausman's strikeout ability poses a challenge. \u2022 Likely outcome: hit probability is higher than homer due to Gausman's dominance; expect a single or double.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kevin Gausman",
+        "hand": "R",
+        "adjusted_avg": 0.26
+      },
+      "stats": {
+        "recent_hits": 26,
+        "avg": 0.26,
+        "obp": 0.36,
+        "slg": 0.408
+      }
+    },
+    {
+      "player": "Davis Schneider",
+      "team": "TOR",
+      "confidence": 34.17,
+      "reasoning": "POWER_HITTER \u2022 Schneider's recent surge and HR hot streak give him an edge against Priester, who has struggled against lefties. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Priester's command issues could lead to pitches in Schneider's sweet spot.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_avg": 0.255
+      },
+      "stats": {
+        "recent_hits": 34,
+        "avg": 0.255,
+        "obp": 0.372,
+        "slg": 0.497
+      }
+    },
+    {
+      "player": "George Springer",
+      "team": "TOR",
+      "confidence": 37.05,
+      "reasoning": "POWER_HITTER \u2022 Springer is on fire with a .301 AVG and 5 HRs in 10 games, while Priester struggles against right-handed bats. \u2022 High probability of a hit, with a solid chance for a homer given Springer's current form. \n\nPITCHING_COMMAND \u2022 SCORCHING \u2022 HIT/HOMER",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_avg": 0.301
+      },
+      "stats": {
+        "recent_hits": 37,
+        "avg": 0.301,
+        "obp": 0.395,
+        "slg": 0.538
+      }
+    },
+    {
+      "player": "Alejandro Kirk",
+      "team": "TOR",
+      "confidence": 33.51,
+      "reasoning": "PLATE DISCIPLINE \u2022 Kirk's scorching form and high average give him a significant advantage over Priester, a rookie pitcher. \u2022 High probability of a hit, with a decent chance for a homer given Kirk's recent power surge. \u2022 Priester's ability to handle left-handed hitters could impact his performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Quinn Priester",
+        "hand": "R",
+        "adjusted_avg": 0.299
+      },
+      "stats": {
+        "recent_hits": 33,
+        "avg": 0.299,
+        "obp": 0.368,
+        "slg": 0.426
+      }
+    },
+    {
+      "player": "Christopher Morel",
+      "team": "TB",
+      "confidence": 25.71,
+      "reasoning": "POWER_SURGE \u2022 Morel's recent hot streak gives him an advantage against Irvin, who may struggle with power hitters. However, Morel's overall low season average is a concern. \u2022 60% chance of a hit, 15% chance of a homer. \u2022 Irvin's ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_avg": 0.219
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.219,
+        "obp": 0.28,
+        "slg": 0.405
+      }
+    },
+    {
+      "player": "Yandy D\u00edaz",
+      "team": "TB",
+      "confidence": 29.369999999999997,
+      "reasoning": "PLATE DISCIPLINE \u2022 D\u00edaz's elite power and recent hitting surge give him an advantage against Irvin, who may struggle with command. \u2022 High probability of a hit, with a moderate chance for a homer. \u2022 Irvin's ability to locate his fastball will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jake Irvin",
+        "hand": "R",
+        "adjusted_avg": 0.287
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.287,
+        "obp": 0.349,
+        "slg": 0.473
+      }
+    },
+    {
+      "player": "Jacob Young",
+      "team": "WSN",
+      "confidence": 23.91,
+      "reasoning": "POWER_SURGE \u2022 Young's recent hitting surge contrasts with his overall low season stats, facing Pepiot's right-handed pitching, which he may struggle against. \u2022 Moderate chance of a hit, low probability for a homer. \u2022 Pitch selection and pitch count could significantly impact Young's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Ryan Pepiot",
+        "hand": "R",
+        "adjusted_avg": 0.229
+      },
+      "stats": {
+        "recent_hits": 23,
+        "avg": 0.229,
+        "obp": 0.298,
+        "slg": 0.278
+      }
+    },
+    {
+      "player": "Spencer Horwitz",
+      "team": "PIT",
+      "confidence": 25.259999999999998,
+      "reasoning": "POWER_SURGE \u2022 Horwitz is hot with a recent 25 hits, but May's strong ground ball rate may limit his power. \u2022 Moderate chance of a hit, low homer probability due to May's effectiveness against lefties.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_avg": 0.256
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.256,
+        "obp": 0.327,
+        "slg": 0.389
+      }
+    },
+    {
+      "player": "Tommy Pham",
+      "team": "PIT",
+      "confidence": 29.49,
+      "reasoning": "SCORCHING FORM \u2022 Pham's recent hot streak gives him an advantage against May, who has struggled with consistency. Expect a solid chance for a hit, with a moderate homer probability. \u2022 Pitch location and pitch type could significantly impact Pham's performance against May's fastball. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_avg": 0.265
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.265,
+        "obp": 0.346,
+        "slg": 0.393
+      }
+    },
+    {
+      "player": "Andrew McCutchen",
+      "team": "PIT",
+      "confidence": 27.63,
+      "reasoning": "PLATE DISCIPLINE \u2022 McCutchen's recent hitting form gives him an edge, but May's strong ground ball rate may limit hard contact. \u2022 Moderate chance of a hit, low homer probability due to May's effectiveness. \n\nPITCHING STYLE \u2022 McCutchen's ability to handle right-handers will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_avg": 0.245
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.245,
+        "obp": 0.34,
+        "slg": 0.386
+      }
+    },
+    {
+      "player": "Joey Bart",
+      "team": "PIT",
+      "confidence": 23.01,
+      "reasoning": "POWER_SURGE \u2022 Bart's recent hot streak gives him a slight edge against May, but his overall low OPS suggests challenges against quality pitching. \u2022 Bart has a moderate chance for a hit, but a homer is unlikely given his season stats. \u2022 KEY_FACTOR: May's ability to limit hard contact.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Dustin May",
+        "hand": "R",
+        "adjusted_avg": 0.24
+      },
+      "stats": {
+        "recent_hits": 23,
+        "avg": 0.24,
+        "obp": 0.344,
+        "slg": 0.309
+      }
+    },
+    {
+      "player": "David Hamilton",
+      "team": "BOS",
+      "confidence": 33.42,
+      "reasoning": "POWER_SURGE \u2022 Hamilton's recent hot streak contrasts with his overall low season stats, while Oviedo's right-handed pitching may neutralize him. \u2022 Hamilton has a higher chance of a hit than a homer, given his power surge but limited season power. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Johan Oviedo",
+        "hand": "R",
+        "adjusted_avg": 0.207
+      },
+      "stats": {
+        "recent_hits": 33,
+        "avg": 0.207,
+        "obp": 0.261,
+        "slg": 0.327
+      }
+    },
+    {
+      "player": "Connor Wong",
+      "team": "BOS",
+      "confidence": 19.139999999999997,
+      "reasoning": "POWER STRUGGLE \u2022 Wong's low power and average against righties face Oviedo's solid strikeout ability, favoring the pitcher. \u2022 Low probability of a hit given Wong's recent slump and season stats.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Johan Oviedo",
+        "hand": "R",
+        "adjusted_avg": 0.189
+      },
+      "stats": {
+        "recent_hits": 19,
+        "avg": 0.189,
+        "obp": 0.256,
+        "slg": 0.231
+      }
+    },
+    {
+      "player": "Eric Wagaman",
+      "team": "MIA",
+      "confidence": 23.189999999999998,
+      "reasoning": "HOT BATTER \u2022 Wagaman's recent power surge gives him an advantage against Peterson, who struggles with left-handed hitters. \u2022 Increased likelihood of a hit, with a moderate chance of a home run. \u2022 Peterson's command issues could lead to favorable pitches for Wagaman.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "David Peterson",
+        "hand": "R",
+        "adjusted_avg": 0.235
+      },
+      "stats": {
+        "recent_hits": 23,
+        "avg": 0.235,
+        "obp": 0.287,
+        "slg": 0.369
+      }
+    },
+    {
+      "player": "Jeff McNeil",
+      "team": "NYM",
+      "confidence": 27.0,
+      "reasoning": "HOT STREAK \u2022 McNeil's recent success against right-handers gives him an advantage over Cabrera, who has struggled with consistency. \u2022 High probability of a hit, with a moderate chance for a homer given McNeil's current form. \u2022 Cabrera's command issues could lead to favorable pitches for McNeil.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_avg": 0.253
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.253,
+        "obp": 0.35,
+        "slg": 0.443
+      }
+    },
+    {
+      "player": "Brandon Nimmo",
+      "team": "NYM",
+      "confidence": 32.73,
+      "reasoning": "PLATE DISCIPLINE \u2022 Nimmo's elite power and recent hitting surge give him an advantage against Cabrera's inconsistent command. \u2022 High probability of a hit, with a moderate chance for a homer. \u2022 Cabrera's ability to locate his fastball will be crucial in determining the outcome.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_avg": 0.262
+      },
+      "stats": {
+        "recent_hits": 32,
+        "avg": 0.262,
+        "obp": 0.335,
+        "slg": 0.451
+      }
+    },
+    {
+      "player": "Brett Baty",
+      "team": "NYM",
+      "confidence": 27.63,
+      "reasoning": "PLATE DISCIPLINE \u2022 Baty's recent hot streak gives him an advantage against Cabrera, who struggles with command. However, Cabrera's high strikeout rate poses a challenge. \u2022 Baty is likely to get a hit, but a home run is less probable given Cabrera's velocity.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_avg": 0.252
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.252,
+        "obp": 0.315,
+        "slg": 0.436
+      }
+    },
+    {
+      "player": "Mark Vientos",
+      "team": "NYM",
+      "confidence": 37.26,
+      "reasoning": "HITTER'S FORM \u2022 Vientos is on fire, hitting .370 with 5 HRs in the last 10 games, while Cabrera's inconsistency could favor Vientos. \u2022 HIGH CHANCE OF HIT, MODERATE HOMER PROBABILITY due to Vientos' current form. \u2022 PITCHER'S CONTROL could significantly impact Cabrera's effectiveness against Vientos.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_avg": 0.246
+      },
+      "stats": {
+        "recent_hits": 37,
+        "avg": 0.246,
+        "obp": 0.298,
+        "slg": 0.434
+      }
+    },
+    {
+      "player": "Luis Torrens",
+      "team": "NYM",
+      "confidence": 22.499999999999996,
+      "reasoning": "POWER_SURGE \u2022 Torrens is on a hot streak, but Cabrera's strong strikeout rate may neutralize his momentum. \u2022 60% chance of a hit, 15% chance of a homer. \n\nPITCHING_STYLE \u2022 Cabrera's ability to induce ground balls could limit Torrens' power potential.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Edward Cabrera",
+        "hand": "R",
+        "adjusted_avg": 0.218
+      },
+      "stats": {
+        "recent_hits": 22,
+        "avg": 0.218,
+        "obp": 0.284,
+        "slg": 0.332
+      }
+    },
+    {
+      "player": "Ozzie Albies",
+      "team": "ATL",
+      "confidence": 29.009999999999998,
+      "reasoning": "HITTER'S FORM \u2022 Albies is scorching hot with 29 hits and 3 HRs in 10 games, giving him a clear advantage against S\u00e1nchez. \u2022 High probability of a hit, with a chance for a homer given Albies' recent power surge. \u2022 Pitch type and location could significantly impact Albies' success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_avg": 0.234
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.234,
+        "obp": 0.304,
+        "slg": 0.351
+      }
+    },
+    {
+      "player": "Jurickson Profar",
+      "team": "ATL",
+      "confidence": 29.819999999999997,
+      "reasoning": "HOT_STREAK \u2022 Profar's recent performance suggests a strong advantage against S\u00e1nchez, who may struggle with left-handed hitters. \u2022 High probability of a hit, with a decent chance for a homer given Profar's current form. \n\nPITCHING_STYLE \u2022 Profar's ability to handle breaking balls could significantly impact his success against S\u00e1nchez.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cristopher S\u00e1nchez",
+        "hand": "R",
+        "adjusted_avg": 0.265
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.265,
+        "obp": 0.371,
+        "slg": 0.489
+      }
+    },
+    {
+      "player": "Bryson Stott",
+      "team": "PHI",
+      "confidence": 26.43,
+      "reasoning": "POWER_SURGE \u2022 Stott's recent hot streak gives him an advantage against RHP, but his overall season stats show inconsistency. \u2022 High likelihood of a hit, but a homer is less probable given his season total. \u2022 Pitcher\u2019s velocity could impact Stott's timing at the plate.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_avg": 0.244
+      },
+      "stats": {
+        "recent_hits": 26,
+        "avg": 0.244,
+        "obp": 0.32,
+        "slg": 0.365
+      }
+    },
+    {
+      "player": "Harrison Bader",
+      "team": "PHI",
+      "confidence": 36.99,
+      "reasoning": "POWER_VS_CONTACT \u2022 Bader's recent hot streak and average power suggest he can make solid contact, but the unknown RHP could present challenges. \u2022 Bader is likely to get a hit, but a home run seems less probable given his season stats.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_avg": 0.269
+      },
+      "stats": {
+        "recent_hits": 36,
+        "avg": 0.269,
+        "obp": 0.353,
+        "slg": 0.45
+      }
+    },
+    {
+      "player": "Edmundo Sosa",
+      "team": "PHI",
+      "confidence": 29.099999999999998,
+      "reasoning": "POWER_SURGE \u2022 Sosa's recent hot streak gives him an advantage against RHP, but his limited power (2 HRs this season) may hinder homer chances. \u2022 If the pitcher has a high strikeout rate, Sosa's contact ability could be tested. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: High strikeout rate RHP could lead to a hit probability of 60% and a homer probability of 15%.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_avg": 0.272
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.272,
+        "obp": 0.313,
+        "slg": 0.436
+      }
+    },
+    {
+      "player": "J.T. Realmuto",
+      "team": "PHI",
+      "confidence": 29.009999999999998,
+      "reasoning": "KEY_FACTOR \u2022 Realmuto is on a hot streak, showcasing power and consistency, which gives him an advantage against any RHP. \u2022 High probability of a hit, with a decent chance for a homer given his recent performance. \u2022 Pitcher\u2019s ability to locate fastballs will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "TBD",
+        "hand": "R",
+        "adjusted_avg": 0.271
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.271,
+        "obp": 0.327,
+        "slg": 0.411
+      }
+    },
+    {
+      "player": "Ke'Bryan Hayes",
+      "team": "CIN",
+      "confidence": 25.77,
+      "reasoning": "POWER_SURGE \u2022 Hayes is on a hot streak with 25 hits in 10 games, but his overall season stats show limited power. McGreevy\u2019s right-handed pitching may neutralize him. \u2022 Moderate chance of a hit, low for a homer. \n\nKEY_FACTOR \u2022 Recent performance momentum. \u2022 MATCHUP_ANALYSIS \u2022 Hayes may capitalize on McGreevy's inexperience. \u2022 PREDICTION: Likely a hit, but homer unlikely.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Michael McGreevy",
+        "hand": "R",
+        "adjusted_avg": 0.237
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.237,
+        "obp": 0.287,
+        "slg": 0.316
+      }
+    },
+    {
+      "player": "Christian Walker",
+      "team": "HOU",
+      "confidence": 27.6,
+      "reasoning": "POWER_HITTER \u2022 Walker's recent surge (5 HRs in 10 games) gives him an edge against Hendricks, who struggles with power hitters. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Walker's ability to handle off-speed pitches will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kyle Hendricks",
+        "hand": "R",
+        "adjusted_avg": 0.24
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.24,
+        "obp": 0.307,
+        "slg": 0.416
+      }
+    },
+    {
+      "player": "C\u00e9sar Salazar",
+      "team": "HOU",
+      "confidence": 29.13,
+      "reasoning": "PLATE DISCIPLINE \u2022 Salazar's average power and recent hit streak face Hendricks' control and ground ball tendencies, favoring the pitcher. \u2022 Salazar is more likely to get a hit than a homer, given his lack of power. \u2022 Hendricks' ability to induce weak contact could limit Salazar's effectiveness.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Kyle Hendricks",
+        "hand": "R",
+        "adjusted_avg": 0.273
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.273,
+        "obp": 0.385,
+        "slg": 0.273
+      }
+    },
+    {
+      "player": "Jake Cronenworth",
+      "team": "SD",
+      "confidence": 27.12,
+      "reasoning": "PLATE DISCIPLINE \u2022 Cronenworth's average power and recent hot streak give him an edge against Bradley, but his low HR total suggests limited power. \u2022 Likely outcome: single or double, with a low chance of a homer due to Bradley's effectiveness against lefties.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Taj Bradley",
+        "hand": "R",
+        "adjusted_avg": 0.249
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.249,
+        "obp": 0.372,
+        "slg": 0.392
+      }
+    },
+    {
+      "player": "Gavin Sheets",
+      "team": "SD",
+      "confidence": 37.529999999999994,
+      "reasoning": "KEY_FACTOR \u2022 Gavin Sheets is on a hot streak with a solid average and power, while Taj Bradley is a young pitcher still finding his footing. Sheets has a favorable matchup against Bradley's inexperience. \u2022 Prediction: High likelihood of a hit, with a moderate chance for a homer.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Taj Bradley",
+        "hand": "R",
+        "adjusted_avg": 0.265
+      },
+      "stats": {
+        "recent_hits": 37,
+        "avg": 0.265,
+        "obp": 0.33,
+        "slg": 0.46
+      }
+    },
+    {
+      "player": "Trent Grisham",
+      "team": "NYY",
+      "confidence": 35.699999999999996,
+      "reasoning": "POWER HITTER \u2022 Grisham's recent form against righties gives him a significant advantage over Smith, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer given Grisham's current streak. \u2022 Smith's command issues could lead to mistakes in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.248
+      },
+      "stats": {
+        "recent_hits": 35,
+        "avg": 0.248,
+        "obp": 0.354,
+        "slg": 0.482
+      }
+    },
+    {
+      "player": "Jazz Chisholm Jr.",
+      "team": "NYY",
+      "confidence": 31.2,
+      "reasoning": "SCORCHING FORM \u2022 Chisholm's recent surge against righties gives him an edge, while Smith's inconsistency could lead to trouble. \u2022 High probability of a hit, with a decent chance for a homer given Chisholm's current form. \u2022 Pitch location could significantly impact Chisholm's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.24
+      },
+      "stats": {
+        "recent_hits": 31,
+        "avg": 0.24,
+        "obp": 0.342,
+        "slg": 0.49
+      }
+    },
+    {
+      "player": "Cody Bellinger",
+      "team": "NYY",
+      "confidence": 32.24999999999999,
+      "reasoning": "POWER_ADVANTAGE \u2022 Bellinger's elite power and recent hot streak give him an edge against Smith, who may struggle with power hitters. \u2022 High probability of a hit, with a moderate chance for a homer due to Bellinger's form. \u2022 Smith's pitch location could significantly impact Bellinger's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.281
+      },
+      "stats": {
+        "recent_hits": 32,
+        "avg": 0.281,
+        "obp": 0.34,
+        "slg": 0.508
+      }
+    },
+    {
+      "player": "Ben Rice",
+      "team": "NYY",
+      "confidence": 33.21,
+      "reasoning": "POWER_HITTER \u2022 Rice's recent surge and HR hot streak give him an advantage against Smith, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer. \u2022 Smith's command issues could lead to mistakes over the plate.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.247
+      },
+      "stats": {
+        "recent_hits": 33,
+        "avg": 0.247,
+        "obp": 0.343,
+        "slg": 0.492
+      }
+    },
+    {
+      "player": "Amed Rosario",
+      "team": "NYY",
+      "confidence": 26.669999999999998,
+      "reasoning": "HITTER'S FORM \u2022 Rosario is hot with a .284 AVG but lacks power, facing a righty in Smith who may exploit this. \u2022 Likely outcome is a hit, not a homer, given Rosario's recent performance and lack of power. \u2022 KEY_FACTOR: Smith's ability to induce ground balls.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.284
+      },
+      "stats": {
+        "recent_hits": 26,
+        "avg": 0.284,
+        "obp": 0.322,
+        "slg": 0.438
+      }
+    },
+    {
+      "player": "Austin Wells",
+      "team": "NYY",
+      "confidence": 27.089999999999996,
+      "reasoning": "SCORCHING FORM \u2022 Wells is heating up with 27 hits in 10 games, while Smith's performance against lefties could be a disadvantage. \u2022 High probability of a hit, with a chance for a homer given Wells' recent power surge. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Shane Smith",
+        "hand": "R",
+        "adjusted_avg": 0.21
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.21,
+        "obp": 0.274,
+        "slg": 0.423
+      }
+    },
+    {
+      "player": "Andrew Benintendi",
+      "team": "CWS",
+      "confidence": 25.41,
+      "reasoning": "HOT_BATTER \u2022 Benintendi's recent hot streak gives him an advantage against Schlittler, but his overall season stats indicate inconsistency. \u2022 Moderate chance of a hit, low for a homer given his power numbers. \u2022 Pitcher's ability to control the fastball could significantly impact Benintendi's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cam Schlittler",
+        "hand": "R",
+        "adjusted_avg": 0.238
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.238,
+        "obp": 0.304,
+        "slg": 0.408
+      }
+    },
+    {
+      "player": "Korey Lee",
+      "team": "CWS",
+      "confidence": 27.900000000000002,
+      "reasoning": "PLATE DISCIPLINE \u2022 Lee's recent hits indicate solid contact against righties, but Schlittler's RHP advantage may limit power. \u2022 Likely outcome: single (hit probability higher than homer). \u2022 KEY_FACTOR: Schlittler's command; if he struggles with control, Lee could capitalize.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Cam Schlittler",
+        "hand": "R",
+        "adjusted_avg": 0.281
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.281,
+        "obp": 0.343,
+        "slg": 0.469
+      }
+    },
+    {
+      "player": "Colt Keith",
+      "team": "DET",
+      "confidence": 27.150000000000002,
+      "reasoning": "HOT BAT \u2022 Colt Keith's recent surge gives him an advantage against Kolek, who may struggle with left-handed hitters. Expect a solid chance for a hit, but a homer is less likely. \u2022 Pitch velocity and pitch selection could significantly impact Keith's performance. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_avg": 0.262
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.262,
+        "obp": 0.343,
+        "slg": 0.427
+      }
+    },
+    {
+      "player": "Riley Greene",
+      "team": "DET",
+      "confidence": 33.629999999999995,
+      "reasoning": "KEY_FACTOR \u2022 Greene's recent hot streak gives him a significant advantage against Kolek, who may struggle with left-handed hitters. \u2022 High probability of a hit, with a decent chance for a homer given Greene's current form. \u2022 Kolek's command issues could lead to more pitches in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_avg": 0.269
+      },
+      "stats": {
+        "recent_hits": 33,
+        "avg": 0.269,
+        "obp": 0.325,
+        "slg": 0.517
+      }
+    },
+    {
+      "player": "Andy Ib\u00e1\u00f1ez",
+      "team": "DET",
+      "confidence": 27.99,
+      "reasoning": "POWER_SURGE \u2022 Ib\u00e1\u00f1ez is on a hot streak with 27 hits, but Kolek's right-handed pitching may neutralize his power. \u2022 Likely outcome favors a hit over a homer, given Ib\u00e1\u00f1ez's season stats. \u2022 KEY_FACTOR: Kolek's ability to control his fastball could dictate the matchup's success.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Stephen Kolek",
+        "hand": "R",
+        "adjusted_avg": 0.25
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.25,
+        "obp": 0.306,
+        "slg": 0.39
+      }
+    },
+    {
+      "player": "Vinnie Pasquantino",
+      "team": "KC",
+      "confidence": 31.980000000000004,
+      "reasoning": "SCORCHING FORM \u2022 Pasquantino's recent surge against Flaherty's inconsistent command gives him a clear advantage. \u2022 High probability of a hit, with a decent chance for a homer given Flaherty's susceptibility to power hitters. \u2022 KEY_FACTOR: Flaherty's ability to locate his fastball will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_avg": 0.26
+      },
+      "stats": {
+        "recent_hits": 31,
+        "avg": 0.26,
+        "obp": 0.322,
+        "slg": 0.47
+      }
+    },
+    {
+      "player": "Mike Yastrzemski",
+      "team": "KC",
+      "confidence": 35.699999999999996,
+      "reasoning": "SCORCHING FORM \u2022 Yastrzemski's recent surge gives him an edge against Flaherty, who has struggled with consistency. \u2022 High probability of a hit, with a decent chance for a homer given Yastrzemski's current form. \u2022 Flaherty's command issues could lead to favorable pitches for Yastrzemski.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Jack Flaherty",
+        "hand": "R",
+        "adjusted_avg": 0.241
+      },
+      "stats": {
+        "recent_hits": 35,
+        "avg": 0.241,
+        "obp": 0.34,
+        "slg": 0.414
+      }
+    },
+    {
+      "player": "Eugenio Su\u00e1rez",
+      "team": "SEA",
+      "confidence": 31.049999999999994,
+      "reasoning": "POWER_HITTER \u2022 Su\u00e1rez's recent hot streak gives him an advantage against Williams, who may struggle with power hitters. \u2022 High probability of a hit, with a decent chance for a homer given Su\u00e1rez's form. \u2022 Pitch location will be crucial; if Williams leaves pitches over the plate, Su\u00e1rez could capitalize.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Gavin Williams",
+        "hand": "R",
+        "adjusted_avg": 0.237
+      },
+      "stats": {
+        "recent_hits": 31,
+        "avg": 0.237,
+        "obp": 0.313,
+        "slg": 0.547
+      }
+    },
+    {
+      "player": "Nolan Jones",
+      "team": "CLE",
+      "confidence": 29.880000000000003,
+      "reasoning": "POWER_SURGE \u2022 Jones is on a hot streak but faces Gilbert, a strong RHP with good command. Jones' low season average suggests a disadvantage. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Key Factor: Gilbert's ability to limit hard contact could stifle Jones' momentum.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Logan Gilbert",
+        "hand": "R",
+        "adjusted_avg": 0.219
+      },
+      "stats": {
+        "recent_hits": 29,
+        "avg": 0.219,
+        "obp": 0.314,
+        "slg": 0.321
+      }
+    },
+    {
+      "player": "Colton Cowser",
+      "team": "BAL",
+      "confidence": 25.139999999999997,
+      "reasoning": "RECENT_FORM \u2022 Cowser is on fire with 25 hits and 3 HRs in 10 games, while Seymour is an inexperienced RHP. Cowser's current form gives him a significant advantage. \u2022 HIGH HIT PROBABILITY, MODERATE HOMER CHANCE. \u2022 Pitching environment (ballpark) could greatly influence Cowser's power potential.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Carson Seymour",
+        "hand": "R",
+        "adjusted_avg": 0.215
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.215,
+        "obp": 0.28,
+        "slg": 0.407
+      }
+    },
+    {
+      "player": "Drew Gilbert",
+      "team": "SF",
+      "confidence": 17.729999999999997,
+      "reasoning": "POWER_SURGE \u2022 Gilbert's recent hot streak contrasts sharply with his poor season stats, while Rogers has been effective against lefties. Expect a potential hit but low homer probability. \u2022 Pitch selection and pitcher's command could significantly impact Gilbert's performance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_avg": 0.139
+      },
+      "stats": {
+        "recent_hits": 17,
+        "avg": 0.139,
+        "obp": 0.139,
+        "slg": 0.278
+      }
+    },
+    {
+      "player": "Luis Matos",
+      "team": "SF",
+      "confidence": 38.04,
+      "reasoning": "HITTER'S FORM \u2022 Matos is in great form with 38 hits and 3 HRs in 10 games, while Rogers has struggled against left-handed batters. \u2022 High probability of a hit, moderate chance for a homer due to recent power surge. \n\nPITCHING STRUGGLES \u2022 Matos' recent performance could exploit Rogers' inconsistency. \u2022 HIT/HOMER PROBABILITY: High for a hit, moderate for a homer.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Trevor Rogers",
+        "hand": "R",
+        "adjusted_avg": 0.222
+      },
+      "stats": {
+        "recent_hits": 38,
+        "avg": 0.222,
+        "obp": 0.263,
+        "slg": 0.465
+      }
+    },
+    {
+      "player": "Ian Happ",
+      "team": "CHC",
+      "confidence": 25.379999999999995,
+      "reasoning": "HOT_STREAK \u2022 Happ's recent performance suggests he\u2019s seeing the ball well, but his overall season stats indicate struggles. Brown's right-handed pitching may neutralize Happ's power. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Pitching location could significantly impact Happ's ability to drive the ball.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "McCade Brown",
+        "hand": "R",
+        "adjusted_avg": 0.231
+      },
+      "stats": {
+        "recent_hits": 25,
+        "avg": 0.231,
+        "obp": 0.333,
+        "slg": 0.393
+      }
+    },
+    {
+      "player": "Brenton Doyle",
+      "team": "COL",
+      "confidence": 32.61,
+      "reasoning": "POWER_HITTER \u2022 Doyle's recent surge (32 hits, 3 HRs) gives him an edge against Assad, who has struggled with power hitters. \u2022 High probability of a hit, moderate chance for a homer. \u2022 Assad's command issues could lead to mistakes in the zone.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_avg": 0.245
+      },
+      "stats": {
+        "recent_hits": 32,
+        "avg": 0.245,
+        "obp": 0.293,
+        "slg": 0.401
+      }
+    },
+    {
+      "player": "Kyle Farmer",
+      "team": "COL",
+      "confidence": 35.339999999999996,
+      "reasoning": "POWER_SURGE \u2022 Farmer's recent hot streak gives him an advantage against Assad, but his overall low average suggests inconsistency. \u2022 Likely outcome: hit probability is higher than homer due to Farmer's limited power this season. \u2022 KEY_FACTOR: Assad's ability to limit hard contact will be crucial.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Javier Assad",
+        "hand": "R",
+        "adjusted_avg": 0.229
+      },
+      "stats": {
+        "recent_hits": 35,
+        "avg": 0.229,
+        "obp": 0.283,
+        "slg": 0.368
+      }
+    },
+    {
+      "player": "Lourdes Gurriel Jr.",
+      "team": "ARI",
+      "confidence": 24.9,
+      "reasoning": "HOT_STREAK \u2022 Gurriel's recent performance gives him confidence against Glasnow, but Glasnow's strikeout ability poses a challenge. \u2022 Given Gurriel's hot streak, a hit is likely, but a homer is less probable.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Tyler Glasnow",
+        "hand": "R",
+        "adjusted_avg": 0.249
+      },
+      "stats": {
+        "recent_hits": 24,
+        "avg": 0.249,
+        "obp": 0.302,
+        "slg": 0.42
+      }
+    },
+    {
+      "player": "Freddie Freeman",
+      "team": "LAD",
+      "confidence": 31.680000000000003,
+      "reasoning": "LEFTY_VS_RIGHTY \u2022 Freeman's scorching form and solid .300 AVG against righties give him a clear advantage over Rodriguez. \u2022 High probability of a hit, with a decent chance for a homer given Freeman's recent power surge. \u2022 Rodriguez's command issues could lead to more favorable pitches for Freeman.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_avg": 0.3
+      },
+      "stats": {
+        "recent_hits": 31,
+        "avg": 0.3,
+        "obp": 0.375,
+        "slg": 0.498
+      }
+    },
+    {
+      "player": "Alex Call",
+      "team": "LAD",
+      "confidence": 35.4,
+      "reasoning": "POWER_SURGE \u2022 Call's recent hitting streak gives him confidence against Rodriguez, but as a lefty, he may struggle against the right-handed pitcher's velocity. \u2022 60% chance of a hit, 10% chance of a homer. \n\nKEY_FACTOR \u2022 Rodriguez's ability to locate fastballs could limit Call's power potential.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_avg": 0.274
+      },
+      "stats": {
+        "recent_hits": 35,
+        "avg": 0.274,
+        "obp": 0.375,
+        "slg": 0.393
+      }
+    },
+    {
+      "player": "Alex Freeland",
+      "team": "LAD",
+      "confidence": 23.94,
+      "reasoning": "POWER_SURGE \u2022 Freeland's recent hot streak contrasts with his low season average, but Rodriguez's right-handed pitching may neutralize him. \u2022 60% chance of a hit, 10% chance of a homer. \u2022 Freeland's ability to handle breaking balls will be crucial against Rodriguez's repertoire.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_avg": 0.192
+      },
+      "stats": {
+        "recent_hits": 23,
+        "avg": 0.192,
+        "obp": 0.306,
+        "slg": 0.329
+      }
+    },
+    {
+      "player": "Dalton Rushing",
+      "team": "LAD",
+      "confidence": 20.13,
+      "reasoning": "HOT STREAK \u2022 Rushing's recent surge may offset his low season stats against Rodriguez, who struggles with left-handed hitters. \u2022 Increased likelihood of a hit, but a homer remains less probable due to Rodriguez's strikeout ability. \n\nKEY_FACTOR \u2022 MATCHUP_ANALYSIS \u2022 PREDICTION: Rushing's confidence; favorable hit probability, low homer chance.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Eduardo Rodriguez",
+        "hand": "R",
+        "adjusted_avg": 0.189
+      },
+      "stats": {
+        "recent_hits": 20,
+        "avg": 0.189,
+        "obp": 0.256,
+        "slg": 0.297
+      }
+    },
+    {
+      "player": "Joc Pederson",
+      "team": "TEX",
+      "confidence": 26.1,
+      "reasoning": "POWER_HITTER \u2022 Pederson's recent surge contrasts with his poor season stats, while Barnett's right-handed delivery may neutralize him. \u2022 Moderate chance for a hit, low for a homer given season struggles. \u2022 KEY_FACTOR: Barnett's command; if he struggles, Pederson could capitalize.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_avg": 0.171
+      },
+      "stats": {
+        "recent_hits": 26,
+        "avg": 0.171,
+        "obp": 0.283,
+        "slg": 0.326
+      }
+    },
+    {
+      "player": "Adolis Garc\u00eda",
+      "team": "TEX",
+      "confidence": 27.99,
+      "reasoning": "POWER_SURGE \u2022 Garc\u00eda's recent hot streak gives him an advantage against Barnett, who may struggle with power hitters. \u2022 High probability of a hit, with a moderate chance for a homer. \u2022 Barnett's command issues could lead to mistakes over the plate.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_avg": 0.232
+      },
+      "stats": {
+        "recent_hits": 27,
+        "avg": 0.232,
+        "obp": 0.278,
+        "slg": 0.409
+      }
+    },
+    {
+      "player": "Jonah Heim",
+      "team": "TEX",
+      "confidence": 24.27,
+      "reasoning": "HITTER'S FORM \u2022 Heim is in good form with 24 hits in 10 games, but his overall season stats are underwhelming. Barnett's right-handed pitching may neutralize Heim's recent success. \u2022 Heim is likely to get a hit, but a home run is less probable.",
+      "gpt_enhanced": true,
+      "pitcher_matchup": {
+        "pitcher": "Mason Barnett",
+        "hand": "R",
+        "adjusted_avg": 0.222
+      },
+      "stats": {
+        "recent_hits": 24,
+        "avg": 0.222,
+        "obp": 0.275,
+        "slg": 0.348
+      }
+    }
+  ],
+  "hot_batters_summary": {
+    "total_detected": 216,
+    "quality_hr_picks": 114,
+    "quality_hit_picks": 63,
+    "gpt_enhanced_picks": 177
+  }
 }

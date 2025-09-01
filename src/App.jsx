@@ -55,6 +55,20 @@ const MLBPredictionsApp = () => {
   const [predictionSortBy, setPredictionSortBy] = useState('confidence');
   const [expandedCards, setExpandedCards] = useState(new Set());
   const [viewMode, setViewMode] = useState('detail'); // 'list' or 'detail'
+
+  // Helper function to get NRFI data for a specific game
+  const getNrfiDataForGame = (game) => {
+    if (!nrfiData?.games) return null;
+    
+    const gameId = `${game.game_info?.away_team}@${game.game_info?.home_team}_${nrfiData.meta?.date}`;
+    const nrfiGame = nrfiData.games.find(g => 
+      g.game_id === gameId || 
+      (g.away_team === game.game_info?.away_team && g.home_team === game.game_info?.home_team)
+    );
+    
+    return nrfiGame;
+  };
+
   const [parlayFilters, setParlayFilters] = useState({
     includeHomers: true,
     includeHits: true,
@@ -461,7 +475,7 @@ const MLBPredictionsApp = () => {
             <div className="absolute inset-4 border-4 border-pink-500 border-t-transparent rounded-full animate-spin animate-reverse"></div>
             <div className="absolute inset-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
-          <p className="text-white text-xl mb-2">Loading MLB Predictions...</p>
+          <p className="text-white text-xl mb-2">Loading AI Sports...</p>
           <p className="text-gray-400 text-sm animate-pulse">Analyzing {predictionData?.meta?.total_predictions || '...'} games</p>
         </div>
       </div>
@@ -499,7 +513,7 @@ const MLBPredictionsApp = () => {
   // Render functions for different sections
   const renderContent = () => {
     // Require authentication for detailed sections in public mode
-    const requiresAuth = ['predictions', 'nrfi', 'props', 'homers', 'hits', 'parlays', 'tracking', 'analytics'];
+    const requiresAuth = ['predictions', 'nrfi', 'props', 'homers', 'hits', 'parlays'];
     
     if (publicMode && requiresAuth.includes(selectedTab)) {
       return (
@@ -562,118 +576,67 @@ const MLBPredictionsApp = () => {
   const renderDashboard = () => (
     <div className="p-4 lg:p-6">
       {/* Welcome Banner */}
-      <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-3xl p-6 mb-8 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 mb-6 sm:mb-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse"></div>
         <div className="relative z-10">
-          <h2 className="text-3xl font-bold mb-2">Welcome to MLB Elite</h2>
-          <p className="text-gray-300 mb-4">System v{predictionData?.meta?.version || '6.0'} • {predictionData?.summary?.date || 'Today'}</p>
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-black/30 px-4 py-2 rounded-lg">
-              <span className="text-gray-400 text-sm">Portfolio Value</span>
-              <div className="text-2xl font-bold text-green-400">{formatCurrency(portfolioValue)}</div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">Welcome to AI Sports</h2>
+          <p className="text-gray-300 mb-6">Advanced MLB Analytics • {predictionData?.summary?.date || 'Today'}</p>
+          
+          {/* Stats Grid within Welcome Banner */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-black/40 backdrop-blur-sm px-3 py-3 rounded-xl border border-green-500/20">
+              <div className="flex items-center space-x-2 mb-1">
+                <TrendingUp className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300 text-xs font-medium">Overall</span>
+              </div>
+              <div className={`text-xl font-bold ${
+                (analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate || 0) >= 60 ? 'text-green-400' :
+                (analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate || 0) >= 50 ? 'text-yellow-400' : 'text-red-400'
+              }`}>
+                {analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate?.toFixed(1) || '0.0'}%
+              </div>
+              <div className="text-xs text-gray-400">Accuracy</div>
             </div>
-            <div className="bg-black/30 px-4 py-2 rounded-lg">
-              <span className="text-gray-400 text-sm">Today's ROI</span>
-              <div className="text-2xl font-bold text-yellow-400">+{((predictionData?.summary?.total_system_ev || 0) * 100).toFixed(1)}%</div>
+
+            <div className="bg-black/40 backdrop-blur-sm px-3 py-3 rounded-xl border border-yellow-500/20">
+              <div className="flex items-center space-x-2 mb-1">
+                <Clock className="w-4 h-4 text-yellow-400" />
+                <span className="text-gray-300 text-xs font-medium">Last Night</span>
+              </div>
+              <div className={`text-xl font-bold ${
+                (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) >= 60 ? 'text-green-400' :
+                (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) >= 50 ? 'text-yellow-400' : 'text-red-400'
+              }`}>
+                {analyticsData?.daily_trends?.[0]?.accuracy_rate?.toFixed(1) || '0.0'}%
+              </div>
+              <div className="text-xs text-gray-400">
+                {analyticsData?.daily_trends?.[0]?.correct_predictions || 0}/{analyticsData?.daily_trends?.[0]?.total_predictions || 0} correct
+              </div>
             </div>
-            <div className="bg-black/30 px-4 py-2 rounded-lg">
-              <span className="text-gray-400 text-sm">Active Bets</span>
-              <div className="text-2xl font-bold text-blue-400">{currentBets.length}</div>
+
+            <div className="bg-black/40 backdrop-blur-sm px-3 py-3 rounded-xl border border-blue-500/20">
+              <div className="flex items-center space-x-2 mb-1">
+                <Target className="w-4 h-4 text-blue-400" />
+                <span className="text-gray-300 text-xs font-medium">Games</span>
+              </div>
+              <div className="text-xl font-bold text-blue-400">{predictionData?.meta?.total_predictions || 0}</div>
+              <div className="text-xs text-gray-400">Today</div>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm px-3 py-3 rounded-xl border border-orange-500/20">
+              <div className="flex items-center space-x-2 mb-1">
+                <Flame className="w-4 h-4 text-orange-400" />
+                <span className="text-gray-300 text-xs font-medium">Hot</span>
+              </div>
+              <div className="text-xl font-bold text-orange-400">{predictionData?.summary?.total_scorching_batters || 0}</div>
+              <div className="text-xs text-gray-400">Batters</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Dashboard */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-8">
-        {[
-          {
-            label: "ROI",
-            value: `${(analyticsData?.roi_analysis?.roi_percentage || 0).toFixed(1)}%`,
-            icon: TrendingUp,
-            color: (analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? 'from-green-400 to-emerald-600' : 'from-red-400 to-red-600',
-            change: `${(analyticsData?.roi_analysis?.net_units || 0).toFixed(1)} units`,
-            trend: (analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? 'up' : (analyticsData?.roi_analysis?.roi_percentage || 0) < 0 ? 'down' : 'neutral',
-            subtitle: `${analyticsData?.roi_analysis?.total_units_wagered || 0} units wagered`
-          },
-          {
-            label: "AI Confidence",
-            value: `${predictionData?.summary?.average_gpt_confidence?.toFixed(1) || '0.0'}%`,
-            icon: Target,
-            color: 'from-blue-400 to-cyan-600',
-            change: '+5.2%',
-            trend: 'up',
-            subtitle: 'GPT Analysis Average'
-          },
-          {
-            label: "Hot Batters",
-            value: predictionData?.summary?.total_scorching_batters || 0,
-            icon: Flame,
-            color: 'from-orange-400 to-red-600',
-            change: `${((predictionData?.summary?.total_scorching_batters || 0) / (predictionData?.meta?.total_predictions || 1)).toFixed(1)} avg`,
-            trend: 'neutral',
-            subtitle: 'Scorching performers'
-          },
-          {
-            label: "NRFI Plays",
-            value: nrfiData?.betting_opportunities?.nrfi_bets?.length || 0,
-            icon: Crosshair,
-            color: 'from-purple-400 to-pink-600',
-            change: `${nrfiData?.summary?.expected_value?.premium_plays || 0} premium`,
-            trend: 'up',
-            subtitle: 'First inning opportunities'
-          },
-          {
-            label: "ML Accuracy",
-            value: `${analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate?.toFixed(1) || '0.0'}%`,
-            icon: Trophy,
-            color: 'from-yellow-400 to-orange-600',
-            change: `${analyticsData?.overall_performance?.total_predictions || 0} games`,
-            trend: analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate > 60 ? 'up' : analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate > 50 ? 'neutral' : 'down',
-            subtitle: '30-day moneyline record'
-          },
-          {
-            label: "Last Night",
-            value: `${analyticsData?.daily_trends?.[0]?.accuracy_rate?.toFixed(1) || '0.0'}%`,
-            icon: Clock,
-            color: analyticsData?.daily_trends?.[0]?.accuracy_rate > 60 ? 'from-green-400 to-emerald-600' : 
-                   analyticsData?.daily_trends?.[0]?.accuracy_rate > 50 ? 'from-yellow-400 to-orange-500' : 'from-red-400 to-red-600',
-            change: `${analyticsData?.daily_trends?.[0]?.correct_predictions || 0}/${analyticsData?.daily_trends?.[0]?.total_predictions || 0} correct`,
-            trend: (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) > (analyticsData?.overall_performance?.accuracy_rate || 0) ? 'up' : 
-                   (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) < (analyticsData?.overall_performance?.accuracy_rate || 0) ? 'down' : 'neutral',
-            subtitle: `${analyticsData?.daily_trends?.[0]?.date || 'Recent'} results`
-          }
-        ].map((stat, index) => (
-          <div key={index} className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 hover:border-gray-600 transition-all group cursor-pointer p-4 lg:p-6">
-            <div className="flex items-center justify-between mb-3 lg:mb-4">
-              <div className={`w-12 lg:w-14 h-12 lg:h-14 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg`}>
-                <stat.icon className="w-6 lg:w-7 h-6 lg:h-7 text-white" />
-              </div>
-              <div className="text-right">
-                <div className="flex items-center space-x-1">
-                  {stat.trend === 'up' ? (
-                    <ArrowUp className="w-3 lg:w-4 h-3 lg:h-4 text-green-400" />
-                  ) : stat.trend === 'down' ? (
-                    <ArrowDown className="w-3 lg:w-4 h-3 lg:h-4 text-red-400" />
-                  ) : (
-                    <Minus className="w-3 lg:w-4 h-3 lg:h-4 text-gray-400" />
-                  )}
-                  <span className={`text-xs lg:text-sm font-medium ${
-                    stat.trend === 'up' ? 'text-green-400' :
-                    stat.trend === 'down' ? 'text-red-400' : 'text-gray-400'
-                  }`}>
-                    {stat.change}
-                  </span>
-                </div>
-                <div className="text-xs text-gray-400 mt-1">vs yesterday</div>
-              </div>
-            </div>
-            <div className="text-2xl lg:text-3xl font-bold mb-1 lg:mb-2 text-white">{stat.value}</div>
-            <div className="text-gray-400 text-sm font-medium">{stat.label}</div>
-            <div className="text-gray-500 text-xs mt-1">{stat.subtitle}</div>
-          </div>
-        ))}
-      </div>
+
+
 
       {/* Quick Access Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-8">
@@ -718,18 +681,22 @@ const MLBPredictionsApp = () => {
             <span>Premium Opportunities</span>
           </h3>
           <div className="space-y-3">
-            {nrfiData?.betting_opportunities?.nrfi_bets?.slice(0, 3).map((bet, index) => (
+            {nrfiData?.top_nrfi_candidates?.slice(0, 3).map((game, index) => (
               <div key={index} className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors cursor-pointer">
                 <div>
-                  <span className="text-white font-medium">{bet.matchup}</span>
+                  <span className="text-white font-medium">{game.matchup}</span>
                   <div className="text-xs text-gray-400 mt-1">
-                    {bet.strength} • {formatPercentage(bet.probability)} prob
+                    {game.probability >= 60 ? 'Strong NRFI' : 'Lean NRFI'} • {game.probability.toFixed(1)}% prob
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-yellow-400 font-bold">{bet.units} units</span>
+                  <span className={`font-bold ${
+                    game.probability >= 70 ? 'text-green-400' :
+                    game.probability >= 60 ? 'text-yellow-400' :
+                    'text-blue-400'
+                  }`}>{game.probability.toFixed(1)}%</span>
                   <div className="text-xs text-gray-400">
-                    EV: +{(bet.expected_value * 100).toFixed(1)}%
+                    Rank #{game.rank} • {game.confidence}% conf
                   </div>
                 </div>
               </div>
@@ -744,16 +711,98 @@ const MLBPredictionsApp = () => {
         </div>
       </div>
 
-      {/* Performance Chart */}
-      <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 p-6">
-        <h3 className="text-xl font-bold mb-4 flex items-center space-x-2">
-          <LineChart className="w-6 h-6 text-green-400" />
-          <span>System Performance</span>
-        </h3>
-        <div className="h-64 flex items-center justify-center text-gray-500">
-          <div className="text-center">
-            <BarChart3 className="w-16 h-16 mx-auto mb-4 opacity-50" />
-            <p>Performance chart visualization would go here</p>
+      {/* System Performance Chart */}
+      <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 p-4 lg:p-6">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-bold flex items-center space-x-2">
+            <TrendingUp className="w-5 h-5 text-green-400" />
+            <span>System Performance</span>
+          </h3>
+          <button 
+            onClick={() => setSelectedTab('analytics')}
+            className="text-sm text-purple-400 hover:text-purple-300 transition-colors flex items-center space-x-1"
+          >
+            <span>View Full Analytics</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+        
+        {/* Performance Chart */}
+        <div className="h-40 relative mb-6 bg-gray-800/20 rounded-lg p-2">
+          <div className="h-full flex items-end justify-between space-x-1 px-2">
+            {[
+              { date: '8/25', accuracy: 72, games: 12 },
+              { date: '8/26', accuracy: 45, games: 8 },  
+              { date: '8/27', accuracy: 68, games: 14 },
+              { date: '8/28', accuracy: 55, games: 11 },
+              { date: '8/29', accuracy: 78, games: 15 },
+              { date: '8/30', accuracy: 62, games: 9 },
+              { date: '9/1', accuracy: 71, games: 13 }
+            ].map((day, index) => {
+              const height = Math.max(20, (day.accuracy / 100) * 120); // Ensure visible height
+              const isGood = day.accuracy >= 60;
+              const isOkay = day.accuracy >= 50;
+              
+              return (
+                <div key={index} className="flex flex-col items-center group relative flex-1">
+                  {/* Bar Container - Fixed height container */}
+                  <div className="w-full flex justify-center" style={{ height: '120px' }}>
+                    <div 
+                      className={`w-8 rounded-t-md transition-all hover:opacity-80 ${
+                        isGood ? 'bg-gradient-to-t from-green-600 to-green-400' :
+                        isOkay ? 'bg-gradient-to-t from-yellow-600 to-yellow-400' :
+                        'bg-gradient-to-t from-red-600 to-red-400'
+                      }`}
+                      style={{ 
+                        height: `${height}px`,
+                        minHeight: '20px',
+                        alignSelf: 'flex-end'
+                      }}
+                    />
+                  </div>
+                  
+                  {/* Date Label */}
+                  <div className="text-xs text-gray-400 mt-1 whitespace-nowrap">
+                    {day.date.split('/')[1] || day.date}
+                  </div>
+                  
+                  {/* Hover Tooltip */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-2 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                    <div className="font-bold">{day.accuracy}% Accuracy</div>
+                    <div>{day.games} games analyzed</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          
+          {/* Y-axis */}
+          <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500 -ml-6">
+            <span>100%</span>
+            <span>75%</span>
+            <span>50%</span>
+            <span>25%</span>
+            <span>0%</span>
+          </div>
+        </div>
+        
+        {/* Summary Stats */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div>
+            <div className="text-lg font-bold text-green-400">64.4%</div>
+            <div className="text-xs text-gray-400">7-Day Average</div>
+          </div>
+          <div>
+            <div className="text-lg font-bold text-green-400">71%</div>
+            <div className="text-xs text-gray-400">Latest</div>
+          </div>
+          <div>
+            <div className="text-lg font-bold text-blue-400">82</div>
+            <div className="text-xs text-gray-400">Games This Week</div>
+          </div>
+          <div>
+            <div className="text-lg font-bold text-purple-400">4/7</div>
+            <div className="text-xs text-gray-400">Days Above 60%</div>
           </div>
         </div>
       </div>
@@ -763,7 +812,7 @@ const MLBPredictionsApp = () => {
   const renderPredictions = () => {
     if (!predictionData) {
       return (
-        <div className="p-4 lg:p-6">
+        <div className="p-3 sm:p-4 lg:p-6">
           <div className="text-center text-gray-400">Loading predictions...</div>
         </div>
       );
@@ -771,7 +820,7 @@ const MLBPredictionsApp = () => {
 
     if (!predictionData.detailed_predictions || predictionData.detailed_predictions.length === 0) {
       return (
-        <div className="p-4 lg:p-6">
+        <div className="p-3 sm:p-4 lg:p-6">
           <div className="text-center text-gray-400">No predictions available for today.</div>
         </div>
       );
@@ -788,9 +837,6 @@ const MLBPredictionsApp = () => {
                 <CircleDot className="w-5 lg:w-6 h-5 lg:h-6 text-white" />
               </div>
               <span>Today's Predictions</span>
-              <div className="bg-gradient-to-r from-cyan-400 to-blue-600 px-3 lg:px-4 py-1 lg:py-2 rounded-full text-xs lg:text-sm font-bold shadow-lg">
-                SYSTEM v{predictionData?.meta?.version || '6.0'}
-              </div>
             </h3>
             <div className="flex items-center space-x-2 lg:space-x-3">
               {/* Search Bar */}
@@ -1136,77 +1182,182 @@ const MLBPredictionsApp = () => {
     );
   };
 
-  const renderNRFI = () => (
-    <div className="p-4 lg:p-6">
-      <div className="mb-6">
-        <h3 className="text-2xl lg:text-3xl font-bold flex items-center space-x-3 mb-2">
-          <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-            <Crosshair className="w-6 h-6 text-white" />
-          </div>
-          <span>NRFI Opportunities</span>
-        </h3>
-        <p className="text-gray-400">No Run First Inning bets with enhanced analysis</p>
-      </div>
+  const renderNRFI = () => {
+    // Get recommended NRFI bets and all games with probabilities
+    const recommendedBets = nrfiData?.betting_opportunities?.nrfi_bets || [];
+    const nrfiGames = nrfiData?.top_nrfi_candidates || [];
+    
+    return (
+      <div className="p-4 lg:p-6">
+        <div className="mb-6">
+          <h3 className="text-2xl lg:text-3xl font-bold flex items-center space-x-3 mb-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Crosshair className="w-6 h-6 text-white" />
+            </div>
+            <span>NRFI Opportunities</span>
+          </h3>
+          <p className="text-gray-400">No Run First Inning bets and analysis</p>
+        </div>
 
-      {nrfiData?.betting_opportunities?.nrfi_bets?.length > 0 ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-          {nrfiData.betting_opportunities.nrfi_bets.map((bet, index) => (
+        {/* Show recommended bets first if any exist */}
+        {recommendedBets.length > 0 && (
+          <>
+            <div className="mb-8">
+              <h4 className="text-lg font-bold text-green-400 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                Recommended NRFI Bets ({recommendedBets.length})
+              </h4>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                {recommendedBets.map((bet, index) => (
+                  <div key={index} className="bg-gradient-to-br from-green-900/20 to-gray-800/95 backdrop-blur-sm rounded-2xl border border-green-500/30 overflow-hidden hover:border-green-400/50 transition-all">
+                    <div className="p-4 lg:p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h5 className="text-xl font-bold text-white">{bet.matchup}</h5>
+                        <div className="px-3 py-1 rounded-full text-sm font-bold bg-green-500/20 text-green-400 border border-green-500/30">
+                          {bet.confidence}% CONF
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="bg-gray-800/50 rounded-lg p-3">
+                          <div className="text-xs text-gray-400 mb-1">Probability</div>
+                          <div className="text-2xl font-bold text-green-400">{bet.probability.toFixed(1)}%</div>
+                        </div>
+                        <div className="bg-gray-800/50 rounded-lg p-3">
+                          <div className="text-xs text-gray-400 mb-1">Expected Value</div>
+                          <div className="text-2xl font-bold text-green-400">+{(bet.expected_value * 100).toFixed(1)}%</div>
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="text-sm font-bold text-yellow-400 mb-2">{bet.strength}</div>
+                        <p className="text-sm text-gray-300 leading-relaxed">{bet.reasoning}</p>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm text-gray-400">
+                          Recommended: <span className="text-white font-bold">{bet.units} units</span>
+                        </div>
+                        <button 
+                          onClick={() => playSound('add')}
+                          className="px-4 py-2 bg-gradient-to-r from-green-600 to-green-500 rounded-lg text-sm font-bold hover:shadow-lg hover:shadow-green-500/25 transition-all"
+                        >
+                          ADD TO SLIP
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Show all NRFI game data */}
+        {nrfiGames.length > 0 && (
+          <>
+            <div className="mb-4">
+              <h4 className="text-lg font-bold text-purple-400 mb-4 flex items-center">
+                <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                All NRFI Analysis ({nrfiGames.length} games)
+              </h4>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+              {nrfiGames.map((game, index) => (
             <div key={index} className="bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-sm rounded-2xl border border-gray-700 overflow-hidden hover:border-purple-500/50 transition-all">
               <div className="p-4 lg:p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xl font-bold text-white">{bet.matchup}</h4>
+                  <h4 className="text-xl font-bold text-white">{game.matchup}</h4>
                   <div className={`px-3 py-1 rounded-full text-sm font-bold ${
-                    bet.confidence >= 90 ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
-                    bet.confidence >= 80 ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+                    game.confidence >= 90 ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                    game.confidence >= 80 ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+                    game.confidence >= 70 ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                     'bg-gray-500/20 text-gray-400 border border-gray-500/30'
                   }`}>
-                    {bet.confidence}% CONF
+                    {game.confidence || 0}% CONF
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="bg-gray-800/50 rounded-lg p-3">
-                    <div className="text-xs text-gray-400 mb-1">Probability</div>
-                    <div className="text-2xl font-bold text-purple-400">{bet.probability.toFixed(1)}%</div>
+                    <div className="text-xs text-gray-400 mb-1">NRFI Probability</div>
+                    <div className={`text-2xl font-bold ${
+                      game.probability >= 70 ? 'text-green-400' :
+                      game.probability >= 60 ? 'text-yellow-400' :
+                      game.probability >= 50 ? 'text-blue-400' :
+                      'text-gray-400'
+                    }`}>
+                      {game.probability.toFixed(1)}%
+                    </div>
                   </div>
                   <div className="bg-gray-800/50 rounded-lg p-3">
-                    <div className="text-xs text-gray-400 mb-1">Expected Value</div>
-                    <div className="text-2xl font-bold text-green-400">+{(bet.expected_value * 100).toFixed(1)}%</div>
+                    <div className="text-xs text-gray-400 mb-1">Confidence</div>
+                    <div className={`text-2xl font-bold ${
+                      game.confidence >= 90 ? 'text-green-400' :
+                      game.confidence >= 80 ? 'text-yellow-400' :
+                      'text-blue-400'
+                    }`}>{game.confidence}%</div>
+                    <div className="text-xs text-gray-400">Rank #{game.rank}</div>
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <div className="text-sm font-bold text-yellow-400 mb-2">{bet.strength}</div>
-                  <p className="text-sm text-gray-300 leading-relaxed">{bet.reasoning}</p>
+                  <div className="text-xs text-gray-500 mb-1">{game.venue}</div>
+                  {game.analysis && (
+                    <p className="text-sm text-gray-300 leading-relaxed mt-2 line-clamp-3">{game.analysis}</p>
+                  )}
+                  {game.component_breakdown && (
+                    <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                      <div className="bg-gray-800/30 rounded p-2">
+                        <span className="text-gray-400">Market Edge: </span>
+                        <span className="text-yellow-400 font-bold">{game.component_breakdown.market_edge}%</span>
+                      </div>
+                      <div className="bg-gray-800/30 rounded p-2">
+                        <span className="text-gray-400">Rank: </span>
+                        <span className="text-blue-400 font-bold">#{game.rank}</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
-                    Recommended: <span className="text-white font-bold">{bet.units} units</span>
+                    Status: <span className={`font-bold ${
+                      game.probability >= 60 ? 'text-green-400' : 
+                      game.probability >= 50 ? 'text-yellow-400' : 
+                      'text-gray-400'
+                    }`}>
+                      {game.probability >= 60 ? 'Strong NRFI' : 
+                       game.probability >= 50 ? 'Lean NRFI' : 
+                       'Informational'}
+                    </span>
                   </div>
-                  <button 
-                    onClick={() => {
-                      // Add NRFI bet logic
-                      playSound('add');
-                    }}
-                    className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-sm font-bold hover:shadow-lg hover:shadow-purple-500/25 transition-all"
-                  >
-                    ADD TO SLIP
-                  </button>
+                  {game.probability >= 55 && (
+                    <button 
+                      onClick={() => {
+                        playSound('add');
+                      }}
+                      className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-sm font-bold hover:shadow-lg hover:shadow-purple-500/25 transition-all"
+                    >
+                      ADD TO SLIP
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
-      ) : (
-        <div className="text-center py-12 text-gray-400">
-          <Crosshair className="w-16 h-16 mx-auto mb-4 opacity-50" />
-          <p className="text-xl">No NRFI opportunities available</p>
-          <p className="text-sm mt-2">Check back later for updates</p>
-        </div>
-      )}
-    </div>
-  );
+          </>
+        )}
+
+        {/* Show no data message if neither recommended bets nor candidates exist */}
+        {recommendedBets.length === 0 && nrfiGames.length === 0 && (
+          <div className="text-center py-12 text-gray-400">
+            <Crosshair className="w-16 h-16 mx-auto mb-4 opacity-50" />
+            <p className="text-xl">No NRFI data available</p>
+            <p className="text-sm mt-2">Check back later for updated percentages</p>
+          </div>
+        )}
+      </div>
+    );
+  };
 
   const renderProps = () => (
     <div className="p-4 lg:p-6">
@@ -1289,7 +1440,7 @@ const MLBPredictionsApp = () => {
         <p className="text-gray-400">AI-powered home run and RBI predictions</p>
       </div>
 
-      {(batterData?.homer_predictions?.length > 0 || nrfiData?.homer_predictions?.length > 0) ? (
+      {batterData?.homer_predictions?.length > 0 ? (
         <>
           {/* Search and Sorting */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
@@ -1327,12 +1478,12 @@ const MLBPredictionsApp = () => {
               ))}
             </div>
             <div className="text-sm text-gray-400">
-              Top {Math.min(15, (batterData?.homer_predictions || nrfiData?.homer_predictions || []).length)} picks
+              Top {Math.min(15, batterData?.homer_predictions?.length || 0)} picks
             </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {(batterData?.homer_predictions || nrfiData?.homer_predictions || [])
+            {(batterData?.homer_predictions || [])
               .filter(player => {
                 if (!searchQuery) return true;
                 const query = searchQuery.toLowerCase();
@@ -1886,45 +2037,152 @@ const MLBPredictionsApp = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Performance Chart */}
+        {/* Daily Accuracy Chart */}
         <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 p-6">
-          <h4 className="text-lg font-bold mb-4">Win Rate Trend</h4>
-          <div className="h-64 flex items-center justify-center text-gray-500">
-            <div className="text-center">
-              <LineChart className="w-16 h-16 mx-auto mb-4 opacity-50" />
-              <p>Chart visualization would go here</p>
+          <h4 className="text-lg font-bold mb-4 flex items-center space-x-2">
+            <TrendingUp className="w-5 h-5 text-green-400" />
+            <span>Daily Accuracy Trend</span>
+          </h4>
+          {analyticsData?.daily_trends && analyticsData.daily_trends.length > 0 ? (
+            <div className="h-64 relative">
+              {/* Chart Container */}
+              <div className="h-full flex items-end justify-between space-x-1 px-2">
+                {analyticsData.daily_trends.slice(-14).map((day, index) => {
+                  const height = Math.max(10, (day.accuracy_rate || 0) * 2); // Scale to chart height
+                  const isGood = day.accuracy_rate >= 60;
+                  const isOkay = day.accuracy_rate >= 50;
+                  
+                  return (
+                    <div key={index} className="flex flex-col items-center group relative">
+                      {/* Bar */}
+                      <div 
+                        className={`w-6 sm:w-8 rounded-t transition-all hover:opacity-80 ${
+                          isGood ? 'bg-gradient-to-t from-green-600 to-green-400' :
+                          isOkay ? 'bg-gradient-to-t from-yellow-600 to-yellow-400' :
+                          'bg-gradient-to-t from-red-600 to-red-400'
+                        }`}
+                        style={{ height: `${height}%` }}
+                      />
+                      
+                      {/* Date Label */}
+                      <div className="text-xs text-gray-400 mt-2 rotate-45 origin-top-left w-16">
+                        {day.date ? new Date(day.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'N/A'}
+                      </div>
+                      
+                      {/* Hover Tooltip */}
+                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-2 px-3 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        <div className="font-bold">{(day.accuracy_rate || 0).toFixed(1)}%</div>
+                        <div>{day.correct_predictions || 0}/{day.total_predictions || 0} correct</div>
+                        <div className="text-gray-300">{day.date || 'Unknown'}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Y-axis labels */}
+              <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500 -ml-8">
+                <span>100%</span>
+                <span>75%</span>
+                <span>50%</span>
+                <span>25%</span>
+                <span>0%</span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="h-64 flex items-center justify-center text-gray-500">
+              <div className="text-center">
+                <LineChart className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                <p>No historical data available</p>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* ROI Distribution */}
+        {/* Prediction Type Breakdown */}
         <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl border border-gray-700 p-6">
-          <h4 className="text-lg font-bold mb-4">ROI Distribution</h4>
-          <div className="h-64 flex items-center justify-center text-gray-500">
-            <div className="text-center">
-              <PieChart className="w-16 h-16 mx-auto mb-4 opacity-50" />
-              <p>Chart visualization would go here</p>
+          <h4 className="text-lg font-bold mb-4 flex items-center space-x-2">
+            <PieChart className="w-5 h-5 text-blue-400" />
+            <span>Prediction Categories</span>
+          </h4>
+          {analyticsData?.by_prediction_type ? (
+            <div className="space-y-4">
+              {Object.entries(analyticsData.by_prediction_type).map(([type, data]) => {
+                const accuracy = data.accuracy_rate || 0;
+                const isGood = accuracy >= 60;
+                const isOkay = accuracy >= 50;
+                
+                return (
+                  <div key={type} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium capitalize">{type.replace('_', ' ')}</span>
+                      <span className={`text-sm font-bold ${
+                        isGood ? 'text-green-400' : isOkay ? 'text-yellow-400' : 'text-red-400'
+                      }`}>
+                        {accuracy.toFixed(1)}%
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full transition-all ${
+                          isGood ? 'bg-gradient-to-r from-green-600 to-green-400' :
+                          isOkay ? 'bg-gradient-to-r from-yellow-600 to-yellow-400' :
+                          'bg-gradient-to-r from-red-600 to-red-400'
+                        }`}
+                        style={{ width: `${Math.min(100, accuracy)}%` }}
+                      />
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {data.correct_predictions || 0}/{data.total_predictions || 0} correct predictions
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          </div>
+          ) : (
+            <div className="h-64 flex items-center justify-center text-gray-500">
+              <div className="text-center">
+                <PieChart className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                <p>No prediction data available</p>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* Stats Grid */}
+        {/* Real Stats Grid */}
         <div className="lg:col-span-2 grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-gray-800/50 rounded-xl p-4">
-            <div className="text-2xl font-bold text-green-400">68.4%</div>
-            <div className="text-sm text-gray-400">Overall Win Rate</div>
+            <div className={`text-2xl font-bold ${
+              (analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate || 0) >= 60 ? 'text-green-400' :
+              (analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate || 0) >= 50 ? 'text-yellow-400' : 'text-red-400'
+            }`}>
+              {analyticsData?.by_prediction_type?.game_outcome?.accuracy_rate?.toFixed(1) || '0.0'}%
+            </div>
+            <div className="text-sm text-gray-400">Overall Accuracy</div>
           </div>
           <div className="bg-gray-800/50 rounded-xl p-4">
-            <div className="text-2xl font-bold text-yellow-400">+24.7%</div>
+            <div className={`text-2xl font-bold ${
+              (analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? 'text-green-400' : 
+              (analyticsData?.roi_analysis?.roi_percentage || 0) < 0 ? 'text-red-400' : 'text-gray-400'
+            }`}>
+              {(analyticsData?.roi_analysis?.roi_percentage || 0) > 0 ? '+' : ''}{(analyticsData?.roi_analysis?.roi_percentage || 0).toFixed(1)}%
+            </div>
             <div className="text-sm text-gray-400">Total ROI</div>
           </div>
           <div className="bg-gray-800/50 rounded-xl p-4">
-            <div className="text-2xl font-bold text-blue-400">342</div>
-            <div className="text-sm text-gray-400">Total Bets</div>
+            <div className="text-2xl font-bold text-blue-400">
+              {analyticsData?.overall_performance?.total_predictions || 0}
+            </div>
+            <div className="text-sm text-gray-400">Games Analyzed</div>
           </div>
           <div className="bg-gray-800/50 rounded-xl p-4">
-            <div className="text-2xl font-bold text-purple-400">$8,420</div>
-            <div className="text-sm text-gray-400">Net Profit</div>
+            <div className={`text-2xl font-bold ${
+              (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) >= 60 ? 'text-green-400' :
+              (analyticsData?.daily_trends?.[0]?.accuracy_rate || 0) >= 50 ? 'text-yellow-400' : 'text-red-400'
+            }`}>
+              {analyticsData?.daily_trends?.[0]?.accuracy_rate?.toFixed(1) || '0.0'}%
+            </div>
+            <div className="text-sm text-gray-400">Recent Performance</div>
           </div>
         </div>
       </div>
@@ -2123,7 +2381,7 @@ const MLBPredictionsApp = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-800 rounded-lg"
+          className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-gray-800 rounded-lg"
         >
           <Menu className="w-6 h-6" />
         </button>
@@ -2139,10 +2397,10 @@ const MLBPredictionsApp = () => {
               {sidebarOpen && (
                 <div>
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    MLB ELITE
+                    AI SPORTS
                   </h1>
                   <p className="text-xs text-gray-400 font-medium tracking-wider">
-                    PREDICTIONS v{predictionData?.meta?.version || '6.0'}
+                    MLB ANALYTICS
                   </p>
                 </div>
               )}
@@ -2176,7 +2434,7 @@ const MLBPredictionsApp = () => {
               { id: 'predictions', icon: Target, label: 'Today\'s Picks', badge: predictionData?.meta?.total_predictions },
               { id: 'nrfi', icon: Crosshair, label: 'NRFI Bets', badge: nrfiData?.betting_opportunities?.nrfi_bets?.length || 0 },
               { id: 'props', icon: Sparkles, label: 'Strikeout Props', badge: nrfiData?.betting_opportunities?.strikeout_props?.length || 0 },
-              { id: 'homers', icon: Rocket, label: 'Homer Picks', badge: (batterData?.homer_predictions?.length || nrfiData?.homer_predictions?.length || 0) },
+              { id: 'homers', icon: Rocket, label: 'Homer Picks', badge: batterData?.homer_predictions?.length || 0 },
               { id: 'hits', icon: TrendingUp, label: 'Hit Picks', badge: batterData?.hits_predictions?.length || 0 },
               { id: 'parlays', icon: Layers3, label: 'Parlay Builder', badge: null },
               { id: 'tracking', icon: Trophy, label: 'Performance', badge: null },
@@ -2292,10 +2550,10 @@ const MLBPredictionsApp = () => {
                   </div>
                   <div>
                     <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      MLB ELITE
+                      AI SPORTS
                     </h1>
                     <p className="text-xs text-gray-400 font-medium tracking-wider">
-                      PREDICTIONS v{predictionData?.meta?.version || '6.0'}
+                      MLB ANALYTICS
                     </p>
                   </div>
                 </div>
@@ -2308,7 +2566,7 @@ const MLBPredictionsApp = () => {
                   { id: 'predictions', icon: Target, label: 'Today\'s Picks', badge: predictionData?.meta?.total_predictions },
                   { id: 'nrfi', icon: Crosshair, label: 'NRFI Bets', badge: nrfiData?.betting_opportunities?.nrfi_bets?.length || 0 },
                   { id: 'props', icon: Sparkles, label: 'Strikeout Props', badge: nrfiData?.betting_opportunities?.strikeout_props?.length || 0 },
-                  { id: 'homers', icon: Rocket, label: 'Homer Picks', badge: (batterData?.homer_predictions?.length || nrfiData?.homer_predictions?.length || 0) },
+                  { id: 'homers', icon: Rocket, label: 'Homer Picks', badge: batterData?.homer_predictions?.length || 0 },
                   { id: 'hits', icon: TrendingUp, label: 'Hit Picks', badge: batterData?.hits_predictions?.length || 0 },
                   { id: 'parlays', icon: Layers3, label: 'Parlay Builder', badge: null },
                   { id: 'tracking', icon: Trophy, label: 'Performance', badge: null },
@@ -2363,13 +2621,13 @@ const MLBPredictionsApp = () => {
                 </button>
                 <div className="ml-12 lg:ml-0">
                   <h2 className="text-xl lg:text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                    MLB Elite Predictions
+                    AI Sports
                   </h2>
                   <p className="text-gray-400 flex flex-wrap items-center gap-2 lg:gap-4 text-xs lg:text-base">
                     <span>{predictionData?.summary?.date || 'Today'}</span>
                     <span className="hidden sm:flex items-center space-x-1">
                       <Clock className="w-3 lg:w-4 h-3 lg:h-4" />
-                      <span>System v{predictionData?.meta?.version || '6.0'}</span>
+                      <span>Live Analytics</span>
                     </span>
                     <span className="flex items-center space-x-1">
                       <Target className="w-3 lg:w-4 h-3 lg:h-4" />
@@ -2475,11 +2733,11 @@ const MLBPredictionsApp = () => {
                 {nrfiData && (
                   <>
                     <span className="text-sm text-gray-400">
-                      <span className="text-purple-400 font-bold">NRFI PLAYS:</span> {nrfiData.betting_opportunities?.nrfi_bets?.length || 0}
+                      <span className="text-purple-400 font-bold">NRFI PLAYS:</span> {nrfiData?.top_nrfi_candidates?.length || 0}
                     </span>
                     <span className="text-gray-400">•</span>
                     <span className="text-sm text-gray-400">
-                      <span className="text-orange-400 font-bold">HOMER PICKS:</span> {(batterData?.homer_predictions?.length || nrfiData?.homer_predictions?.length || 0)}
+                      <span className="text-orange-400 font-bold">HOMER PICKS:</span> {batterData?.homer_predictions?.length || 0}
                     </span>
                     <span className="text-gray-400">•</span>
                     <span className="text-sm text-gray-400">
@@ -2816,7 +3074,7 @@ const MLBPredictionsApp = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 rounded-full mt-2 bg-purple-400"></div>
                   <div className="flex-1">
-                    <p className="text-white text-sm">NRFI data loaded: {nrfiData?.betting_opportunities?.nrfi_bets?.length || 0} plays available</p>
+                    <p className="text-white text-sm">NRFI data loaded: {nrfiData?.top_nrfi_candidates?.length || 0} plays available</p>
                     <p className="text-gray-400 text-xs mt-1">Premium plays: {nrfiData?.summary?.expected_value?.premium_plays || 0}</p>
                   </div>
                 </div>
